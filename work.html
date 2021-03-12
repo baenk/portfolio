@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        body {
+            background: #fff;
+            color: #272727;
+        }
+
+        .wrap {
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        h1+h1,
+        h1+h2,
+        h1+h3,
+        h2+h1,
+        h2+h2,
+        h2+h3,
+        h3+h1,
+        h3+h2,
+        h3+h3 {
+            margin-top: 15px;
+        }
+
+        /* font-size 
+            640:
+            40px;
+
+            768~:
+            43px;
+        */
+        h1 {
+            font-size: 40px;
+            font-weight: 400;
+            letter-spacing: 0;
+            line-height: 1.1em;
+            margin: 0.1em 0;
+        }
+
+        p {
+            font-size: 23px;
+            word-break: keep-all;
+        }
+
+        /* media screen
+            max-width
+            640px
+            768px
+            960px
+            1024px
+        */
+
+        .index-page-bg-01 {
+            background: url(commonfiles/images/bg_01.png) center center no-repeat;
+            background-size: cover;
+            /* color: #fff; */
+        }
+
+        .index-page-bg-02 {
+            background: url(commonfiles/images/bg1_01.png) center center no-repeat;
+            background-size: cover;
+            color: #fff;
+        }
+
+        /* index-page-content */
+        /* padding 
+            640:
+            padding-left: 20px;
+            padding-right: 20px;
+
+            768:
+            padding-left: 36px;
+            padding-right: 36px;
+
+            960:
+            padding-left: 48px;
+            padding-right: 48px;
+
+            1024:
+            padding-left: 64px;
+            padding-right: 64px;
+
+            1024~:
+            padding: 130px 100px;
+        */
+        .index-page-content {
+            padding-top: 120px;
+            padding-bottom: 120px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .sqs-layout {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+        }
+
+        .sqs-layout-direction {
+            flex-flow: row wrap;
+        }
+
+        .sqs-col-1 {
+            width: 8.33%;
+        }
+
+        .sqs-col-2 {
+            width: 16.66%;
+        }
+
+        .sqs-col-5 {
+            width: 41.65%;
+            /* background: coral; */
+        }
+
+        .sqs-col-6 {
+            width: 50%;
+        }
+
+        .sqs-col-8 {
+            width: 66.66%;
+        }
+
+        .sqs-col-10 {
+            width: 83.33%;
+            /* display: flex; */
+        }
+
+        .sqs-col-12 {
+            width: 100%;
+        }
+
+        .sqs-spacer {
+            height: 60px;
+        }
+
+        .sqs-block {
+            padding: 17px;
+        }
+
+        .sqs-content {
+            padding: 17px;
+        }
+
+        .sqs-image {}
+
+        .sqs-image--modify {
+            position: relative;
+        }
+
+        .bg-color-light-gray {
+            background: #efeeed;
+        }
+
+        .bg-color-light-orange {
+            background: #f3b582;
+        }
+
+        .bg-color-black {
+            background: #272727;
+        }
+
+        @media screen and (max-width:960px) {
+            .sqs-spacer {
+                display: none;
+            }
+
+            .sqs-col-8 {
+                width: auto;
+            }
+
+            .sqs-col-10 {
+                width: auto;
+            }
+        }
+
+        @media screen and (max-width:640px) {
+            .sqs-layout-direction {
+                flex-flow: column wrap;
+            }
+
+            .sqs-block {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .sqs-col-1 {
+                width: auto;
+            }
+
+            .sqs-col-2 {
+                width: auto;
+            }
+
+            .sqs-col-5 {
+                width: auto;
+            }
+
+            .sqs-col-6 {
+                width: auto;
+            }
+
+            .sqs-col-8 {
+                /* width: 66%; */
+                width: auto;
+            }
+
+            .sqs-col-10 {
+                width: auto;
+            }
+
+            .sqs-spacer {
+                display: none;
+            }
+
+            .sqs-content {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .sqs-image {
+                max-height: 640px;
+                overflow: hidden;
+            }
+
+            .sqs-image--modify {
+                /* top: -30px; */
+            }
+        }
+
+        .center {
+            text-align: center;
+        }
+
+
+
+        .sqs-image__elem {
+            width: 100%;
+        }
+
+        .sqs-block .sqs-button .sqs-button__elem {
+            position: relative;
+            color: #272727;
+            padding: 13px 21px;
+            font-size: 19px;
+            font-weight: 400;
+            letter-spacing: .03em;
+            border: 1px solid #272727;
+            /* border: 1px solid #000; */
+            display: inline-block;
+            z-index: 2;
+        }
+
+        .sqs-block .sqs-button .sqs-button__elem::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: auto;
+            width: 0;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            transition: width .3s ease;
+            z-index: -1;
+        }
+
+        .sqs-block .sqs-button .sqs-button__elem:hover {
+            color: #fff;
+            /* border: 1px solid #000;
+            background: rgba(0, 0, 0, 0.7); */
+            transition: color, background-color .3s ease;
+        }
+
+        .sqs-block .sqs-button .sqs-button__elem:hover::before {
+            width: 100%;
+        }
+
+        .footer-page {
+            padding: 48px 20px;
+            color: #fff;
+        }
+
+        .bg-color-light-charcoal {
+            background: #383636;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- header-start -->
+        <header>
+            <nav>
+
+            </nav>
+        </header>
+
+        <!-- section-start -->
+        <section id="new-page-02" class="index-page index-page-bg-02">
+            <div class="index-page-content">
+                <div class="sqs-layout sqs-layout-direction">
+                    <div class="sqs-col-2 sqs-spacer"></div>
+                    <div class="sqs-col-8 center">
+                        <div class="sqs-content">
+                            <div class="sqs-block">
+                                <div class="sqs-block-text">
+                                    <h3>Our Signature Course</h3>
+                                    <h1>Crafted to <span>Convert</span></h1>
+                                    <p>Your complete blueprint for building and launching an irresistible and impactful
+                                        website
+                                        without
+                                        the
+                                        uncertainty and tech overwhelm.</p>
+                                </div>
+                            </div>
+                            <div class="sqs-block center">
+                                <div class="sqs-button">
+                                    <a class="sqs-button__elem" href="#">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sqs-col-2 sqs-spacer"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="new-page-03" class="index-page index-page-bg-03">
+            <div class="index-page-content">
+                <div class="sqs-layout sqs-layout-direction">
+                    <div class="sqs-col-1 sqs-spacer"></div>
+                    <div class="sqs-col-10 sqs-layout sqs-layout-direction bg-color-light-gray">
+                        <div class="sqs-col-6 center">
+                            <div class="sqs-content">
+                                <div class="sqs-block">
+                                    <div class="sqs-image sqs-layout" style="align-items: center;">
+                                        <img class="sqs-image__elem" src="/commonfiles/images/profile_01.jpg">
+                                        <!-- <img class="sqs-image__elem" src="/commonfiles/images/work_ver_01.png"> -->
+                                        <!-- <img class="sqs-image__elem" src="/commonfiles/images/lotte_kiosk01.jpg"> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sqs-col-6" style="display: flex; flex-flow: row wrap; align-items: center;">
+                            <div class="sqs-content">
+                                <div class="sqs-block">
+                                    <div class="sqs-block-text">
+                                        <h3>Our Signature Course</h3>
+                                        <h1>Crafted to <span>Convert</span></h1>
+                                        <p>Your complete blueprint for building and launching an irresistible and
+                                            impactful
+                                            website
+                                            without
+                                            the
+                                            uncertainty and tech overwhelm.</p>
+                                    </div>
+                                </div>
+                                <div class="sqs-block">
+                                    <div class="sqs-button">
+                                        <a class="sqs-button__elem" href="#">View Website</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sqs-col-6" style="display: flex; flex-flow: row wrap; align-items: center;">
+                            <div class="sqs-content">
+                                <div class="sqs-block">
+                                    <div class="sqs-block-text">
+                                        <h3>Our Signature Course</h3>
+                                        <h1>Crafted to <span>Convert</span></h1>
+                                        <p>Your complete blueprint for building and launching an irresistible and
+                                            impactful
+                                            website
+                                            without
+                                            the
+                                            uncertainty and tech overwhelm.</p>
+                                    </div>
+                                </div>
+                                <div class="sqs-block">
+                                    <div class="sqs-button">
+                                        <a class="sqs-button__elem" href="#">View Website</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sqs-col-6 center">
+                            <div class="sqs-content">
+                                <div class="sqs-block">
+                                    <div class="sqs-image">
+                                        <img class="sqs-image__elem" src="commonfiles/images/work_hor_01.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sqs-col-1 sqs-spacer"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="new-page-01" class="index-page index-page-bg-01">
+            <div class="index-page-content">
+                <div class="sqs-layout sqs-layout-direction">
+                    <div class="sqs-col-2 sqs-spacer"></div>
+                    <div class="sqs-col-8">
+                        <div class="sqs-content">
+                            <div class="sqs-block">
+                                <div class="sqs-block-text">
+                                    <h3>Our Signature Course</h3>
+                                    <h1>Crafted to <span>Convert</span></h1>
+                                </div>
+                            </div>
+                            <!-- <div class="sqs-block">
+                                <div class="sqs-button">
+                                    <a class="sqs-button__elem" href="#">Learn More</a>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="sqs-col-2 sqs-spacer"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="new-page-03" class="index-page index-page-bg-03">
+            <div class="index-page-content">
+                <div class="sqs-layout sqs-layout-direction">
+                    <div class="sqs-col-1 sqs-spacer"></div>
+                    <div class="sqs-col-10 sqs-layout sqs-layout-direction">
+                        <div class="sqs-col-12">
+                            <div class="sqs-content">
+                                <div class="sqs-block center">
+                                    <div class="sqs-block-text`">
+                                        <h1>Works</h1>
+                                        <p>This is my portfolio</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sqs-col-12 sqs-spacer"></div>
+                        <div class="sqs-col-6">
+                            <div class="sqs-content">
+                                <div class="sqs-block">
+                                    <div class="sqs-image">
+                                        <img class="sqs-image__elem" src="commonfiles/images/work_b_03.png">
+                                    </div>
+                                </div>
+                                <div class="sqs-block">
+                                    <div class="sqs-bloack-text center">
+                                        <h2>Johnstones</h2>
+                                    </div>
+                                </div>
+                                <div class="sqs-block">
+                                    <div class="sqs-button center">
+                                        <a class="sqs-button__elem" href="#">View Website</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sqs-col-6">
+                            <div class="sqs-content">
+                                <div class="sqs-block">
+                                    <div class="sqs-image">
+                                        <img class="sqs-image__elem" src="commonfiles/images/work_03.png">
+                                    </div>
+                                </div>
+                                <div class="sqs-block">
+                                    <div class="sqs-bloack-text center">
+                                        <h2>Johnstones</h2>
+                                    </div>
+                                </div>
+                                <div class="sqs-block">
+                                    <div class="sqs-button center">
+                                        <a class="sqs-button__elem" href="#">View Website</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sqs-col-6">
+                            <div class="sqs-content">
+                                <div class="sqs-block">
+                                    <div class="sqs-image">
+                                        <img class="sqs-image__elem" src="commonfiles/images/work_b_04.png">
+                                    </div>
+                                </div>
+                                <div class="sqs-block">
+                                    <div class="sqs-bloack-text center">
+                                        <h2>Johnstones</h2>
+                                    </div>
+                                </div>
+                                <div class="sqs-block">
+                                    <div class="sqs-button center">
+                                        <a class="sqs-button__elem" href="#">View Website</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sqs-col-6">
+                            <div class="sqs-content">
+                                <div class="sqs-block">
+                                    <div class="sqs-image">
+                                        <img class="sqs-image__elem" src="commonfiles/images/work_b_05.png">
+                                    </div>
+                                </div>
+                                <div class="sqs-block">
+                                    <div class="sqs-bloack-text center">
+                                        <h2>Johnstones</h2>
+                                    </div>
+                                </div>
+                                <div class="sqs-block">
+                                    <div class="sqs-button center">
+                                        <a class="sqs-button__elem" href="#">View Website</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sqs-col-6">
+                            <div class="sqs-content">
+                                <div class="sqs-block">
+                                    <div class="sqs-image">
+                                        <img class="sqs-image__elem" src="commonfiles/images/work_b_06.png">
+                                    </div>
+                                </div>
+                                <div class="sqs-block">
+                                    <div class="sqs-bloack-text center">
+                                        <h2>Johnstones</h2>
+                                    </div>
+                                </div>
+                                <div class="sqs-block">
+                                    <div class="sqs-button center">
+                                        <a class="sqs-button__elem" href="#">View Website</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sqs-col-6">
+                            <div class="sqs-content">
+                                <div class="sqs-block">
+                                    <div class="sqs-image">
+                                        <img class="sqs-image__elem" src="commonfiles/images/work_04.png">
+                                    </div>
+                                </div>
+                                <div class="sqs-block">
+                                    <div class="sqs-bloack-text center">
+                                        <h2>Johnstones</h2>
+                                    </div>
+                                </div>
+                                <div class="sqs-block">
+                                    <div class="sqs-button center">
+                                        <a class="sqs-button__elem" href="#">View Website</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="sqs-col-1 sqs-spacer"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer-start -->
+        <footer id="new-page-footer" class="footer-page bg-color-light-charcoal">
+            <div class="sqs-layout sqs-layout-direction">
+                <div class="sqs-col-12">
+                    <div class="sqs-content">
+                        <div class="sqs-block">
+                            <div class="sqs-block-text">
+                                <h3>Our Signature Course</h3>
+                                <h1>Crafted to <span>Convert</span></h1>
+                                <p>Your complete blueprint for building and launching an irresistible and impactful
+                                    website
+                                    without
+                                    the
+                                    uncertainty and tech overwhelm.</p>
+                            </div>
+                        </div>
+                        <div class="sqs-block">
+                            <div class="sqs-button">
+                                <a class="sqs-button__elem" href="#">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
