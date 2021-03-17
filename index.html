@@ -6,12 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./include/css/lib/font.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             list-style: none;
             text-decoration: none;
+            font-family: 'Noto Sans CJK';
         }
 
         body {
@@ -37,12 +39,17 @@
             margin-top: 15px;
         }
 
-        li {
-            padding-bottom: 20px;
+        h1+p {
+            margin-top: 15px;
+            /* color: #8c8989; */
+            color: #ada8a8;
         }
 
-        p>span {
-            padding-right: 7px;
+        h2+p {
+            font-size: 12px;
+            font-weight: 400;
+            /* color: #8c8989; */
+            color: #ada8a8;
         }
 
         /* font-size 
@@ -54,10 +61,10 @@
         */
         h1 {
             font-size: 40px;
-            font-weight: 400;
+            font-weight: 500;
             letter-spacing: 0;
             line-height: 1.1em;
-            margin: 0.1em 0;
+            /* margin: 0.1em 0; */
         }
 
         h2 {
@@ -67,9 +74,16 @@
         }
 
         p {
-            /* font-size: 19px; */
-            /* word-break: keep-all; */
             letter-spacing: 0.1rem;
+            line-height: 1.8rem;
+        }
+
+        p>span {
+            padding-right: 7px;
+        }
+
+        li {
+            padding-bottom: 20px;
         }
 
         .sub-title {
@@ -80,15 +94,20 @@
             /* max-width: 600px; */
         }
 
-        .sqs-block-text-inner p::before {
-            content: "-";
-            min-width: 50px;
+        .sqs-block-text-inner li::before {
+            content: "▫︎";
+            min-width: 45px;
+            margin-top: 1px;
             margin-left: -50px;
-            padding-right: 10px;
+            padding-right: 5px;
             box-sizing: border-box;
-            display: inline-block;
             text-align: right;
+            vertical-align: top;
+            float: left;
+        }
 
+        .sqs-block-text-inner li::after {
+            clear: both;
         }
 
         /* media screen
@@ -99,14 +118,18 @@
             1024px
         */
 
+        #new-page-03 {
+            box-shadow: 0 0 45vw 14vw black inset;
+        }
+
         .index-page-bg-01 {
-            background: url(commonfiles/images/bg_01.png) center center no-repeat;
+            background: url(./commonfiles/images/bg_01.png) center center no-repeat;
             background-size: cover;
             /* color: #fff; */
         }
 
         .index-page-bg-02 {
-            background: url(commonfiles/images/bg1_01.png) center center no-repeat;
+            background: url(./commonfiles/images/bg1_01.png) center center no-repeat;
             background-size: cover;
             color: #fff;
         }
@@ -211,6 +234,10 @@
             padding: 17px;
         }
 
+        .sqs-about {
+            max-width: 700px;
+        }
+
         .sqs-image {}
 
         .sqs-image--modify {
@@ -218,7 +245,8 @@
         }
 
         .bg-color-light-gray {
-            background: #efeeed;
+            /* background: #efeeed; */
+            background: #f5f2ef;
         }
 
         .bg-color-light-orange {
@@ -230,7 +258,7 @@
         }
 
         @media screen and (max-width:960px) {
-            .sqs-spacer {
+            .sqs-spacer-960 {
                 display: none;
             }
 
@@ -280,7 +308,7 @@
             }
 
             .sqs-spacer {
-                display: none;
+                /* display: none; */
             }
 
             .sqs-content {
@@ -368,48 +396,47 @@
 
         <!-- section-start -->
         <section id="new-page-02" class="index-page">
-            <div class="index-page-content">
-                <div class="sqs-layout sqs-layout-direction">
-                    <div class="sqs-col-2 sqs-spacer"></div>
-                    <div class="sqs-col-8 center">
-                        <div class="sqs-content">
+            <div class="index-page-content" style="padding-top: 0px; padding-bottom: 0px;">
+                <div class="">
+                    <!-- <div class="sqs-col-2 sqs-spacer"></div> -->
+                    <div class="sqs-col-12">
+                        <div class="sqs-content center">
                             <div class="sqs-block">
                                 <div class="sqs-block-text">
-                                    <!-- <h3>This is Frontend Developer Baenk</h3> -->
-                                    <h1>Baenk Portfolio</h1>
-                                    <!-- <h3>This is Frontend Developer Baenk</h3> -->
+                                    <h2>Baenk Portfolio</h2>
                                     <p></p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="sqs-col-2 sqs-spacer"></div>
+                    <!-- <div class="sqs-col-2 sqs-spacer"></div> -->
                 </div>
             </div>
         </section>
 
-        <section id="new-page-03" class="index-page index-page-bg-03 bg-color-light-gray">
-            <div class="index-page-content">
+        <section id="new-page-03" class="index-page index-page-bg-03 bg-color-light-charcoal">
+            <div class="index-page-content" style="padding-bottom: 0px;">
                 <div class="sqs-layout sqs-layout-direction">
-                    <div class="sqs-col-1 sqs-spacer"></div>
+                    <div class="sqs-col-1 sqs-spacer-960"></div>
                     <div class="sqs-col-10 sqs-layout sqs-layout-direction">
                         <div class="sqs-col-6 center" style="display: flex; flex-flow: row wrap; align-items: center;">
                             <div class="sqs-content">
                                 <div class="sqs-block">
                                     <div class="sqs-image sqs-layout" style="align-items: center;">
-                                        <img class="sqs-image__elem" src="commonfiles/images/profile_01.jpg">
+                                        <!-- <img class="sqs-image__elem" src="./commonfiles/images/profile_01.jpg"> -->
+                                        <img class="sqs-image__elem" src="./commonfiles/images/profile_02.png">
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!-- <div class="sqs-col-1 sqs-spacer"></div> -->
-                        <div class="sqs-col-5"
-                            style="display: flex; flex-flow: row wrap; align-items: center; margin: 0 auto;">
+                        <div class="sqs-col-6"
+                            style="display: flex; flex-flow: row wrap; align-items: center; word-break: keep-all;">
                             <div class="sqs-content">
                                 <div class="sqs-block">
                                     <div class="sqs-block-text">
                                         <!-- <h2>Profile</h2> -->
-                                        <h2>프론트엔드 개발자를 찾고있나요?</h2>
+                                        <h1 style="color: #fff;">프론트엔드 개발자를 찾고있나요?</h1>
                                         <!-- <h3>프론트엔드 개발자 배남기 입니다</h3> -->
                                     </div>
                                 </div>
@@ -418,7 +445,7 @@
                                         <!-- <p>프론트엔드 개발자를 꿈꾸는 배남기입니다 웹페이지를 사용하는 고객들이 UI/UX에 대해 느끼는 사용감을 향상시킬 수 있도록
                                             새로운 아이디어를 탐구하고 있습니다!
                                         </p> -->
-                                        <p>안녕하세요. 프론트엔드 개발자 배남기 입니다. 다양한 경험과 창의적이고 예술적인 감각으로
+                                        <p style="color: #ada8a8;">안녕하세요. 프론트엔드 개발자 배남기 입니다. 다양한 경험과 창의적이고 예술적인 감각으로
                                             웹사이트를 만들어갑니다. 지금 만나보세요! 당신의 연락을 기다립니다
                                         </p>
                                     </div>
@@ -445,28 +472,7 @@
                         </div>
                     </div>
 
-                    <div class="sqs-col-1 sqs-spacer"></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="new-page-02" class="index-page">
-            <div class="index-page-content">
-                <div class="sqs-layout sqs-layout-direction">
-                    <div class="sqs-col-2 sqs-spacer"></div>
-                    <div class="sqs-col-8 center">
-                        <div class="sqs-content">
-                            <div class="sqs-block">
-                                <div class="sqs-block-text">
-                                    <!-- <h3>This is Frontend Developer Baenk</h3> -->
-                                    <h1>So, Who am I?</h1>
-                                    <!-- <h3>This is Frontend Developer Baenk</h3> -->
-                                    <p></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sqs-col-2 sqs-spacer"></div>
+                    <div class="sqs-col-1 sqs-spacer-960"></div>
                 </div>
             </div>
         </section>
@@ -474,9 +480,9 @@
         <section id="new-page-04" class="index-page index-page-bg-03">
             <div class="index-page-content">
                 <div class="sqs-layout sqs-layout-direction">
-                    <div class="sqs-col-2 sqs-spacer"></div>
+                    <div class="sqs-col-2 sqs-spacer-960"></div>
                     <div class="sqs-col-8 sqs-layout sqs-layout-direction">
-                        <div class="sqs-content">
+                        <div class="sqs-content sqs-about">
                             <div class="sqs-block center">
                                 <div class="sqs-block-text`">
                                     <!-- <h1>About</h1> -->
@@ -493,13 +499,13 @@
                                             <p><span>이름 :</span>배남기</p>
                                         </li>
                                         <li>
-                                            <p><span>연락처 :</span>010-0000-0000</p>
+                                            <p><span>연락처 :</span>010-9700-3230</p>
                                         </li>
                                         <li>
                                             <p><span>이메일 :</span>itwasgreat@naver.com</p>
                                         </li>
                                         <li>
-                                            <p><span>홈페이지 :</span>www.musenaus.git.io</p>
+                                            <p><span>홈페이지 :</span>baenk.github.io/portfolio/</p>
                                         </li>
                                     </ul>
                                 </div>
@@ -511,16 +517,30 @@
                                     <!-- <h1>경력</h1> -->
                                     <ul class="sqs-block-text-inner">
                                         <li>
-                                            <p><span>엘토브</span></p>
+                                            <p><span>엘토브 :</span></p>
+                                            <p>R&D 부서 개발팀 프론트엔드 개발자(2020.09.14 - 2020.12.31)</p>
+                                            <p>웹개발로 만드는 Lotte Tower Kiosk 프로젝트에 참여했습니다</p>
+                                            <br>
+                                            <p>kiosk 가로형 및 세로형 웹 퍼블리싱 100%</p>
+                                            <p>ajex 통신으로 다국어 json 파일 로드 및 언어별 키오스크 텍스트 변경</p>
+                                            <p>기타 javascript 작업 보조 </p>
                                         </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="sqs-spacer"></div>
+                            <div class="sqs-block">
+                                <div class="sqs-block-text">
+                                    <h2 class="sub-title">Education</h2>
+                                    <!-- <h1>경력</h1> -->
+                                    <ul class="sqs-block-text-inner">
                                         <li>
-                                            <p><span>그린아카데미 신촌</span></p>
-                                        </li>
-                                        <li>
-                                            <p><span>aaaaa</span></p>
-                                        </li>
-                                        <li>
-                                            <p><span>무언가</span></p>
+                                            <p><span>웹 퍼블리셔 전문가 양성과정 :</span></p>
+                                            <p>신촌 그린 컴퓨터 아카데미(2019.12 - 2020.05)</p>
+                                            <br>
+                                            <p>NCS에 기반한 웹퍼블리셔 직업훈련으로써 800여 시간의 교육과정을 이수하였습니다. HTML, CSS, JQurey 를 사용한 웹
+                                                퍼블리싱 뿐만 아니라 웹 기획, 웹디자인, 웹 퍼블리싱 등 전반적인 업무 진행사항을 배워 협업에 대한 이해도를 높이고 실전에 바로
+                                                투입될 수 있도록 교육받았습니다</p>
                                         </li>
                                     </ul>
                                 </div>
@@ -532,19 +552,19 @@
                                     <!-- <h1>기술 및 작업도구</h1> -->
                                     <ul class="sqs-block-text-inner">
                                         <li>
-                                            <p><span>javascript(ES6), css, html, jQuery, react</span></p>
+                                            <p>Javascript, css, html, jQuery, react(공부 중)</p>
                                         </li>
                                         <li>
-                                            <p><span>VScode, GitHub</span></p>
+                                            <p>Node express, apache</p>
                                         </li>
                                         <li>
-                                            <p><span>협업</span></p>
+                                            <p>VScode, GitHub</p>
                                         </li>
                                         <li>
-                                            <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                    Perferendis unde aspernatur qui quam fugit accusamus. Consequuntur
-                                                    quibusdam at, dolorem aperiam repellat numquam autem quam laborum
-                                                    obcaecati est nisi et illo?</span></p>
+                                            <p>TeamViewer</p>
+                                        </li>
+                                        <li>
+                                            <p>Zeplin</p>
                                         </li>
                                     </ul>
                                 </div>
@@ -552,7 +572,7 @@
                         </div>
                     </div>
 
-                    <div class="sqs-col-2 sqs-spacer"></div>
+                    <div class="sqs-col-2 sqs-spacer-960"></div>
                 </div>
             </div>
         </section>
@@ -567,7 +587,7 @@
                                 <div class="sqs-block-text">
                                     <h3>Baenk's Signature product</h3>
                                     <!-- <h1>Crafted to <span>Convert</span></h1> -->
-                                    <h1>How was he worked?</h1>
+                                    <h1>What did he make?</h1>
                                 </div>
                             </div>
                             <!-- <div class="sqs-block">
@@ -585,14 +605,14 @@
         <section id="new-page-06" class="index-page index-page-bg-03">
             <div class="index-page-content">
                 <div class="sqs-layout sqs-layout-direction">
-                    <div class="sqs-col-1 sqs-spacer"></div>
+                    <div class="sqs-col-1 sqs-spacer-960"></div>
                     <div class="sqs-col-10 sqs-layout sqs-layout-direction">
                         <div class="sqs-col-12">
                             <div class="sqs-content">
                                 <div class="sqs-block center">
                                     <div class="sqs-block-text`">
                                         <h1>Works</h1>
-                                        <!-- <p>This is my portfolio</p> -->
+                                        <p>경력기간동안 만든 작업물 입니다</p>
                                     </div>
                                 </div>
                             </div>
@@ -602,19 +622,18 @@
                             <div class="sqs-content">
                                 <div class="sqs-block">
                                     <div class="sqs-image">
-                                        <img class="sqs-image__elem" src="commonfiles/images/work_hor_01.png">
+                                        <img class="sqs-image__elem" src="./commonfiles/images/work_hor_01.png">
                                     </div>
                                 </div>
                                 <div class="sqs-block">
-                                    <div class="sqs-bloack-text center">
-                                        <h2>Johnstones</h2>
-                                        <p>this is this so this is this work</p>
+                                    <div class="sqs-block-text center">
+                                        <h2>Lotte Tower Kiosk (세로형)</h2>
+                                        <p>램 사용량이 높으며, 디스크 용량상 일부 이미지가 누락되었습니다</p>
                                     </div>
                                 </div>
                                 <div class="sqs-block">
                                     <div class="sqs-button center">
-                                        <a class="sqs-button__elem" href="/lottetower_ver/index.html"
-                                            target="blank">View
+                                        <a class="sqs-button__elem" href="./lottetower_ver_201224/index.html">View
                                             Website</a>
                                     </div>
                                 </div>
@@ -624,34 +643,48 @@
                             <div class="sqs-content">
                                 <div class="sqs-block">
                                     <div class="sqs-image">
-                                        <img class="sqs-image__elem" src="commonfiles/images/work_hor_01.png">
+                                        <img class="sqs-image__elem" src="./commonfiles/images/work_hor_01.png">
                                     </div>
                                 </div>
                                 <div class="sqs-block">
-                                    <div class="sqs-bloack-text center">
-                                        <h2>Johnstones</h2>
-                                        <p>this is this so this is this work</p>
+                                    <div class="sqs-block-text center">
+                                        <h2>Lotte Tower Kiosk (가로형)</h2>
+                                        <p>램 사용량이 높으며, 디스크 용량상 일부 이미지가 누락되었습니다</p>
+                                        <!-- <span>(이 페이지는 램 사용량이 높습니다)</span> -->
                                     </div>
                                 </div>
                                 <div class="sqs-block">
                                     <div class="sqs-button center">
-                                        <a class="sqs-button__elem" href="#">View Website</a>
+                                        <a class="sqs-button__elem" href="./lottetower_hor_201224/index.html">View
+                                            Website</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
+                        <div class="sqs-col-12" style="padding-top: 120px;">
+                            <div class="sqs-content">
+                                <div class="sqs-block center">
+                                    <div class="sqs-block-text`">
+                                        <h1>Web Renewal</h1>
+                                        <p>웹퍼블리셔 양성과정 동안 리뉴얼한 작업물 입니다</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sqs-col-12 sqs-spacer"></div>
+
                         <div class="sqs-col-6">
                             <div class="sqs-content">
                                 <div class="sqs-block">
                                     <div class="sqs-image">
-                                        <img class="sqs-image__elem" src="commonfiles/images/work_03.png">
+                                        <img class="sqs-image__elem" src="./commonfiles/images/work_03.png">
                                     </div>
                                 </div>
                                 <div class="sqs-block">
-                                    <div class="sqs-bloack-text center">
+                                    <div class="sqs-block-text center">
                                         <h2>Johnstones</h2>
-                                        <p>this is this so this is this work</p>
+                                        <p>웹 표준을 준수한 리뉴얼 사이트</p>
                                     </div>
                                 </div>
                                 <div class="sqs-block">
@@ -665,33 +698,13 @@
                             <div class="sqs-content">
                                 <div class="sqs-block">
                                     <div class="sqs-image">
-                                        <img class="sqs-image__elem" src="commonfiles/images/work_04.png">
+                                        <img class="sqs-image__elem" src="./commonfiles/images/work_04.png">
                                     </div>
                                 </div>
                                 <div class="sqs-block">
-                                    <div class="sqs-bloack-text center">
-                                        <h2>Johnstones</h2>
-                                        <p>this is this so this is this work</p>
-                                    </div>
-                                </div>
-                                <div class="sqs-block">
-                                    <div class="sqs-button center">
-                                        <a class="sqs-button__elem" href="#">View Website</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sqs-col-6">
-                            <div class="sqs-content">
-                                <div class="sqs-block">
-                                    <div class="sqs-image">
-                                        <img class="sqs-image__elem" src="commonfiles/images/work_05.png">
-                                    </div>
-                                </div>
-                                <div class="sqs-block">
-                                    <div class="sqs-bloack-text center">
-                                        <h2>Johnstones</h2>
-                                        <p>this is this so this is this work</p>
+                                    <div class="sqs-block-text center">
+                                        <h2>Shake shack</h2>
+                                        <p>반응형을 적용한 리뉴얼 사이트</p>
                                     </div>
                                 </div>
                                 <div class="sqs-block">
@@ -705,13 +718,33 @@
                             <div class="sqs-content">
                                 <div class="sqs-block">
                                     <div class="sqs-image">
-                                        <img class="sqs-image__elem" src="commonfiles/images/work_06.png">
+                                        <img class="sqs-image__elem" src="./commonfiles/images/work_05.png">
                                     </div>
                                 </div>
                                 <div class="sqs-block">
-                                    <div class="sqs-bloack-text center">
-                                        <h2>Johnstones</h2>
-                                        <p>this is this so this is this work</p>
+                                    <div class="sqs-block-text center">
+                                        <h2>National museum</h2>
+                                        <p>부트스트랩 적용 리뉴얼 사이트</p>
+                                    </div>
+                                </div>
+                                <div class="sqs-block">
+                                    <div class="sqs-button center">
+                                        <a class="sqs-button__elem" href="#">View Website</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sqs-col-6">
+                            <div class="sqs-content">
+                                <div class="sqs-block">
+                                    <div class="sqs-image">
+                                        <img class="sqs-image__elem" src="./commonfiles/images/work_06.png">
+                                    </div>
+                                </div>
+                                <div class="sqs-block">
+                                    <div class="sqs-block-text center">
+                                        <h2>Portfolio(구버전)</h2>
+                                        <p>애니메이션에 집중한 포트폴리오</p>
                                     </div>
                                 </div>
                                 <div class="sqs-block">
@@ -723,7 +756,7 @@
                         </div>
 
                     </div>
-                    <div class="sqs-col-1 sqs-spacer"></div>
+                    <div class="sqs-col-1 sqs-spacer-960"></div>
                 </div>
             </div>
         </section>
