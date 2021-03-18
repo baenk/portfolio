@@ -122,6 +122,9 @@ a {
     }
 }
 
+.footer-copy-size {
+    font-size: 10px;
+}
 
 /* text color option */
 .text-color__white {
@@ -142,6 +145,9 @@ a {
 .center {
     text-align: center;
 }
+.right {
+    text-align: right;
+}
 
 
 
@@ -161,7 +167,7 @@ a {
 
 .index-page-content {
     padding-top: 120px;
-    padding-bottom: 120px;
+    padding-bottom: 0px;
     padding-left: 100px;
     padding-right: 100px;
 }
@@ -187,6 +193,7 @@ a {
     .index-page-content {
         padding-left: 20px;
         padding-right: 20px;
+        padding-bottom: 120px;
     }
 }
 
@@ -234,6 +241,9 @@ a {
 
 .sqs-layout-direction {
     flex-flow: row wrap;
+}
+.sqs-layout__row-center {
+    justify-content: center;
 }
 
 
