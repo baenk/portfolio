@@ -167,7 +167,7 @@ a {
 
 .index-page-content {
     padding-top: 120px;
-    padding-bottom: 0px;
+    padding-bottom: 120px;
     padding-left: 100px;
     padding-right: 100px;
 }
@@ -193,7 +193,6 @@ a {
     .index-page-content {
         padding-left: 20px;
         padding-right: 20px;
-        padding-bottom: 120px;
     }
 }
 
