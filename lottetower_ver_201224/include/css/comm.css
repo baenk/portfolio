@@ -1,0 +1,21 @@
+/* 기본 CSS */
+/* 기본 색상 #7424ac */
+/*           #9e14fc */
+
+/*
+ZINDEX
+
+MODAL ALERT        97000
+      LAYER        95000
+      BG           90000
+LOADING           100000
+TOP TITLE,BOTTOM   80000
+
+*/
+
+
+*{
+    -webkit-text-size-adjust:none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none; 
+}

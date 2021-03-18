@@ -1,0 +1,430 @@
+<!--------------------------------------------- 
+   name :  store.html
+   auth :  ELTOV
+   date :  2020.11.08
+   desc :  매장검색 HTML
+---------------------------------------------->
+<!DOCTYPE HTML>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="user-scalable=no,initial-scale=1.0,maximum-scale=1.0 minimal-ui" />
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LOTTE TOWER INFORMATION</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico">
+
+    <link rel="stylesheet" href="./include/css/lib/reset.css">
+    <link rel="stylesheet" href="./include/css/lib/font.css">
+    <link rel="stylesheet" href="./include/css/lib/swiper.css">
+    <link rel="stylesheet" href="./include/css/lib/common.css">
+    <link rel="stylesheet" href="./include/css/component.css">
+
+    <link rel="stylesheet" href="./include/css/store.css">
+
+    <script type="text/javascript" src="include/js/lib/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="include/js/lib/hangul.js"></script>
+    <script type="text/javascript" src="include/js/tweenmax/TweenLite.js"></script>
+    <script type="text/javascript" src="include/js/tweenmax/plugins/CSSPlugin.js"></script>
+
+    <script type="text/javascript" src="include/js/comm.js"></script>
+    <script type="text/javascript" src="include/js/xml.js"></script>
+
+    <script type="text/javascript" src="include/js/store.js"></script>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+
+    <div class="contents_area">
+        <header>
+            <div class="top_box">
+                <div class="top_box_img">
+                    <img src="./images/brand-ic-tit.svg">
+                </div>
+                <div class="top_text_box">
+                    <h1 class="lang_code_names" lang_code="STORE_TITLE">매장검색</h1>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="store_wrap">
+                <div class="top">
+                    <div class="contents_section">
+                        <ul class="contents_list">
+
+                            <div id="id_store_list" class="store_list"></div>
+
+                            <div id="id_page_car_no_result" class="store_no_result">
+                                <img src="./images/carpark_no_search.png">
+                                <p class="lang_code_names" lang_code="STORE_NO_RESULT">검색결과가 없습니다.<br>다른 검색어를 입력해 주세요.
+                                </p>
+                            </div>
+
+                        </ul>
+                    </div>
+                    <div id="id_paging_main" class="pager_section">
+                        <ul class="pager_list">
+                            <li id="id_paging_prev" class="circle_38 prev_btn" page_num="1"
+                                onClick="javascript:onClickPagingNum(this);"><img src="./images/brand-ic-navi-left.png">
+                            </li>
+                            <li id="id_paging_01" class="circle_38" page_num="1"
+                                onClick="javascript:onClickPagingNum(this);">
+                                <p>1</p>
+                            </li>
+                            <li id="id_paging_02" class="circle_38" page_num="2"
+                                onClick="javascript:onClickPagingNum(this);">
+                                <p>2</p>
+                            </li>
+                            <li id="id_paging_03" class="circle_38" page_num="3"
+                                onClick="javascript:onClickPagingNum(this);">
+                                <p>3</p>
+                            </li>
+                            <li id="id_paging_04" class="circle_38" page_num="4"
+                                onClick="javascript:onClickPagingNum(this);">
+                                <p>4</p>
+                            </li>
+                            <li id="id_paging_05" class="circle_38" page_num="5"
+                                onClick="javascript:onClickPagingNum(this);">
+                                <p>5</p>
+                            </li>
+                            <li id="id_paging_06" class="circle_38" page_num="6"
+                                onClick="javascript:onClickPagingNum(this);">
+                                <p>6</p>
+                            </li>
+                            <li id="id_paging_07" class="circle_38" page_num="7"
+                                onClick="javascript:onClickPagingNum(this);">
+                                <p>7</p>
+                            </li>
+                            <li id="id_paging_next" class="circle_38 next_btn" page_num="1"
+                                onClick="javascript:onClickPagingNum(this);"><img
+                                    src="./images/brand-ic-navi-right.png">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+                <!--------------- category ------------------>
+
+                <div class="bottom">
+                    <div class="search_option">
+                        <ul class="search_option_list">
+                            <li id="id_search_type_category" class="search_text search_text_active"
+                                onClick="javascript:onClickSearchType('CATE');">
+                                <img src="./images/brand-tab-ic-category.svg" class="icon_img">
+                                <img src="./images/brand-tab-ic-category-o.svg" class="icon_img">
+                                <p class="lang_code_names" lang_code="STORE_CTG_SEARCH">카테고리 검색</p>
+                            </li>
+                            <li id="id_search_type_keyword" class="search_text"
+                                onClick="javascript:onClickSearchType('KEYWORD');">
+                                <img src="./images/brand-tab-ic-alphabet.svg" class="icon_img">
+                                <img src="./images/brand-tab-ic-alphabet-o.svg" class="icon_img">
+                                <p class="lang_code_names" lang_code="STORE_CTG_INIT">초성/알파벳 검색</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="search_box">
+                        <div class="search_contents">
+
+                            <div class="category_box">
+                                <ul class="category">
+
+
+                                    <li code="0000">
+                                        <img src="./images/brand-category-ic-01.png">
+                                        <img src="./images/brand-category-ic-01-o.png">
+                                        <p class="lang_code_names" lang_code="STORE_CTG_C01">해외명품</p>
+                                    </li>
+                                    <li code="0001">
+                                        <img src="./images/brand-category-ic-02.png">
+                                        <img src="./images/brand-category-ic-02-o.png">
+                                        <p class="lang_code_names" lang_code="STORE_CTG_C02">패션의류</p>
+                                    </li>
+                                    <li code="0002">
+                                        <img src="./images/brand-category-ic-03.png">
+                                        <img src="./images/brand-category-ic-03-o.png">
+                                        <p class="lang_code_names" lang_code="STORE_CTG_C03">패션잡화</p>
+                                    </li>
+                                    <li code="0003">
+                                        <img src="./images/brand-category-ic-04.png">
+                                        <img src="./images/brand-category-ic-04-o.png">
+                                        <p class="lang_code_names" lang_code="STORE_CTG_C04">뷰티</p>
+                                    </li>
+                                    <li code="0004">
+                                        <img src="./images/brand-category-ic-05.png">
+                                        <img src="./images/brand-category-ic-05-o.png">
+                                        <p class="lang_code_names" lang_code="STORE_CTG_C05">스포츠</p>
+                                    </li>
+                                    <li code="0005">
+                                        <img src="./images/brand-category-ic-06.png">
+                                        <img src="./images/brand-category-ic-06-o.png">
+                                        <p class="lang_code_names" lang_code="STORE_CTG_C06">키즈</p>
+                                    </li>
+                                    <li code="0006">
+                                        <img src="./images/brand-category-ic-07.png">
+                                        <img src="./images/brand-category-ic-07-o.png">
+                                        <p class="lang_code_names" lang_code="STORE_CTG_C07">리빙/가전</p>
+                                    </li>
+                                    <li code="0010">
+                                        <img src="./images/brand-category-ic-08.png">
+                                        <img src="./images/brand-category-ic-08-o.png">
+                                        <p class="lang_code_names" lang_code="STORE_CTG_C08">엔터테인먼트</p>
+                                    </li>
+                                    <li code="0007">
+                                        <img src="./images/brand-category-ic-09.png">
+                                        <img src="./images/brand-category-ic-09-o.png">
+                                        <p class="lang_code_names" lang_code="STORE_CTG_C09">호텔</p>
+                                    </li>
+                                    <li code="0011">
+                                        <img src="./images/brand-category-ic-10.png">
+                                        <img src="./images/brand-category-ic-10-o.png">
+                                        <p class="lang_code_names" lang_code="STORE_CTG_C10">서비스</p>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                            <div class="keyword_box" style="display:none;">
+                                <div class="search_keytype">
+                                    <span id="id_search_lang" class="circle_56 circle_56_wide">
+                                        <p class="search_circle_active" code="KOR">한</p>
+                                        <p code="ENG">영</p>
+                                        <p code="NUM">숫자</p>
+                                    </span>
+                                    <input id="id_txt_search_keyword" type="text" name="search_store"
+                                        placeholder="초성/알파벳으로 매장을 검색해 보세요">
+                                    <div class="search_image"><img src="./images/category_icon_03.png"></div>
+                                    <div class="search_arrow" onClick="javascript:onClickSearchKeyDel('NUM');"><img
+                                            src="./images/icon-search-clear.svg" style="width:30px;"></div>
+                                    <span class="circle_56_whight" onClick="javascript:onClickSearchKeyDel('ALL');"><img
+                                            src="./images/icon-search-del.svg" style="width:30px;"></span>
+                                </div>
+                                <div>
+                                    <div class="lang">
+                                        <ul id="id_lang_list_kor" class="lang_list kor">
+                                            <li code="ㄱ"><span class="circle_60">
+                                                    <p>ㄱ</p>
+                                                </span></li>
+                                            <li code="ㄴ"><span class="circle_60">
+                                                    <p>ㄴ</p>
+                                                </span></li>
+                                            <li code="ㄷ"><span class="circle_60">
+                                                    <p>ㄷ</p>
+                                                </span></li>
+                                            <li code="ㄹ"><span class="circle_60">
+                                                    <p>ㄹ</p>
+                                                </span></li>
+                                            <li code="ㅁ"><span class="circle_60">
+                                                    <p>ㅁ</p>
+                                                </span></li>
+                                            <li code="ㅂ"><span class="circle_60">
+                                                    <p>ㅂ</p>
+                                                </span></li>
+                                            <li code="ㅅ"><span class="circle_60">
+                                                    <p>ㅅ</p>
+                                                </span></li>
+                                            <li code="ㅇ"><span class="circle_60">
+                                                    <p>ㅇ</p>
+                                                </span></li>
+                                            <li code="ㅈ"><span class="circle_60">
+                                                    <p>ㅈ</p>
+                                                </span></li>
+                                            <li code="ㅊ"><span class="circle_60">
+                                                    <p>ㅊ</p>
+                                                </span></li>
+                                            <li code="ㅋ"><span class="circle_60">
+                                                    <p>ㅋ</p>
+                                                </span></li>
+                                            <li code="ㅌ"><span class="circle_60">
+                                                    <p>ㅌ</p>
+                                                </span></li>
+                                            <li code="ㅍ"><span class="circle_60">
+                                                    <p>ㅍ</p>
+                                                </span></li>
+                                            <li code="ㅎ"><span class="circle_60">
+                                                    <p>ㅎ</p>
+                                                </span></li>
+                                        </ul>
+                                        <ul id="id_lang_list_eng" class="lang_list eng">
+                                            <li code="A"><span class="circle_60">
+                                                    <p>A</p>
+                                                </span></li>
+                                            <li code="B"><span class="circle_60">
+                                                    <p>B</p>
+                                                </span></li>
+                                            <li code="C"><span class="circle_60">
+                                                    <p>C</p>
+                                                </span></li>
+                                            <li code="D"><span class="circle_60">
+                                                    <p>D</p>
+                                                </span></li>
+                                            <li code="E"><span class="circle_60">
+                                                    <p>E</p>
+                                                </span></li>
+                                            <li code="F"><span class="circle_60">
+                                                    <p>F</p>
+                                                </span></li>
+                                            <li code="G"><span class="circle_60">
+                                                    <p>G</p>
+                                                </span></li>
+                                            <li code="H"><span class="circle_60">
+                                                    <p>H</p>
+                                                </span></li>
+                                            <li code="I"><span class="circle_60">
+                                                    <p>I</p>
+                                                </span></li>
+                                            <li code="J"><span class="circle_60">
+                                                    <p>J</p>
+                                                </span></li>
+                                            <li code="K"><span class="circle_60">
+                                                    <p>K</p>
+                                                </span></li>
+                                            <li code="L"><span class="circle_60">
+                                                    <p>L</p>
+                                                </span></li>
+                                            <li code="M"><span class="circle_60">
+                                                    <p>M</p>
+                                                </span></li>
+                                            <li code="N"><span class="circle_60">
+                                                    <p>N</p>
+                                                </span></li>
+                                            <li code="O"><span class="circle_60">
+                                                    <p>O</p>
+                                                </span></li>
+                                            <li code="P"><span class="circle_60">
+                                                    <p>P</p>
+                                                </span></li>
+                                            <li code="Q"><span class="circle_60">
+                                                    <p>Q</p>
+                                                </span></li>
+                                            <li code="R"><span class="circle_60">
+                                                    <p>R</p>
+                                                </span></li>
+                                            <li code="S"><span class="circle_60">
+                                                    <p>S</p>
+                                                </span></li>
+                                            <li code="T"><span class="circle_60">
+                                                    <p>T</p>
+                                                </span></li>
+                                            <li code="U"><span class="circle_60">
+                                                    <p>U</p>
+                                                </span></li>
+                                            <li code="V"><span class="circle_60">
+                                                    <p>V</p>
+                                                </span></li>
+                                            <li code="W"><span class="circle_60">
+                                                    <p>W</p>
+                                                </span></li>
+                                            <li code="X"><span class="circle_60">
+                                                    <p>X</p>
+                                                </span></li>
+                                            <li code="Y"><span class="circle_60">
+                                                    <p>Y</p>
+                                                </span></li>
+                                            <li code="Z"><span class="circle_60">
+                                                    <p>Z</p>
+                                                </span></li>
+                                        </ul>
+                                        <ul id="id_lang_list_num" class="lang_list num">
+                                            <li code="0"><span class="circle_60">
+                                                    <p>0</p>
+                                                </span></li>
+                                            <li code="1"><span class="circle_60">
+                                                    <p>1</p>
+                                                </span></li>
+                                            <li code="2"><span class="circle_60">
+                                                    <p>2</p>
+                                                </span></li>
+                                            <li code="3"><span class="circle_60">
+                                                    <p>3</p>
+                                                </span></li>
+                                            <li code="4"><span class="circle_60">
+                                                    <p>4</p>
+                                                </span></li>
+                                            <li code="5"><span class="circle_60">
+                                                    <p>5</p>
+                                                </span></li>
+                                            <li code="6"><span class="circle_60">
+                                                    <p>6</p>
+                                                </span></li>
+                                            <li code="7"><span class="circle_60">
+                                                    <p>7</p>
+                                                </span></li>
+                                            <li code="8"><span class="circle_60">
+                                                    <p>8</p>
+                                                </span></li>
+                                            <li code="9"><span class="circle_60">
+                                                    <p>9</p>
+                                                </span></li>
+                                        </ul>
+                                    </div> <!-- END LANG -->
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+
+
+
+
+</body>
+
+</html>
+
+<script language="javascript">
+
+    var PAGEACTIVEYN = false;
+
+    var gl_conf_header = new Object();
+    var gl_jsop_lang_data = new Object();
+
+    var gl_arr_store_list = new Array();
+
+    function setInit() {
+
+        // 클릭이벤트 리스너 처리
+        // 카테고리 타입 선택
+        $(".category li").click(function () {
+            onClickSearchCategory(this);
+        });
+
+        $(".search_keytype p").click(function () {
+            onClickSearchKeyType(this);
+        });
+
+        $("#id_lang_list_kor li").click(function () {
+            onClickSearchKeyWord(this, 'KOR');
+        });
+        $("#id_lang_list_eng li").click(function () {
+            onClickSearchKeyWord(this, 'ENG');
+        });
+        $("#id_lang_list_num li").click(function () {
+            onClickSearchKeyWord(this, 'NUM');
+        });
+
+        if (parent.MAINPARENTCUSTOMCODE) {
+            $(".debug_area").hide();
+            PAGEACTIVEYN = false;
+            setInitSetting();
+        } else {
+            PAGEACTIVEYN = true;
+            setLoadLanguage("./include/kiosk_lang_horizon.json");
+            setLoadContents("./xml/kiosk_contents.xml");
+        }
+    }
+
+    jQuery(document).ready(function () {
+        setTimeout(setInit, 150);
+    });
+</script>

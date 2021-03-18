@@ -1,0 +1,140 @@
+/******************************************
+   name :  recommand.css
+   auth :  ELTOV
+   date :  2020.11.08
+   desc :  추천매장 CSS
+*******************************************/
+
+.debug_button01{
+    position:absolute;z-index:1;
+    width:100px;height:100px;
+    background:#000000;
+    opacity:0;
+    top:0;right:0;
+}
+
+
+
+
+
+
+
+
+
+/* SECTION AREA */
+.recommand_wrap{
+    padding: 94px 0 0 0;
+    box-sizing: border-box;
+}
+
+/* COMMON TEXT AREA*/
+.swiper_text_box{
+    width: 100%;
+    height: 53px;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: flex-end;
+    box-sizing: border-box;
+    padding: 0 0 10px 62px;
+    /* border: 1px solid black; */
+    border-bottom: 1px solid #bebebf;
+}
+.swiper_text_box h3{
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 32px;
+    letter-spacing: -0.8;
+    color: #464646;
+    /* border: 1px solid black; */
+    margin-right: 17px;
+}
+.swiper_text_box p{
+    font-weight: 300;
+    line-height: 16px;
+    letter-spacing: 0.16;
+    color: #464646;
+}
+.swiper_text_box hr{
+    width: 695px;
+    margin: 0;
+    border: 0;
+    border-bottom: 1px solid #bebebf;
+}
+
+
+/* PHOTO TEXT AREA*/
+.photo_section{
+    margin: 20px 0;
+}
+.photo_section .swiper_text_box{
+    justify-content: flex-end;
+    /* padding: 0; */
+}
+.photo_section .swiper_text_box hr{
+    width: 790px;
+}
+.new_store_section .swiper_text_box hr{
+    width: 740px;
+}
+
+
+
+/* COMMON SWIPER AREA*/
+div.swiper-container {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 20px 0 33px;
+}
+
+div.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    width: 430px;
+    height: 238px;
+    overflow: hidden;
+    border-radius: 20px;
+
+    /* Center slide text vertically */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+}
+.swiper-slide img{
+/*    max-width: 100%;*/
+/*    max-height: 100%;*/
+    width: 100%;
+    height: 100%;
+}
+
+/* PHOTO SWIPER SIZE*/
+div.photo{
+    width: 298px;
+    height: 398px;
+}
+/* NEW_STORE SWIPER SIZE*/
+div.new_store{
+    width: 430px;
+    height: 240px;
+}
+
+
+
+/* PHOTO SWIPER TEXT*/
+.photo .photo_txt{
+    position: absolute;bottom: 0;
+    width: 100%;
+    height: 55px;
+    background: rgba(0,0,0,0.6);
+}
+.photo .photo_txt p{
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 55px;
+    color: #ffffff ;
+    text-align: center;
+}

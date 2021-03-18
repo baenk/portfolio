@@ -1,0 +1,84 @@
+/******************************************
+   name :  facility.css
+   auth :  ELTOV
+   date :  2020.11.08
+   desc :  ����ü� ó��
+*******************************************/
+
+
+/* SECTION AREA */
+.facility_wrap{
+    width: 1000px;
+    height: 100%;
+    margin: 0 40px;
+    padding: 20px 20px 0 20px;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+
+/******************* FACILITY LIST *****************/
+
+/* FACILITY LINE */
+.facility_list li{
+    width: 100%;
+    height: 135px;
+    display: table;
+    /* border: 1px solid blue; */
+    border-bottom: 1px solid #bebebf;
+}
+.facility_list li:last-child{
+    border: 0;
+}
+.facility_list li .facility_box{
+    width: 33.3%;
+    display: table-cell;
+    box-sizing: border-box;
+    vertical-align: middle;
+    /* border: 1px solid red; */
+}
+
+/* FACILITY */
+.facility_list li .facility_box>div{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* FACILITY ICON IMAGE */
+.facility_list li .facility_box .facility_img_box{
+    margin: 0 20px;
+}
+.facility_list li .facility_box .facility_img_box img{
+    width:80px;
+}
+
+
+.facility_list li .facility_box .facility_img_box img:nth-child(2){
+    display: none;
+}
+
+/* FACILITY ICON IMAGE ACTIVE */
+.facility_list li .facility_box.facility_active .facility_img_box img:first-child{
+    display: none;
+}
+.facility_list li .facility_box.facility_active .facility_img_box img:nth-child(2){
+    display: block;
+}
+
+/* FACILITY NAME */
+.facility_list li .facility_box .facility_text_box h3{
+
+    /* 일단 수정 */
+    /* font-size: 21px; */
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 21px;
+    color: #7d7f80;
+}
+.facility_list li .facility_box .facility_text_box p{
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 5px;
+    color: #949494;
+}
+

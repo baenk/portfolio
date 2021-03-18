@@ -1,0 +1,152 @@
+/******************************************
+   name :  event.css
+   auth :  ELTOV
+   date :  2020.11.15
+   desc :  이벤트 스타일 시트
+*******************************************/
+
+
+
+/* SECTION AREA */
+.event_wrap{
+    width: 1080px;
+    height: 1372px;
+    
+    /*오른쪽으로 회전*/
+    padding: 47px 0 0 50px;
+    
+    /*왼쪽으로 회전*/
+    /*padding: 47px 50px 0 0;*/
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+
+
+
+/******************* EVENT SWIPER AREA *****************/
+.event_wrap .swiper-container {
+    width: 100%;
+    /* height: 1083px; */
+    height: 1083px;
+    box-sizing: border-box;
+    /* padding: 33px 0; */
+    /* display: none; */
+    /* border: 1px solid red; */
+    
+}
+
+.event_wrap .swiper-container .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    width:794px;
+    height:1058px;
+    overflow: hidden;
+    border-radius: 30px;
+    
+    /*왼쪽으로 회전*/
+    box-shadow:  5px 10px 10px rgba(12, 9, 9, 0.4);
+    
+    /*오른쪽으로 회전*/
+    /* box-shadow:  -5px 10px 10px rgba(12, 9, 9, 0.4);*/
+    /* border: 1px solid red; */
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.event_wrap .swiper-container .swiper-slide img{
+    width:794px;
+    height:1058px;
+    border-radius:30px;
+}
+.event_wrap .swiper-container #id_event_no_list{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 50px 50px 0 0;
+    
+    display: none;
+}
+.event_wrap .swiper-container #id_event_no_list img{
+    width: 100%;
+    border-radius:30px;
+}
+.event_wrap .swiper-container #id_event_no_list .no_list_text{
+    bottom: 460px;
+    margin: auto;
+    font-size:25px;
+    font-weight: 500;
+    color: #cccccc;
+}
+
+
+
+
+
+/******************* PAGER AREA *****************/
+.pager_section{
+    width: 340px;
+    height: 47px;
+    margin: auto;
+    position: relative;
+    box-sizing: border-box;
+    margin-top: 10px;
+    /* border: 1px solid red; */
+}
+.pager_list{
+    width: 100%;
+    height:40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.pager_list li,
+.pager_list span{
+    margin-right: 9px;
+}
+.pager_list .prev_btn{
+    order: -1;
+}
+.pager_list li:last-child{
+    margin-right: 0;
+}
+
+
+
+/******************* EVENT CATEGORY AREA *****************/
+.event_category{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    box-sizing: border-box;
+    padding-right: 50px;
+}
+.event_category>span{
+    margin: 0 12px;
+}
+.event_category>span img:nth-child(2){
+    display: none;
+}
+.event_category>span.rectangle_ctg_active img:first-child{
+    display: none;
+}
+.event_category>span.rectangle_ctg_active img:nth-child(2){
+    display: block;
+}

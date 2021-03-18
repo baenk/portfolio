@@ -1,0 +1,197 @@
+<!--------------------------------------------- 
+   name :  park.html
+   auth :  ELTOV
+   date :  2020.11.15
+   desc :  주차연동 HTML
+---------------------------------------------->
+
+<!DOCTYPE HTML>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="user-scalable=no,initial-scale=1.0,maximum-scale=1.0 minimal-ui" />
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LOTTE TOWER INFORMATION</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico">
+
+    <link rel="stylesheet" href="./include/css/lib/reset.css">
+    <link rel="stylesheet" href="./include/css/lib/font.css">
+    <link rel="stylesheet" href="./include/css/lib/common.css">
+    <link rel="stylesheet" href="./include/css/component.css">
+
+    <link rel="stylesheet" href="./include/css/park.css">
+
+    <script type="text/javascript" src="include/js/lib/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="include/js/lib/sock.js"></script>
+    <script type="text/javascript" src="include/js/comm.js"></script>
+    <script type="text/javascript" src="include/js/xml.js"></script>
+
+    <script type="text/javascript" src="include/js/park.js"></script>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+
+    <div class="debug_area" style="width: 400px;">
+        <button class="btn" onClick="javascript:onClickDebugLang('KOR');">KOR</button>
+        <button class="btn" onClick="javascript:onClickDebugLang('ENG');">ENG</button>
+        <button class="btn" onClick="javascript:onClickDebugLang('CHN');">CHN</button>
+        <button class="btn" onClick="javascript:onClickDebugLang('JPN');">JPN</button>
+    </div>
+
+
+    <div class="contents_area">
+        <header>
+            <div class="top_box">
+                <div class="top_box_img">
+                    <img src="./images/carpark-ic-tit.svg">
+                </div>
+                <div class="top_text_box">
+                    <h1 class="lang_code_names" lang_code="PARK_TITLE">주차안내</h1>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+        </header>
+        <section>
+            <div id="car_park_info_wrap">
+                <div class="park_info_box">
+                    <div class="img_section lang_carpark_img">
+                        <img src="./images/carpark_img_kor.png">
+                        <!-- qr page 추가 -->
+                        <div class="qr_part">
+                            <div class="qr_img">
+                                <img src="./images/carpark_qr-img.png">
+                            </div>
+                            <p class="lang_code_names" lang_code="PARK_QR_TEXT">주차비 결제 페이지로 이동합니다</p>
+                        </div>
+                    </div>
+
+                    <div id="id_page_car_list" class="list_section" style="display:none;">
+                        <div class="car_list_box">
+                            <div class="car_list_wrap">
+                                <ul id="id_page_car_result_list" class="car_list">
+                                    <li>
+                                        <div class="car_park_img">
+                                            <img src="">
+                                        </div>
+                                        <div class="car_park_info">
+                                            <p><span>차량번호</span>34머 8148</p>
+                                            <p><span>입차시간</span>9:15:00</p>
+                                            <p><span>주차구역</span>A40</p>
+
+                                        </div>
+                                        <div class="car_park_loc">
+                                            <span class="rectangle_loc rectangle_loc_active"><img
+                                                    src="./images/pop_location_btn01.png">
+                                                <p class="lang_code_names" lang_code="PARK_CAR_GUIDE">위치안내</p>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div id="id_page_car_no_result" class="car_no_result">
+                                    <img src="./images/carpark_no_search.png">
+                                    <p class="lang_code_names" lang_code="PARK_NO_RESULT">검색결과가 없습니다.<br>차량번호를 다시 확인하여
+                                        주세요</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <!----------- car number keyboard ------------->
+
+                <div class="car_num_box">
+                    <div class="car_num_window">
+                        <div class="inputbox">
+                            <input id="id_txt_search_keyword" type="text">
+                            <p class="lang_code_names" lang_code="PARK_ENTER_NUM">차량번호를 입력해 주세요.</p>
+                        </div>
+                    </div>
+                    <div class="car_num_key">
+                        <div class="key_box">
+                            <ul id="id_num_list" class="car_key_list">
+                                <li code="1"><span class="circle_84 circle_84_active">
+                                        <p>1</p>
+                                    </span></li>
+                                <li code="2"><span class="circle_84">
+                                        <p>2</p>
+                                    </span></li>
+                                <li code="3"><span class="circle_84">
+                                        <p>3</p>
+                                    </span></li>
+                                <li code="4"><span class="circle_84">
+                                        <p>4</p>
+                                    </span></li>
+                                <li code="5"><span class="circle_84">
+                                        <p>5</p>
+                                    </span></li>
+                                <li code="6"><span class="circle_84">
+                                        <p>6</p>
+                                    </span></li>
+                                <li code="7"><span class="circle_84">
+                                        <p>7</p>
+                                    </span></li>
+                                <li code="8"><span class="circle_84">
+                                        <p>8</p>
+                                    </span></li>
+                                <li code="9"><span class="circle_84">
+                                        <p>9</p>
+                                    </span></li>
+                                <li code="0"><span class="circle_84">
+                                        <p>0</p>
+                                    </span></li>
+
+                                <!-- HTML 변경 전 버전으로 코딩되어 있어서 변경된 부분 확인 부탁드립니다
+                                NUM LIST 밖에 있던 백스페이스 엔터 버튼을 NUM LIST 안에 같이 넣었습니다 -->
+                                <span id="id_btn_bspace" class="circle_84_2d"
+                                    onClick="javascript:onClickSearchKeyDel();"><img
+                                        src="./images/capark-keypad-ic-del.svg"></span>
+                                <span id="id_btn_enter" class="circle_84_2d"
+                                    onClick="javascript:onClickSearchKeyDone();"><img
+                                        src="./images/capark-keypad-ic-enter.svg"></span>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+</body>
+
+</html>
+
+
+<script language="javascript">
+
+    var PAGEACTIVEYN = false;
+
+    var gl_conf_header = new Object();
+    var gl_jsop_lang_data = new Object();
+    var gl_arr_park_list = new Array();
+
+    function setInit() {
+
+        $("#id_num_list li").click(function () {
+            onClickSearchNum(this);
+        });
+
+        if (parent.MAINPARENTCUSTOMCODE) {
+            $(".debug_area").hide();
+            PAGEACTIVEYN = false;
+            setInitSetting();
+        } else {
+            PAGEACTIVEYN = true;
+            setLoadLanguage("./include/kiosk_lang_horizon.json");
+            setLoadContents("./xml/kiosk_contents.xml");
+        }
+    }
+
+    jQuery(document).ready(function () {
+        setTimeout(setInit, 350);
+    });
+</script>

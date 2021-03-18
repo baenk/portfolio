@@ -1,0 +1,261 @@
+<!--------------------------------------------- 
+   name :  help.html
+   auth :  ELTOV
+   date :  2020.11.16
+   desc :  도움 html
+---------------------------------------------->
+
+<!DOCTYPE HTML>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="user-scalable=no,initial-scale=1.0,maximum-scale=1.0 minimal-ui" />
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LOTTE TOWER INFORMATION</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico">
+
+    <link rel="stylesheet" href="./include/css/lib/reset.css">
+    <link rel="stylesheet" href="./include/css/lib/font.css">
+    <link rel="stylesheet" href="./include/css/lib/swiper.css">
+    <link rel="stylesheet" href="./include/css/lib/common.css">
+    <link rel="stylesheet" href="./include/css/component.css">
+
+    <link rel="stylesheet" href="./include/css/help.css">
+
+    <script type="text/javascript" src="./include/js/lib/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="./include/js/lib/swiper.js"></script>
+    <script type="text/javascript" src="./include/js/comm.js"></script>
+    <script type="text/javascript" src="./include/js/xml.js"></script>
+
+    <script type="text/javascript" src="./include/js/help.js"></script>
+
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+
+    <div class="debug_area" style="width: 400px;">
+        <button class="btn" onClick="javascript:onClickDebugLang('KOR');">KOR</button>
+        <button class="btn" onClick="javascript:onClickDebugLang('ENG');">ENG</button>
+        <button class="btn" onClick="javascript:onClickDebugLang('CHN');">CHN</button>
+        <button class="btn" onClick="javascript:onClickDebugLang('JPN');">JPN</button>
+    </div>
+
+    <!-- KIOSK AREA START-->
+    <div id="info" class="contents_area">
+
+        <!-- HEADER START-->
+        <header>
+            <div class="top_box">
+                <div class="top_box_img">
+                    <img src="./images/info-ic-tit.svg">
+                </div>
+                <div class="top_text_box">
+                    <!-- <h1>이용안내</h1>
+                    <p>안내를 원하시는 버튼을 선택해 주세요</p> -->
+                    <h1 class="lang_code_names" lang_code="HELP_TITLE">이용안내</h1>
+                    <p></p>
+                </div>
+            </div>
+        </header>
+        <!-- HEADER END-->
+
+        <!-- SECTION START-->
+        <section>
+
+            <!-- INFO START-->
+            <div id="information_wrap">
+
+                <!-- INFO PART START-->
+                <div class="info_detail">
+
+                    <!-- INFO TRAFFIC IMAGE-->
+                    <div id="id_page_traffic_box" class="info_traffic_box">
+                        <img id="id_page_traffic_box_bus" src="./images/info_img_bus_kor.png">
+                        <img id="id_page_traffic_box_transfer" src="./images/info_img_transfer_kor.png">
+                    </div>
+
+                    <!-- INFO TIME DETAIL START-->
+                    <div class="info_time_box">
+
+                        <!-- INFO LOTTE TOWER START-->
+                        <div class="info_time_tower">
+                            <!-- INFO LOCATION NAME-->
+                            <div class="info_time_loc">
+                                <h3 class="lang_code_names" lang_code="HELP_INFO_TOWER">롯데월드타워</h3>
+                            </div>
+
+                            <!-- INFO OPEN TIME START-->
+                            <div class="info_time_table" style="height:320px;">
+                                <ul id="id_info_time_tower_list" class="info_time_list">
+                                    <li>
+                                        <span class="rectangle_info">
+                                            <p>서울스카이</p>117F-123F
+                                        </span>
+                                        <p>10:00~22:00 (금,토 23:00까지)</p>
+                                    </li>
+                                    <li>
+                                        <span class="rectangle_info rectangle_info_active"
+                                            onClick="javascript:onClickInfoView('VIEW_SIGNIEL');">
+                                            <p>시그니엘 서울</p>1F [<span>상세보기</span>]
+                                        </span>
+                                        <p>&nbsp;</p>
+                                    </li>
+
+                                    <li>
+                                        <span class="rectangle_info rectangle_info_active"
+                                            onClick="javascript:onClickInfoView('VIEW_PODIUM');">
+                                            <p>포디엄</p>B1F-12F [<span>상세보기</span>]
+                                        </span>
+                                        <p>&nbsp;</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- INFO OPEN TIME END-->
+
+                        </div>
+                        <!-- INFO LOTTE TOWER END-->
+
+
+                        <!-- INFO LOTTE MALL START-->
+                        <div class="info_time_mall">
+                            <!-- INFO LOCATION NAME-->
+                            <div class="info_time_loc">
+                                <h3 class="lang_code_names" lang_code="HELP_INFO_MALL">롯데월드몰</h3>
+                            </div>
+
+                            <!-- INFO OPEN TIME START-->
+                            <div class="info_time_table">
+                                <ul id="id_info_time_mall_list" class="info_time_list"
+                                    style="height:620px;overflow-y:auto;">
+                                </ul>
+                            </div>
+                            <!-- INFO OPEN TIME END-->
+                        </div>
+                        <!-- INFO LOTTE MALL END-->
+                    </div>
+                    <!-- INFO TIME DETAIL END-->
+                </div>
+                <!-- INFO PART END-->
+
+
+                <!-- CATEGORY PART START-->
+                <div class="info_category">
+                    <!-- CATEGORY TAP AREA-->
+                    <div class="info_tap_box">
+                        <ul class="info_tap_list">
+                            <li id="id_btn_traffic_bus" class="info_tap info_tap_active"
+                                onClick="javascript:onClickInfoView('TRAFFIC_BUS');">
+                                <img src="./images/info-cate-ic-bus.svg" class="info_tap_icon">
+                                <img src="./images/info-cate-ic-bus-o.svg" class="info_tap_icon">
+                                <p class="lang_code_names" lang_code="HELP_TAP_BUS">버스노선</p>
+                            </li>
+                            <li id="id_btn_traffic_trans" class="info_tap"
+                                onClick="javascript:onClickInfoView('TRAFFIC_TRANS');">
+                                <img src="./images/info-cate-ic-transfer.svg" class="info_tap_icon">
+                                <img src="./images/info-cate-ic-transfer-o.svg" class="info_tap_icon">
+                                <!-- <p>환승센터</p> -->
+                                <p class="lang_code_names" lang_code="HELP_TAP_TRANSFER">환승센터</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- INFO BTN AREA-->
+                    <div class="info_btn_box">
+                        <span id="id_btn_view_traffic" class="rectangle_ctg rectangle_ctg_active"
+                            onClick="javascript:onClickInfoView('VIEW_TRAFFIC');">
+                            <img src="./images/info-main-cate-ic-traffic.svg" class="info_tap_icon">
+                            <img src="./images/info-main-cate-ic-traffic-o.svg" class="info_tap_icon">
+                            <p class="lang_code_names" lang_code="HELP_BTN_TRAFFIC">교통안내</p>
+                        </span>
+                        <span id="id_btn_view_time" class="rectangle_ctg"
+                            onClick="javascript:onClickInfoView('VIEW_TIME');">
+                            <img src="./images/info-main-cate-ic-time.svg" class="info_tap_icon">
+                            <img src="./images/info-main-cate-ic-time-o.svg" class="info_tap_icon">
+                            <!-- <p>영업시간안내</p> -->
+                            <p class="lang_code_names" lang_code="HELP_BTN_TIME">영업시간안내</p>
+                        </span>
+                    </div>
+                </div>
+                <!-- CATEGORY PART END-->
+            </div>
+            <!-- INFO END-->
+        </section>
+        <!-- SECTION START-->
+    </div>
+
+
+
+    <div id="id_popup_bg" class="popup_bg"></div>
+
+    <!--  POPUP START  -->
+    <!--  POPUP START  -->
+
+    <div id="id_popup_signiel" class="popup_podium" style="height:600px;display:none;">
+        <div>
+            <div class="info_time_loc">
+                <h3 class="lang_code_names" lang_code="HELP_POP_SIGNIEL">롯데월드타워 - 시그니엘서울</h3>
+            </div>
+            <div class="info_time_table">
+                <ul id="id_info_time_signiel_list" class="info_time_list" style="height:380px;overflow-y:auto;"></ul>
+            </div>
+        </div>
+
+        <div class="pop_closebtn" onClick="javascript:onClickPopupClose('SIGNIEL');"><img
+                src="./images/pop_close_btn.svg"></div>
+    </div>
+
+
+    <div id="id_popup_podium" class="popup_podium" style="display:none;">
+        <div>
+            <div class="info_time_loc">
+                <h3 class="lang_code_names" lang_code="HELP_POP_PODIUM">롯데월드타워 - 포디엄</h3>
+            </div>
+            <div class="info_time_table">
+                <ul id="id_info_time_podium_list" class="info_time_list" style="height:700px;overflow-y:auto;"></ul>
+            </div>
+        </div>
+
+        <div class="pop_closebtn" onClick="javascript:onClickPopupClose('PODIUM');"><img
+                src="./images/pop_close_btn.svg">
+        </div>
+    </div>
+
+    <!--  POPUP START  -->
+    <!--  POPUP START  -->
+
+
+
+</body>
+
+</html>
+
+<script language="javascript">
+
+    var PAGEACTIVEYN = false;
+
+    var gl_conf_header = new Object();
+    var gl_jsop_lang_data = new Object();
+
+    var gl_arr_help_list = new Array();
+
+    function setInit() {
+
+        if (parent.MAINPARENTCUSTOMCODE) {
+
+            $(".debug_area").hide();
+            PAGEACTIVEYN = false;
+            setInitSetting();
+
+        } else {
+            PAGEACTIVEYN = true;
+            setLoadLanguage("./include/kiosk_lang_vertical.json");
+            setLoadContents("./xml/kiosk_contents.xml");
+        }
+    }
+
+    jQuery(document).ready(function () {
+        setTimeout(setInit, 400);
+    });
+</script>

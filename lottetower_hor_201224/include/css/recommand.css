@@ -1,0 +1,165 @@
+/******************************************
+   name :  recommand.css
+   auth :  ELTOV
+   date :  2020.11.08
+   desc :  추천매장 CSS
+*******************************************/
+
+/* SECTION AREA */
+#recommend_wrap{
+    width: 100%;
+    height: 100%;
+    padding: 34px  0 0 70px;
+    box-sizing: border-box;
+}
+.swiper_area{
+    display: flex;
+    box-sizing: border-box;
+    padding: 40px 0;
+    position: relative;
+}
+
+/* COMMON TEXT AREA*/
+.swiper_area .swiper_text_box{
+    width: 140px;
+    /* display: flex;
+    justify-content: space-between;
+    align-items: flex-end; */
+    box-sizing: border-box;
+}
+.swiper_area .swiper_text_box h3{
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 32px;
+    letter-spacing: -0.8;
+    color: #464646;
+    /* border: 1px solid black; */
+}
+.swiper_area .swiper_text_box p{
+    font-weight: 300;
+    line-height: 16px;
+    letter-spacing: 0.16;
+    color: #464646;
+    margin-top: 14px;
+}
+.swiper_area hr{
+    width: 95%;
+    margin: 0;
+    border: 0;
+    border-bottom: 1px solid #bebebf;
+    position: absolute;
+    bottom: 0;
+}
+
+/* PHOTO TEXT AREA*/
+.photo_section{
+    /* margin: 20px 0; */
+}
+.photo_section .swiper_text_box{
+    padding: 0;
+}
+.photo_section .swiper_text_box hr{
+    width: 790px;
+}
+
+
+/* NEW STORE TEXT AREA*/
+.new_store_section .swiper_text_box hr{
+    width: 740px;
+}
+
+
+
+
+
+
+/* COMMON SWIPER AREA*/
+.swiper_area .store_swiper_box{
+    width: 1390px;
+    box-sizing: border-box;
+    position: relative;
+    /* border: 1px solid black; */
+}
+.swiper_area .store_swiper_box .circle_38{
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    /* left: 20px; */
+    margin: auto;
+}
+.swiper_area .store_swiper_box #prev_btn{
+    left: 20px;
+}
+.swiper_area .store_swiper_box #next_btn{
+    right: 20px;
+}
+
+
+
+/**************** SWIPER 공통 디자인 *****************/
+div.swiper-container {
+    width: 1264px;
+    height: auto;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+div.swiper-slide {
+    width: 308px;
+    height: 170px;
+    text-align: center;
+    font-size: 18px;
+    overflow: hidden;
+    border-radius: 20px;
+
+    /* Center slide text vertically */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+}
+.swiper-slide img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+/**************** SWIPER 공통 디자인 *****************/
+
+
+/* PHOTO AREA SWIPER */
+.photo_section .swiper-container{
+    width: 1330px;
+    margin: 0;
+    margin-right: 30px;
+}
+.photo_section .swiper-container .swiper-slide{
+/*    margin: 0 12px*/
+}
+.photo_section .swiper-container .swiper-slide:first-child{
+    margin-left: 0;
+}
+/* PHOTO SWIPER SIZE*/
+div.photo{
+    width: 202px;
+    height: 269px;
+}
+
+
+/* PHOTO SWIPER TEXT*/
+.photo .photo_txt{
+    position: absolute;bottom: 0;
+    width: 100%;
+    height: 55px;
+    background: rgba(0,0,0,0.6);
+}
+.photo .photo_txt p{
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 55px;
+    color: #ffffff ;
+    text-align: center;
+}

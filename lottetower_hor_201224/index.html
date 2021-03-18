@@ -1,0 +1,393 @@
+<!--------------------------------------------- 
+   name :  index.html
+   auth :  ELTOV
+   date :  2020.11.08
+   desc :  메인 HTML
+---------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" gnb="width=device-width, initial-scale=1.0">
+    <title>LOTTE TOWER INFORMATION</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico">
+
+    <link rel="stylesheet" href="./include/css/lib/font.css">
+    <link rel="stylesheet" href="./include/css/lib/reset.css">
+    <link rel="stylesheet" href="./include/css/lib/swiper.css">
+
+    <link rel="stylesheet" href="./include/css/component.css">
+    <link rel="stylesheet" href="./include/css/index.css">
+
+    <script src="./include/js/lib/jquery-3.2.1.js"></script>
+    <script src="./include/js/lib/hangul.js"></script>
+    <script src="./include/js/lib/swiper.js"></script>
+    <script src="./include/js/comm.js"></script>
+    <script src="./include/js/xml.js"></script>
+    <script src="./include/js/fscommand.js"></script>
+    <script src="./include/js/index.js"></script>
+
+</head>
+
+<body style="overflow:hidden;" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+
+    <div class="debug_area">
+        <button class="btn" onClick="javascript:onClickDebug01();">D01</button>
+        <button class="btn" onClick="javascript:onClickDebug02();">D02</button>
+        <button class="btn" onClick="javascript:onClickDebug03();">D03</button>
+    </div>
+
+    <div id="id_page_block_white" class="block_white" style="display:none;"></div>
+
+    <div id="id_main_init_loading" class="contents_loading" style="display:none1;">
+        <div class="contents">
+            <!-- <img src="./images/logo_main.png"> -->
+            <div class="progress">
+                <div class="progress_bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="id_main_frame_intro" class="contents_intro" style="display:none1;">
+        <iframe name="frame_intro" src="./intro.html"></iframe>
+    </div>
+
+    <!--    MAIN START  -->
+    <div class="contents_main">
+        <div class="contents_area">
+
+            <!-- STORE START-->
+            <div id="id_main_frame_store" class="frame_info">
+                <iframe name="frame_store" src="./store.html"></iframe>
+            </div>
+            <!-- STORE END -->
+
+            <!-- FOOD START-->
+            <div id="id_main_frame_food" class="frame_info">
+                <iframe name="frame_food" src="./food.html"></iframe>
+            </div>
+            <!-- FOOD END -->
+
+            <!-- RECOMMAND START-->
+            <div id="id_main_frame_recommand" class="frame_info">
+                <iframe name="frame_recommand" src="./recommand.html"></iframe>
+            </div>
+            <!-- RECOMMAND END -->
+
+            <!-- EVENT START-->
+            <div id="id_main_frame_event" class="frame_info">
+                <iframe name="frame_event" src="./event.html"></iframe>
+            </div>
+            <!-- EVENT END -->
+
+            <!-- PARK START-->
+            <div id="id_main_frame_park" class="frame_info">
+                <iframe name="frame_park" src="./park.html"></iframe>
+            </div>
+            <!-- PARK END -->
+
+            <!-- INFO START-->
+            <div id="id_main_frame_help" class="frame_info">
+                <iframe name="frame_help" src="./help.html"></iframe>
+            </div>
+            <!-- INFO END -->
+
+            <!-- FACILITY START-->
+            <div id="id_main_frame_facility" class="frame_info">
+                <iframe name="frame_facility" src="./facility.html"></iframe>
+            </div>
+            <!-- FACILITY END -->
+
+            <!-- FLOOR GUIDE START-->
+            <div id="id_main_frame_floor" class="frame_info" style="z-index:1;">
+                <iframe name="frame_floor" src="./floor.html"></iframe>
+            </div>
+            <!-- FLOOR GUIDE END -->
+
+        </div>
+
+        <!--    FOOTER START  -->
+        <footer>
+            <div class="right_mnu_logo_box" onClick="javascript:onClickBottomLogo();"><img
+                    src="./images/logo_right_menu_mall.svg" style="width:280px;"></div>
+
+            <div class="bottom_gnb">
+                <div class="bottom_gnb_box">
+
+                    <ul class="bottom_gnb_list">
+                        <li id="id_btn_botom_mnu_floor" class="gnb_box_active"
+                            onClick="javascript:onClickBottomMnu('FLOOR');">
+                            <div class="gnb_icon_box"><img src="./images/GNB-01.svg" alt="gnb_icon_01"></div>
+                            <p id="id_mnu_icon_floor" class="gnb_lang_01" lang_code="BOTTOM_MNU_FLOOR"><img
+                                    src="./images/index_mnu_floor_txt_kor.svg" style="width:85%;"></p>
+                        </li>
+                        <li id="id_btn_botom_mnu_store" onClick="javascript:onClickBottomMnu('STORE');">
+                            <div class="gnb_icon_box"><img src="./images/GNB-02.svg" alt="gnb_icon_02"></div>
+                            <p id="id_mnu_icon_store" class="gnb_lang_01" lang_code="BOTTOM_MNU_STORE"><img
+                                    src="./images/index_mnu_store_txt_kor.svg" style="width:85%;"></p>
+                        </li>
+                        <li id="id_btn_botom_mnu_food" onClick="javascript:onClickBottomMnu('FOOD');">
+                            <div class="gnb_icon_box"><img src="./images/GNB-03.svg" alt="gnb_icon_03"></div>
+                            <p id="id_mnu_icon_food" class="gnb_lang_01" lang_code="BOTTOM_MNU_FOOD"><img
+                                    src="./images/index_mnu_food_txt_kor.svg" style="width:85%;"></p>
+                        </li>
+                        <li id="id_btn_botom_mnu_recommand" onClick="javascript:onClickBottomMnu('RECOMMAND');">
+                            <div class="gnb_icon_box"><img src="./images/GNB-04.svg" alt="gnb_icon_04"></div>
+                            <p id="id_mnu_icon_recommand" class="gnb_lang_01" lang_code="BOTTOM_MNU_RECOMMAND"><img
+                                    src="./images/index_mnu_recommand_txt_kor.svg" style="width:85%;"></p>
+                        </li>
+                        <li id="id_btn_botom_mnu_event" onClick="javascript:onClickBottomMnu('EVENT');">
+                            <div class="gnb_icon_box"><img src="./images/GNB-05.svg" alt="gnb_icon_05"></div>
+                            <p id="id_mnu_icon_event" class="gnb_lang_01" lang_code="BOTTOM_MNU_EVENT"><img
+                                    src="./images/index_mnu_event_txt_kor.svg" style="width:85%;"></p>
+                        </li>
+                        <li id="id_btn_botom_mnu_park" onClick="javascript:onClickBottomMnu('PARK');">
+                            <div class="gnb_icon_box"><img src="./images/GNB-06.svg" alt="gnb_icon_06"></div>
+                            <p id="id_mnu_icon_park" class="gnb_lang_01" lang_code="BOTTOM_MNU_PARK"><img
+                                    src="./images/index_mnu_park_txt_kor.svg" style="width:85%;"></p>
+                        </li>
+                        <li id="id_btn_botom_mnu_help" onClick="javascript:onClickBottomMnu('HELP');">
+                            <div class="gnb_icon_box"><img src="./images/GNB-07.svg" alt="gnb_icon_07"></div>
+                            <p id="id_mnu_icon_help" class="gnb_lang_01" lang_code="BOTTOM_MNU_HELP"><img
+                                    src="./images/index_mnu_help_txt_kor.svg" style="width:85%;"></p>
+                        </li>
+                        <li id="id_btn_botom_mnu_facility" onClick="javascript:onClickBottomMnu('FACILITY');">
+                            <div class="gnb_icon_box"><img src="./images/GNB-08.svg" alt="gnb_icon_08"></div>
+                            <p id="id_mnu_icon_facility" class="gnb_lang_01" lang_code="BOTTOM_MNU_FACILITY"><img
+                                    src="./images/index_mnu_facility_txt_kor.svg" style="width:85%;"></p>
+                        </li>
+                    </ul>
+                    <div class="bottom_end">
+                        <div class="bottom_lang_box">
+                            <ul class="bottom_lang_list">
+                                <li id="id_btn_lang_kor" class="bottom_lang_01 lang_active"
+                                    onClick="javascript:onClickBottomLang('KOR');">
+                                    <p>한국어</p>
+                                </li>
+                                <li id="id_btn_lang_eng" class="bottom_lang_02"
+                                    onClick="javascript:onClickBottomLang('ENG');">
+                                    <p>ENG</p>
+                                </li>
+                                <li id="id_btn_lang_chn" class="bottom_lang_03"
+                                    onClick="javascript:onClickBottomLang('CHN');">
+                                    <p>中文</p>
+                                </li>
+                                <li id="id_btn_lang_jpn" class="bottom_lang_04"
+                                    onClick="javascript:onClickBottomLang('JPN');">
+                                    <p>日本語</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- FOOTER END  -->
+
+    </div>
+    <!--  MAIN END  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="id_popup_bg" class="popup_bg"></div>
+
+
+    <!--  POPUP ERROR START  -->
+    <div id="id_popup_error" class="popup_error" style="display:none;">
+        <div class="popup_top">
+            <div class="pop_name">
+                <p class="popup_error_title"></p>
+            </div>
+        </div>
+        <div class="popup_error_desc"></div>
+        <div class="pop_closebtn" onClick="javascript:onClickPopupClose('ERROR');"><img
+                src="./images/pop_close_btn_black.svg"></div>
+    </div>
+    <!--  POPUP ERROR END  -->
+
+
+    <!--  POPUP STORE START  -->
+    <!--  POPUP STORE START  -->
+    <div id="id_popup_store" class="popup_store" style="display:none;">
+        <div class="top_area">
+            <div id="id_popup_store_swiper" class="swiper-container" style="overflow:hidden;">
+                <div class="swiper-wrapper"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+
+        <div class="contents_area">
+            <div class="title">
+                <h1 class="txt_name_title"></h1>
+            </div>
+            <div class="pop_text_box">
+                <ul class="pop_info">
+                    <li>
+                        <p class="pop_info_txt lang_code_names" lang_code="POP_LOC">매장위치</p>
+                        <p class="txt_shop_location"></p>
+                        <p class="pop_info_txt lang_code_names" lang_code="POP_TEL">전화번호</p>
+                        <p class="txt_name_phone"></p>
+                    </li>
+                    <li>
+                        <p class="pop_info_txt lang_code_names" lang_code="POP_TIME">영업시간</p>
+                        <p class="txt_name_service_time"></p>
+                    </li>
+                </ul>
+                <div class="pop_detail">
+
+                    <!-- food 177px /  store  -->
+                    <div class="pop_detail_info_box" style="height:300px;">
+                        <p class="txt_name_description"></p>
+                    </div>
+                    <hr>
+                    <div class="pop_detail_info_mnu">
+                        <h3 class="lang_code_names" lang_code="POP_MENU">주요메뉴</h3>
+                        <ul class="txt"></ul>
+                    </div>
+                </div>
+            </div>
+            <div id="id_popup_store_btn_loc"></div>
+        </div>
+        <div class="pop_closebtn" onClick="javascript:onClickPopupClose('STORE');"><img
+                src="./images/pop_close_btn.svg">
+        </div>
+    </div>
+    <!--  POPUP STORE END  -->
+    <!--  POPUP STORE END  -->
+
+
+
+
+
+    <!--  POPUP EVENT START  -->
+    <!--  POPUP EVENT START  -->
+    <div id="id_popup_event" class="popup_event" style="display:none;">
+
+        <!-- POPUP MAIN -->
+        <div id="id_popup_event_top_img" class="top_area">
+            <div class="top_img"><img src=""></div>
+        </div>
+        <div class="contents_area">
+            <div class="event_title">
+                <div class="title_img" style=""><img src="" style="height:100%;text-align:left;margin-left:-40px;">
+                </div>
+                <div class="title_txt">
+                    <h1 class="txt_name_title"></h1>
+                </div>
+            </div>
+
+            <div class="event_info">
+                <div class="event_time">
+                    <p class="left_title lang_code_names" lang_code="POP_TERM">기간</p>
+                    <p class="right_title txt_name_service_time"></p>
+                </div>
+
+                <ul id="id_popup_event_loc_list" class="event_loc_list">
+                </ul>
+            </div>
+        </div>
+        <div class="pop_closebtn" onClick="javascript:onClickPopupClose('EVENT');"><img
+                src="./images/pop_close_btn.svg">
+        </div>
+    </div>
+
+    <!--  POPUP EVENT END  -->
+    <!--  POPUP EVENT END  -->
+
+
+
+
+
+
+
+
+
+
+    <!--  POPUP FACILITY START  -->
+    <!--  POPUP FACILITY START  -->
+
+    <div id="id_popup_facility" class="popup_facility" style="display:none;">
+        <div class="top_area">
+            <div class="top_img"><img src="./images/facility_pop_ic_10_o.png"></div>
+            <div class="title_name">
+                <h2 class="txt_name_title">화장실</h2>
+                <p class="txt_name_subtitle">Restrooms</p>
+            </div>
+        </div>
+        <div class="contents_area">
+            <hr>
+            <ul id="id_popup_facility_loc_list" class="pop_info_list"></ul>
+        </div>
+        <div class="pop_closebtn" onClick="javascript:onClickPopupClose('FACILITY');"><img
+                src="./images/pop_close_btn.svg"></div>
+    </div>
+
+    <!--  POPUP FACILITY END  -->
+    <!--  POPUP FACILITY END  -->
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+<script language="javascript">
+
+    var MAINPARENTCUSTOMCODE = true;
+
+    var gl_conf_header = new Object();
+    var gl_jsop_lang_data = new Object();
+
+    var gl_arr_notice_list = new Array();
+    var gl_arr_store_list = new Array();
+    var gl_arr_event_list = new Array();
+    var gl_arr_help_list = new Array();
+    var gl_arr_recommand_list = new Array();
+    var gl_arr_facility_list = new Array();
+    var gl_arr_park_list = new Array();
+
+    function setInit() {
+        $("#id_main_init_loading .progress_bar").addClass("run");
+        setLoadLanguage("./include/kiosk_lang_horizon.json");
+    }
+
+    jQuery(document).ready(function () {
+        $(".debug_area").hide();
+        setTimeout(setInit, 1000);
+    });
+
+</script>

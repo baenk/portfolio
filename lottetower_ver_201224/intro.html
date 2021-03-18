@@ -1,0 +1,206 @@
+<!--------------------------------------------- 
+   name :  intro.html
+   auth :  ELTOV
+   date :  2020.11.08
+   desc :  인트로 HTML
+---------------------------------------------->
+
+
+<!DOCTYPE HTML>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="user-scalable=no,initial-scale=1.0,maximum-scale=1.0 minimal-ui" />
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LOTTE TOWER INFORMATION</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico">
+
+    <link rel="stylesheet" href="./include/css/lib/reset.css">
+    <link rel="stylesheet" href="./include/css/lib/font.css">
+    <link rel="stylesheet" href="./include/css/lib/swiper.css">
+    <link rel="stylesheet" href="./include/css/component.css">
+
+    <link rel="stylesheet" href="./include/css/intro.css">
+
+    <script type="text/javascript" src="./include/js/lib/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="./include/js/lib/swiper.js"></script>
+    <script type="text/javascript" src="./include/js/comm.js"></script>
+    <script type="text/javascript" src="./include/js/xml.js"></script>
+
+    <script type="text/javascript" src="./include/js/intro.js"></script>
+
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+    <!--    main start  -->
+    <!--    main start  -->
+
+    <div id="main">
+        <div class="bg_video">
+            <video muted autoplay loop>
+                <source src="./images/intro_background.mp4">
+            </video>
+        </div>
+
+        <div class="debug_button01" style="width: 400px;" onClick="javascript:onClickDebug01();"></div>
+        <header>
+            <div class="weather_wrap">
+                <div class="w_icon_part">
+                    <img id="id_weather_icon" src="./" style="width:85px;">
+                </div>
+                <div class="w_text_part">
+                    <div class="w_tpr_box">
+                        <p id="id_weather_temp"></p>
+                        <p id="id_weather_name"></p>
+                    </div>
+                    <div class="w_time_box">
+                        <p id="id_time_box_hour" style="width:180px;">AM 00:00</p>
+                        <p id="id_time_box_day" style="width:180px;">0000.00.00</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!--    section start  -->
+        <!--    section start  -->
+        <section>
+            <div id="id_page_intro_list" class="video_section" style="position:absolute;z-index:2;display:none;">
+                <div id="id_notice_contents_00" class="video_section_wrap">
+                    <video muted>
+                        <source src="./">
+                    </video>
+                    <img src="./">
+                </div>
+                <div id="id_notice_contents_01" class="video_section_wrap">
+                    <video muted>
+                        <source src="./">
+                    </video>
+                    <img src="./">
+                </div>
+            </div>
+
+            <!--           <div id="id_page_event_list" class="swiper_section swiper-container" dir="rtl" style="position:absolute;z-index:2;">-->
+            <div id="id_page_event_list" class="swiper_section swiper-container" style="position:absolute;z-index:2;">
+                <div class="swiper-wrapper"></div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        <!--    section end  -->
+        <!--    section end  -->
+
+
+
+        <!--    footer start  -->
+        <!--    footer start  -->
+        <footer>
+            <div class="bottom_gnb">
+                <div class="bottom_gnb_box">
+                    <ul class="bottom_gnb_list">
+                        <li id="id_btn_botom_mnu_floor" onClick="javascript:onClickBottomMnu('FLOOR');">
+                            <div class="gnb_icon_box">
+                                <img src="./images/main-navi-intro-bt-01.png" alt="gnb_icon_01">
+                            </div>
+                            <p id="id_mnu_icon_floor" class="gnb_lang_01" lang_code="BOTTOM_MNU_FLOOR"><img
+                                    src="./images/index_mnu_floor_txt_kor.svg" style="width:130px;"></p>
+                        </li>
+                        <li id="id_btn_botom_mnu_store" onClick="javascript:onClickBottomMnu('STORE');">
+                            <div class="gnb_icon_box">
+                                <img src="./images/main-navi-intro-bt-02.png" alt="gnb_icon_02">
+                            </div>
+                            <p id="id_mnu_icon_store" class="gnb_lang_01" lang_code="BOTTOM_MNU_STORE"><img
+                                    src="./images/index_mnu_store_txt_kor.svg" style="width:130px;"></p>
+                        </li>
+                        <li id="id_btn_botom_mnu_food" onClick="javascript:onClickBottomMnu('FOOD');">
+                            <div class="gnb_icon_box">
+                                <img src="./images/main-navi-intro-bt-03.png" alt="gnb_icon_03">
+                            </div>
+                            <p id="id_mnu_icon_food" class="gnb_lang_01" lang_code="BOTTOM_MNU_FOOD"><img
+                                    src="./images/index_mnu_food_txt_kor.svg" style="width:130px;"></p>
+                        </li>
+                        <li id="id_btn_botom_mnu_recommand" onClick="javascript:onClickBottomMnu('RECOMMAND');">
+                            <div class="gnb_icon_box">
+                                <img src="./images/main-navi-intro-bt-04.png" alt="gnb_icon_04">
+                            </div>
+                            <p id="id_mnu_icon_recommand" class="gnb_lang_01" lang_code="BOTTOM_MNU_RECOMMAND"><img
+                                    src="./images/index_mnu_recommand_txt_kor.svg" style="width:130px;"></p>
+                        </li>
+                        <li id="id_btn_botom_mnu_event" onClick="javascript:onClickBottomMnu('EVENT');">
+                            <div class="gnb_icon_box">
+                                <img src="./images/main-navi-intro-bt-05.png" alt="gnb_icon_05">
+                            </div>
+                            <p id="id_mnu_icon_event" class="gnb_lang_01" lang_code="BOTTOM_MNU_EVENT"><img
+                                    src="./images/index_mnu_event_txt_kor.svg" style="width:130px;"></p>
+                        </li>
+                        <li id="id_btn_botom_mnu_park" onClick="javascript:onClickBottomMnu('PARK');">
+                            <div class="gnb_icon_box">
+                                <img src="./images/main-navi-intro-bt-06.png" alt="gnb_icon_06">
+                            </div>
+                            <p id="id_mnu_icon_park" class="gnb_lang_01" lang_code="BOTTOM_MNU_PARK"><img
+                                    src="./images/index_mnu_park_txt_kor.svg" style="width:130px;"></p>
+                        </li>
+                        <li id="id_btn_botom_mnu_help" onClick="javascript:onClickBottomMnu('HELP');">
+                            <div class="gnb_icon_box">
+                                <img src="./images/main-navi-intro-bt-07.png" alt="gnb_icon_07">
+                            </div>
+                            <p id="id_mnu_icon_help" class="gnb_lang_01" lang_code="BOTTOM_MNU_HELP"><img
+                                    src="./images/index_mnu_help_txt_kor.svg" style="width:130px;"></p>
+                        </li>
+                        <li id="id_btn_botom_mnu_facility" onClick="javascript:onClickBottomMnu('FACILITY');">
+                            <div class="gnb_icon_box">
+                                <img src="./images/main-navi-intro-bt-08.png" alt="gnb_icon_08">
+                            </div>
+                            <p id="id_mnu_icon_facility" class="gnb_lang_01" lang_code="BOTTOM_MNU_FACILITY"><img
+                                    src="./images/index_mnu_facility_txt_kor.svg" style="width:130px;"></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!--    footer end  -->
+        <!--    footer end  -->
+
+
+
+    </div>
+
+    <!--    main end  -->
+    <!--    main end  -->
+
+
+</body>
+
+</html>
+
+<script language="javascript">
+
+    var PAGEACTIVEYN = false;
+
+    var gl_conf_header = new Object();
+    var gl_jsop_lang_data = new Object();
+
+    var gl_arr_notice_list = new Array();
+    var gl_arr_notice_img_list = new Array();
+    var gl_arr_notice_mov_list = new Array();
+
+    function setInit() {
+
+        if (parent.MAINPARENTCUSTOMCODE) {
+            $(".debug_area").hide();
+            PAGEACTIVEYN = false;
+            setInitSetting();
+        } else {
+            PAGEACTIVEYN = true;
+            setLoadLanguage("./include/kiosk_lang_vertical.json");
+            setLoadContents("./xml/kiosk_contents.xml");
+        }
+    }
+
+    jQuery(document).ready(function () {
+        //setLoadLanguage("./include/kiosk_lang_vertical.json");
+        setTimeout(setInit, 50);
+    });
+</script>

@@ -1,0 +1,143 @@
+<!--------------------------------------------- 
+   name :  event.html
+   auth :  ELTOV
+   date :  2020.11.15
+   desc :  이벤트 처리
+---------------------------------------------->
+
+<!DOCTYPE HTML>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="user-scalable=no,initial-scale=1.0,maximum-scale=1.0 minimal-ui" />
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LOTTE TOWER INFORMATION</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico">
+
+    <link rel="stylesheet" href="./include/css/lib/reset.css">
+    <link rel="stylesheet" href="./include/css/lib/font.css">
+    <link rel="stylesheet" href="./include/css/lib/swiper.css">
+    <link rel="stylesheet" href="./include/css/lib/common.css">
+    <link rel="stylesheet" href="./include/css/component.css">
+
+    <link rel="stylesheet" href="./include/css/event.css">
+
+    <script type="text/javascript" src="./include/js/lib/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="./include/js/lib/swiper.js"></script>
+    <script type="text/javascript" src="./include/js/comm.js"></script>
+    <script type="text/javascript" src="./include/js/xml.js"></script>
+
+    <script type="text/javascript" src="./include/js/event.js"></script>
+</head>
+
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+
+    <div class="debug_area" style="width: 400px;">
+        <button class="btn" onClick="javascript:onClickDebugLang('KOR');">KOR</button>
+        <button class="btn" onClick="javascript:onClickDebugLang('ENG');">ENG</button>
+        <button class="btn" onClick="javascript:onClickDebugLang('CHN');">CHN</button>
+        <button class="btn" onClick="javascript:onClickDebugLang('JPN');">JPN</button>
+    </div>
+
+    <div class="contents_area">
+        <header>
+            <div class="top_box">
+                <div class="top_box_img">
+                    <img src="./images/event-ic-tit.svg">
+                </div>
+                <div class="top_text_box">
+                    <h1 class="lang_code_names" lang_code="EVENT_TITLE">이벤트</h1>
+                    <p></p>
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="event_wrap">
+                <!--               <div id="id_page_event_list" class="swiper_section swiper-container" dir="rtl">-->
+                <div id="id_page_event_list" class="swiper_section swiper-container">
+                    <div class="swiper-wrapper"></div>
+                    <div id="id_event_no_list" style="text-align:center;">
+                        <img src="./images/img_event_default.png">
+                        <p class="no_list_text lang_code_names" lang_code="EVENT_NO_DATA">진행중인 이벤트가 없습니다</p>
+                    </div>
+                </div>
+
+                <!-- EVENT PAGER AREA START-->
+                <!-- <div class="pager_section">
+                    <ul class="pager_list">
+                        <li class="circle_38"><p>1</p></li>
+                        <li class="circle_38 circle_38_active_wide"><p>2</p></li>
+                        <li class="circle_38"><p>3</p></li>
+                        <li class="circle_38"><p>4</p></li>
+                        <li class="circle_38"><p>5</p></li>
+                        <span class="circle_38 prev_btn"><img src="./images/brand-ic-navi-left.png"></span>
+                        <span class="circle_38 next_btn"><img src="./images/brand-ic-navi-right.png"></span>
+                    </ul>
+                </div> -->
+                <!-- EVENT PAGER AREA END-->
+
+                <!-- EVENT CATEGORY AREA START-->
+                <div class="event_category">
+                    <!-- EVENT CATEGORY BTN-->
+                    <span class="rectangle_ctg rectangle_ctg_active" code="">
+                        <img src="./images/event-cate-ic-all.svg" style="width:28px;">
+                        <img src="./images/event-cate-ic-all-o.svg" style="width:28px;">
+                        <p class="lang_code_names" lang_code="EVENT_BTN_ALL">전체</p>
+                    </span>
+                    <span class="rectangle_ctg" code="BRAND">
+                        <img src="./images/event-cate-ic-shopping.svg" style="width:28px;">
+                        <img src="./images/event-cate-ic-shopping-o.svg" style="width:28px;">
+                        <p class="lang_code_names" lang_code="EVENT_BTN_SHOP">쇼핑</p>
+                    </span>
+                    <span class="rectangle_ctg" code="EXHBT">
+                        <img src="./images/event-cate-ic-enter.svg" style="width:28px;">
+                        <img src="./images/event-cate-ic-enter-o.svg" style="width:28px;">
+                        <p class="lang_code_names" lang_code="EVENT_BTN_ENT">엔터테인먼트</p>
+                    </span>
+                </div>
+                <!-- EVENT CATEGORY AREA END-->
+            </div>
+
+        </section>
+
+
+    </div>
+
+</body>
+
+</html>
+
+<script language="javascript">
+
+    var PAGEACTIVEYN = false;
+
+    var gl_conf_header = new Object();
+    var gl_jsop_lang_data = new Object();
+    var gl_arr_event_list = new Array();
+
+    function setInit() {
+
+        $(".event_category span").click(function () {
+            onClickEventCate(this);
+        });
+
+        if (parent.MAINPARENTCUSTOMCODE) {
+            $(".debug_area").hide();
+            PAGEACTIVEYN = false;
+            setInitSetting();
+        } else {
+            PAGEACTIVEYN = true;
+            setLoadLanguage("./include/kiosk_lang_vertical.json");
+            setLoadContents("./xml/kiosk_contents.xml");
+        }
+    }
+
+    jQuery(document).ready(function () {
+
+        setTimeout(setInit, 300);
+    });
+</script>

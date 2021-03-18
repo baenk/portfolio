@@ -1,0 +1,425 @@
+<!--------------------------------------------- 
+   name :  help.html
+   auth :  ELTOV
+   date :  2020.11.16
+   desc :  도움 html
+---------------------------------------------->
+
+<!DOCTYPE HTML>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="user-scalable=no,initial-scale=1.0,maximum-scale=1.0 minimal-ui" />
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LOTTE TOWER INFORMATION</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico">
+
+    <link rel="stylesheet" href="./include/css/lib/reset.css">
+    <link rel="stylesheet" href="./include/css/lib/font.css">
+    <link rel="stylesheet" href="./include/css/lib/swiper.css">
+    <link rel="stylesheet" href="./include/css/lib/common.css">
+    <link rel="stylesheet" href="./include/css/component.css">
+
+    <link rel="stylesheet" href="./include/css/help.css">
+
+    <script type="text/javascript" src="include/js/lib/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="include/js/lib/swiper.js"></script>
+    <script type="text/javascript" src="include/js/comm.js"></script>
+    <script type="text/javascript" src="include/js/xml.js"></script>
+
+    <script type="text/javascript" src="include/js/help.js"></script>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+
+    <div class="debug_area" style="width: 400px;">
+        <button class="btn" onClick="javascript:onClickDebugLang('KOR');">KOR</button>
+        <button class="btn" onClick="javascript:onClickDebugLang('ENG');">ENG</button>
+        <button class="btn" onClick="javascript:onClickDebugLang('CHN');">CHN</button>
+        <button class="btn" onClick="javascript:onClickDebugLang('JPN');">JPN</button>
+    </div>
+
+    <!-- KIOSK AREA START-->
+    <div id="info" class="contents_area">
+
+        <!-- HEADER START-->
+        <header>
+            <div class="top_box">
+                <div class="top_box_img">
+                    <img src="./images/info-ic-tit.svg">
+                </div>
+                <div class="top_text_box">
+                    <h1 class="lang_code_names" lang_code="HELP_TITLE">이용안내</h1>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+        </header>
+        <!-- HEADER END-->
+
+        <!-- SECTION START-->
+        <section>
+
+            <!-- INFO START-->
+            <div id="information_wrap">
+
+                <!-- INFO PART START-->
+                <div class="info_detail">
+
+                    <!-- INFO TRAFFIC IMAGE-->
+                    <div id="id_page_traffic_box" class="info_traffic_box">
+                        <img id="id_page_traffic_box_bus" src="./images/info_img_bus_w_kor.png" style="width:100%;">
+                        <img id="id_page_traffic_box_transfer" src="./images/info_img_transfer_w_kor.png"
+                            style="width:100%;">
+                    </div>
+
+                    <!-- INFO TIME DETAIL START-->
+                    <div class="info_time_box">
+
+                        <!-- INFO LOTTE TOWER START-->
+                        <div class="info_box info_time_tower">
+                            <!-- INFO LOCATION NAME-->
+                            <div class="info_time_loc">
+                                <h3 class="lang_code_names" lang_code="HELP_INFO_TOWER">롯데월드타워</h3>
+                            </div>
+
+                            <!-- INFO OPEN TIME START-->
+                            <div class="info_time_table">
+                                <ul id="id_info_time_tower_list" class="info_time_list">
+                                    <li>
+                                        <span class="rectangle_info">
+                                            <p>서울스카이</p>117F-123F
+                                        </span>
+                                        <p>10:00~22:00 (금,토 23:00까지)</p>
+                                    </li>
+                                    <li>
+                                        <span class="rectangle_info">
+                                            <p>시그니엘서울</p>76F-101F
+                                        </span>
+                                        <p>연중무휴</p>
+                                    </li>
+                                    <li>
+                                        <span class="rectangle_info">
+                                            <p>스카이31</p>31F
+                                        </span>
+                                        <p>컨벤션 09:00~18:00</p>
+                                    </li>
+                                    <li>
+                                        <span class="rectangle_info">
+                                            <p>워크플렉스</p>30F
+                                        </span>
+                                        <p>09:00~18:00 (연중무휴)</p>
+                                    </li>
+                                    <li>
+                                        <span class="rectangle_info">
+                                            <p>롯데면세점</p>8F-9F
+                                        </span>
+                                        <p>09:00~20:30 (연중무휴)</p>
+                                    </li>
+                                    <li>
+                                        <span class="rectangle_info">
+                                            <p>뮤지엄(LMoA)</p>7F
+                                        </span>
+                                        <p>10:00~22:00 (금,토 23:00까지)</p>
+                                    </li>
+                                    <li>
+                                        <span class="rectangle_info rectangle_info_active"
+                                            onClick="javascript:onClickInfoView('VIEW_PODIUM');">
+                                            <p>포디엄</p>B1F-12F [<span>상세보기</span>]
+                                        </span>
+                                        <p>10:30~19:00 (에비뉴엘 휴점 시 동시 휴관)</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- INFO OPEN TIME END-->
+
+                        </div>
+                        <!-- INFO LOTTE TOWER END-->
+
+
+                        <!-- INFO LOTTE MALL START-->
+                        <div class="info_box info_time_mall">
+                            <!-- INFO LOCATION NAME-->
+                            <div class="info_time_loc">
+                                <h3 class="lang_code_names" lang_code="HELP_INFO_MALL">롯데월드몰</h3>
+                            </div>
+
+                            <!-- INFO OPEN TIME START-->
+                            <div class="info_time_table">
+                                <ul id="id_info_time_mall_list" class="info_time_list">
+                                    <li>
+                                        <span class="rectangle_info">
+                                            <p>롯데콘서트홀</p>8F-10F
+                                        </span>
+                                        <p>10:00~22:00 (금,토 23:00까지)</p>
+                                    </li>
+                                    <li>
+                                        <span class="rectangle_info">
+                                            <p>롯데면세점</p>8F-9F롯데면세점
+                                        </span>
+                                        <p>연중무휴</p>
+                                    </li>
+                                    <li>
+                                        <span class="rectangle_info">
+                                            <p>롯데시네마</p>5F-10F
+                                        </span>
+                                        <p>컨벤션 09:00~18:00</p>
+                                    </li>
+                                    <li>
+                                        <span class="rectangle_info">
+                                            <p>하이마트</p>3F
+                                        </span>
+                                        <p>09:00~18:00 (연중무휴)</p>
+                                    </li>
+                                    <li>
+                                        <span class="rectangle_info">
+                                            <p>에비뉴엘</p>B1F-6F
+                                        </span>
+                                        <p>
+                                            백화점 10:30~22:00 (금,토,일 30분 연장영업)
+                                            <br>식당가 10:30~22:00 (주문 및 예약 20:30까지)
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span class="rectangle_info">
+                                            <p>쇼핑몰</p>B1F-6F
+                                        </span>
+                                        <p>09:00~20:30 (연중뮤휴)</p>
+                                    </li>
+                                    <li>
+                                        <span class="rectangle_info">
+                                            <p>아쿠아리움</p>B2F-B1F
+                                        </span>
+                                        <p>10:00~22:00 (금,토 23:00까지)</p>
+                                    </li>
+                                    <li>
+                                        <span class="rectangle_info">
+                                            <p>롯데마트</p>B2F-B1F
+                                        </span>
+                                        <p>10:00~22:00 (금,토 23:00까지)</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- INFO OPEN TIME END-->
+                        </div>
+                        <!-- INFO LOTTE MALL END-->
+                    </div>
+                    <!-- INFO TIME DETAIL END-->
+                </div>
+                <!-- INFO PART END-->
+
+
+                <!-- CATEGORY PART START-->
+                <div class="info_category">
+                    <!-- CATEGORY TAP AREA-->
+                    <div class="info_tap_box">
+                        <ul class="info_tap_list">
+                            <li id="id_btn_traffic_bus" class="info_tap info_tap_active"
+                                onClick="javascript:onClickInfoView('TRAFFIC_BUS');">
+                                <img src="./images/info-cate-ic-bus.svg" class="info_tap_icon">
+                                <img src="./images/info-cate-ic-bus-o.svg" class="info_tap_icon">
+                                <p class="lang_code_names" lang_code="HELP_TAP_BUS">버스노선</p>
+                            </li>
+                            <li id="id_btn_traffic_trans" class="info_tap"
+                                onClick="javascript:onClickInfoView('TRAFFIC_TRANS');">
+                                <img src="./images/info-cate-ic-transfer.svg" class="info_tap_icon">
+                                <img src="./images/info-cate-ic-transfer-o.svg" class="info_tap_icon">
+                                <p class="lang_code_names" lang_code="HELP_TAP_TRANSFER">환승센터</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- INFO BTN AREA-->
+                    <div class="info_btn_box">
+                        <span id="id_btn_view_traffic" class="rectangle_ctg rectangle_ctg_active"
+                            onClick="javascript:onClickInfoView('VIEW_TRAFFIC');">
+                            <img src="./images/info-main-cate-ic-traffic.svg" class="info_tap_icon">
+                            <img src="./images/info-main-cate-ic-traffic-o.svg" class="info_tap_icon">
+                            <p class="lang_code_names" lang_code="HELP_BTN_TRAFFIC">교통안내</p>
+                        </span>
+                        <span id="id_btn_view_time" class="rectangle_ctg"
+                            onClick="javascript:onClickInfoView('VIEW_TIME');">
+                            <img src="./images/info-main-cate-ic-time.svg" class="info_tap_icon">
+                            <img src="./images/info-main-cate-ic-time-o.svg" class="info_tap_icon">
+                            <p class="lang_code_names" lang_code="HELP_BTN_TIME">영업시간안내</p>
+                        </span>
+                    </div>
+                </div>
+                <!-- CATEGORY PART END-->
+            </div>
+            <!-- INFO END-->
+        </section>
+        <!-- SECTION START-->
+    </div>
+
+
+
+    <div id="id_popup_bg" class="popup_bg"></div>
+
+
+    <div id="id_popup_signiel" class="popup_podium" style="display:none;">
+        <div>
+            <div class="info_time_loc">
+                <h3 class="lang_code_names" lang_code="HELP_POP_SIGNIEL">롯데월드타워 - 시그니엘서울</h3>
+            </div>
+            <div class="info_time_table">
+                <ul id="id_info_time_signiel_list" class="info_time_list" style="height:380px;overflow-y:auto;"></ul>
+            </div>
+        </div>
+
+        <div class="pop_closebtn" onClick="javascript:onClickPopupClose('SIGNIEL');"><img
+                src="./images/pop_close_btn.png"></div>
+    </div>
+
+
+
+    <!--  POPUP START  -->
+    <!--  POPUP START  -->
+    <div id="id_popup_podium" class="popup_podium" style="display:none;">
+        <div>
+            <div class="info_time_loc">
+                <h3 class="lang_code_names" lang_code="HELP_POP_PODIUM">롯데월드타워 - 포디엄</h3>
+            </div>
+            <div class="info_time_table">
+                <ul id="id_info_time_podium_list" class="info_time_list" style="height:400px;overflow-y:auto;">
+                    <li>
+                        <span class="rectangle_info">
+                            <p>하나금융투자</p>12F
+                        </span>
+                        <p>08:00~16:00 (휴무: 주말, 공휴일)</p>
+                    </li>
+                    <li>
+                        <span class="rectangle_info">
+                            <p>하나은행</p>12F
+                        </span>
+                        <p>08:00~16:00 (휴무: 주말, 공휴일)</p>
+                    </li>
+                    <li>
+                        <span class="rectangle_info">
+                            <p>우리은행</p>12F
+                        </span>
+                        <p>08:00~16:00 (휴무: 주말, 공휴일)</p>
+                    </li>
+                    <li>
+                        <span class="rectangle_info">
+                            <p>롯데금융센터</p>12F
+                        </span>
+                        <p>08:00~18:00 (휴무: 주말, 공휴일)</p>
+                    </li>
+                    <li>
+                        <span class="rectangle_info">
+                            <p>가인 월드타워 치과의원</p>11F
+                        </span>
+                        <p>평일: 10:00~19:00 / 토: 10:00~14:00
+                            <br>휴무: 일요일, 공휴일
+                        </p>
+                    </li>
+                    <li>
+                        <span class="rectangle_info">
+                            <p>잠실월드타워 정형외과</p>11F
+                        </span>
+                        <p>평일: 10:00~21:00 / 토: 09:00~14:00
+                            <br>휴무: 일요일, 공휴일
+                        </p>
+                    </li>
+                    <li>
+                        <span class="rectangle_info">
+                            <p>BGN 월드타워 안과</p>11F
+                        </span>
+                        <p>월,화,목,금: 09:00~18:00 / 토: 09:00~15:00
+                            <br>점심시간: 13:00~14:00휴무: 수요일, 일요일, 공휴일
+                        </p>
+                    </li>
+                    <li>
+                        <span class="rectangle_info">
+                            <p>롯데면세점</p>8F~9F
+                        </span>
+                        <p>09:30~18:30 (연중무휴)
+                            <br>한시적으로 영업시간이 변경됩니다.
+                        </p>
+                    </li>
+                    <li>
+                        <span class="rectangle_info">
+                            <p>롯데뮤지엄</p>7F
+                        </span>
+                        <p>잠정중단</p>
+                    </li>
+                    <li>
+                        <span class="rectangle_info">
+                            <p>Fitness Platform MOVE 360</p>6F
+                        </span>
+                        <p>평일: 06:00~23:00 / 주말(공휴일): 10:30~22:00
+                            <br>휴무: 매월 마지막주 일요일
+                        </p>
+                    </li>
+                    <li>
+                        <span class="rectangle_info">
+                            <p>홍보관</p>
+                            <p class="info_no_margin">기자실</p>5F
+                        </span>
+                        <p>일별상이</p>
+                    </li>
+                    <li>
+                        <span class="rectangle_info">
+                            <p>엔젤리너스</p>1F
+                        </span>
+                        <p>평일: 08:00~19:00
+                            <br>주말(공휴일): 10:00~19:00
+                        </p>
+                    </li>
+                    <li>
+                        <span class="rectangle_info">
+                            <p>7-Eleven</p>B1F
+                        </span>
+                        <p>평일: 07:00~22:00
+                            <br>연중무휴
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="pop_closebtn" onClick="javascript:onClickPopupClose('PODIUM');"><img
+                src="./images/pop_close_btn.png">
+        </div>
+    </div>
+
+
+    <!--  POPUP START  -->
+    <!--  POPUP START  -->
+
+
+
+</body>
+
+</html>
+
+<script language="javascript">
+
+    var PAGEACTIVEYN = false;
+
+    var gl_conf_header = new Object();
+    var gl_jsop_lang_data = new Object();
+
+    var gl_arr_help_list = new Array();
+
+    function setInit() {
+
+        if (parent.MAINPARENTCUSTOMCODE) {
+
+            $(".debug_area").hide();
+            PAGEACTIVEYN = false;
+            setInitSetting();
+
+        } else {
+            PAGEACTIVEYN = true;
+            setLoadLanguage("./include/kiosk_lang_horizon.json");
+            setLoadContents("./xml/kiosk_contents.xml");
+        }
+    }
+
+    jQuery(document).ready(function () {
+        setTimeout(setInit, 400);
+    });
+</script>

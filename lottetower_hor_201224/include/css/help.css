@@ -1,0 +1,265 @@
+/******************************************
+   name :  recommand.css
+   auth :  ELTOV
+   date :  2020.11.16
+   desc :  도움말 CSS
+*******************************************/
+
+
+
+
+/************* SECTION AREA **************/
+.info_detail{
+    height: 700px;
+/*    overflow: hidden;*/
+    /* border: 1px solid red; */
+}
+
+/********* INFO TRAFFIC AREA ***********/
+.info_traffic_box{
+    /* display: none; */
+}
+/********* INFO TRAFFIC AREA ***********/
+
+
+
+
+/********* INFO TIME AREA COMMON CSS ********/
+.info_detail .info_time_box{
+    width: 100%;
+    height: 100%;
+    display: none;
+    padding-top: 40px;
+}
+.info_box{
+    width: 700px;
+/*    height: 635px;*/
+    height: 100%;
+    float: left;
+    margin-left: 70px;
+    vertical-align: top;
+}
+.info_box::after{
+    content: "";
+    clear: both;
+    
+}
+
+.info_time_loc{
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #828282;
+}
+.info_time_loc>h3{
+    font-size: 23px;
+    font-weight: bold;
+    line-height: 23px;
+    color: #4b4b4b;
+}
+.info_time_table{
+    width: 100%;
+    height: 640px;
+    box-sizing: border-box;
+    padding: 16px 0 0 1px;
+}
+.info_time_list{
+/*    height: 530px;*/
+    height: 100%;
+    overflow-y: auto;
+}
+.info_time_list li{
+    min-height: 40px;
+    margin-top: 10px;
+    display: flex;
+    align-items: flex-start;
+    /* margin-bottom: 23px; */
+}
+.info_time_list li>p{
+    width: 350px;
+    font-size: 18px;
+    font-weight: 300;
+    color: #4b4b4b;
+    margin-left: 20px;
+    word-break: keep-all;
+}
+/********* INFO TIME COMMON CSS ********/
+
+
+
+
+
+/************ INFO TAP AREA ************/
+
+/* INFO TAP */
+.info_category{
+    width: 100%;
+/*    height: 287px;*/
+    box-sizing: border-box;
+    background: #f6f6f6;
+    
+    position: absolute;
+    bottom: 0;
+}
+.info_category .info_tap_box{
+    width: 1448px;
+    height: 75px;
+    /* background-color: salmon; */
+    box-sizing: border-box;
+    /* padding: 0 50px; */
+    margin: 0 auto;
+}
+.info_tap_icon{
+    width: 27px;
+    height: 27px;
+}
+.info_category .info_tap_box .info_tap_list{
+    width: 100%;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    border-bottom: 2px solid #bebebf;
+    text-align: center;
+}
+.info_category .info_tap_box .info_tap_list .info_tap{
+    width: 250px;
+    height: 64px;
+    text-align: center;
+    box-sizing: border-box;
+    /* padding-top: 11px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+    /* border-bottom: 2px solid #d92316; */
+}
+.info_category .info_tap_box .info_tap_list .info_tap img:nth-child(2){
+    display: none;
+}
+.info_category .info_tap_box .info_tap_list .info_tap p{
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 23px;
+    font-weight: 500;
+    color: #a6a7a9;
+}
+.info_category .info_tap_box .info_tap_list li.info_tap_active{
+    border-bottom: 2px solid #d92316;
+}
+.info_category .info_tap_box .info_tap_list li.info_tap_active img:first-child{
+    display: none;
+}
+.info_category .info_tap_box .info_tap_list li.info_tap_active img:nth-child(2){
+    display: block;
+}
+.info_category .info_tap_box .info_tap_list li.info_tap_active>p{
+    color: #d92316;
+}
+
+/* INFO BTN */
+.info_category .info_btn_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding-top: 40px;
+    margin-bottom: 100px;
+}
+
+.info_category .info_btn_box>span{
+    margin: 0 5px;
+}
+.info_category .info_btn_box>span .info_tap_icon{
+    margin-right: 6px;
+}
+.info_category .info_btn_box>span .info_tap_icon img:nth-child(2){
+    display: none;
+}
+.info_category .info_btn_box>span.rectangle_ctg_active .info_tap_icon img:first-child{
+    display: none;
+}
+.info_category .info_btn_box>span.rectangle_ctg_active .info_tap_icon img:nth-child(2){
+    display: block;
+}
+
+/************ INFO TAP AREA ************/
+
+
+/* POPUP  */
+
+/* .popup_bg{ position:absolute;z-index:120000;width:1050px;height:1550px;top:0;left:0;background:rgba(0,0,0,0.9);border-radius: 0 0 60px 0;display:none; } */
+.popup_bg{ position:absolute;z-index:120000;width:1566px;height:650px;top:150px;left:27px;margin:auto;background:rgba(0,0,0,0.9);border-radius: 30px;display:none; }
+
+.popup_podium{
+    position: absolute; z-index:121000;
+    width:1470px; height:562px;
+    top:186px;left:70px;
+    margin: auto;
+    box-sizing: border-box;
+    -webkit-transition:all 0.3s;
+    -moz-transition:all 0.3s;
+    -o-transition:all 0.3s;
+    transition:all 0.3s;
+}
+
+
+.popup_podium .info_time_box{
+    width: 1470px;
+    height: 562px;
+    margin: 42px 85px 0 85px;
+    /* display: none; */
+}
+.popup_podium .info_time_loc{
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #828282;
+}
+.popup_podium .info_time_loc>h3{
+    font-size: 23px;
+    font-weight: bold;
+    line-height: 23px;
+    color: #ffffff;
+}
+.popup_podium .info_time_table{
+    width: 100%;
+    height: 462px;
+    box-sizing: border-box;
+    padding: 16px 0 0 50px;
+}
+.popup_podium .info_time_list{
+    width: 1370px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-between;
+}
+.popup_podium .info_time_list li{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    /* margin-bottom: 23px; */
+}
+.popup_podium .info_time_list li>p{
+    font-size: 16px;
+    font-weight: 300;
+    color: #ffffff;
+    margin-left: 20px;
+}
+.popup_podium .info_time_list li .info_no_margin{
+    margin-left: 0;
+}
+
+.popup_podium .pop_closebtn{
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    cursor: pointer;
+}
+.popup_podium .pop_closebtn img{
+    width: 100%;
+}

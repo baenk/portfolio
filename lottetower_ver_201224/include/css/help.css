@@ -1,0 +1,232 @@
+/******************************************
+   name :  recommand.css
+   auth :  ELTOV
+   date :  2020.11.16
+   desc :  도움말 CSS
+*******************************************/
+
+
+
+
+/************* SECTION AREA **************/
+.info_detail{
+    height: 1183px;
+    overflow: hidden;
+    /* border: 1px solid red; */
+}
+
+/********* INFO TRAFFIC AREA ***********/
+.info_traffic_box{
+    height: 100%;
+    /* display: none; */
+}
+/********* INFO TRAFFIC AREA ***********/
+
+.info_traffic_box img{
+    width:100%;
+}
+
+
+
+/********* INFO TIME AREA COMMON CSS ********/
+.info_detail .info_time_box{
+    width: 912px;
+    height: 100%;
+    margin: 42px 85px 0 85px;
+    display: none;
+}
+.info_detail .info_time_box>div{
+/*    border: 1px solid black;*/
+}
+.info_detail .info_time_box .info_time_mall{
+    margin-top: 30px;
+}
+.info_time_loc{
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #828282;
+}
+.info_time_loc>h3{
+    font-size: 23px;
+    font-weight: bold;
+    line-height: 23px;
+    color: #4b4b4b;
+}
+.info_time_table{
+    width: 100%;
+    height: 482px;
+    box-sizing: border-box;
+    padding: 10px 0 0 50px;
+}
+.info_time_list{
+    height: 100%;
+    overflow-y: auto;
+}
+.info_time_list li{
+    display: flex;
+    align-items:flex-start;
+    margin:12px 0 0 0;
+    min-height:30px;
+}
+.info_time_list li>p{
+    max-width: 500px;
+    font-size: 18px;
+    font-weight: 300;
+    color: #4b4b4b;
+    margin-left: 20px;
+    word-break: keep-all;
+}
+/********* INFO TIME COMMON CSS ********/
+
+
+
+
+
+/************ INFO TAP AREA ************/
+
+/* INFO TAP */
+.info_category{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 82px;
+    margin: 0 auto;
+    background-color: #f6f6f6;
+}
+.info_category .info_tap_box{
+    width: 100%;
+    height: 75px;
+    /* background-color: salmon; */
+    box-sizing: border-box;
+    padding: 0 50px;
+}
+.info_category .info_tap_box .info_tap_list{
+    width: 100%;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    border-bottom: 2px solid #bebebf;
+    text-align: center;
+}
+.info_category .info_tap_box .info_tap_list .info_tap{
+    width: 250px;
+    height: 64px;
+    text-align: center;
+    box-sizing: border-box;
+    /* padding-top: 11px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+    /* border-bottom: 2px solid #d92316; */
+}
+.info_category .info_tap_box .info_tap_list .info_tap img:nth-child(2){
+    display: none;
+}
+.info_category .info_tap_box .info_tap_list .info_tap p{
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 23px;
+    font-weight: 500;
+    color: #a6a7a9;
+}
+.info_category .info_tap_box .info_tap_list li.info_tap_active{
+    border-bottom: 2px solid #d92316;
+}
+.info_category .info_tap_box .info_tap_list li.info_tap_active img:first-child{
+    display: none;
+}
+.info_category .info_tap_box .info_tap_list li.info_tap_active img:nth-child(2){
+    display: block;
+}
+.info_category .info_tap_box .info_tap_list li.info_tap_active>p{
+    color: #d92316;
+}
+
+/* INFO BTN */
+.info_category .info_btn_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding-top: 40px;
+}
+
+.info_category .info_btn_box>span{
+    margin: 0 5px;
+}
+
+.info_tap_icon{
+    width: 27px;
+    height: 27px;
+}
+
+/************ INFO TAP AREA ************/
+
+
+/* POPUP  */
+
+.popup_bg{
+    position:absolute;z-index:120000;width:1020px;height:980px;top:186px;left:30px;margin:auto;background:rgba(0,0,0,0.9);border-radius: 60px;
+    display:none;
+}
+
+.popup_podium{
+    position: absolute; z-index:121000;
+    background:rgba(0,0,0,0.9);border-radius: 60px;
+    width:980px; height:900px;
+    top:190px;left:30px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.popup_podium .info_time_loc{
+    width: 90%;
+    height: 50px;
+    padding:42px 0 42px 20px;
+    margin: auto;
+    box-sizing: border-box;
+    border-bottom: 1px solid #828282;
+}
+.popup_podium .info_time_loc>h3{
+    font-size: 23px;
+    font-weight: bold;
+    line-height: 23px;
+    color: #ffffff;
+}
+.popup_podium .info_time_table{
+    width: 95%;
+    height:462px;
+    box-sizing: border-box;
+    padding: 16px 0 0 50px;
+}
+.popup_podium .info_time_list li{
+    display: flex;
+    align-items: flex-start;
+    margin:20px 0 0 0;
+}
+.popup_podium .info_time_list li>span{
+    width:360px;
+    letter-spacing:-1px;
+}
+.popup_podium .info_time_list li>p{
+    font-size: 18px;
+    font-weight: 300;
+    color: #ffffff;
+    width:450px;
+    margin-left: 20px;
+}
+
+.popup_podium .pop_closebtn{
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+}
+.popup_podium .pop_closebtn img{
+    width: 100%;
+}

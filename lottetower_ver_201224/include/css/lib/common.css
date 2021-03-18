@@ -1,0 +1,106 @@
+/******************************************
+   name :  common.css
+   auth :  ELTOV
+   date :  2020.11.08
+   desc :  공통디자인 (폰트, 컴포넌트 추가 예정)
+*******************************************/ 
+  
+ *{
+    margin: 0;
+    padding:0;
+    list-style: none;
+    /* font-family: 'Noto Sans KR'; */
+    font-family: 'Noto Sans CJK';
+}
+ 
+ /* 화면 드래그 방지*/
+ body { 
+    user-select: none;
+}
+
+
+
+/******************  COMMON UI  ********************/
+
+/* BODY AREA */
+.contents_area{
+    width: 1080px;
+    height: 1550px;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: #f6f6f6;
+}
+
+/* HEADER */
+header{
+    width: 1080px;
+    height: 178px;
+    box-sizing: border-box;
+}
+header .top_box{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding: 74px 0 0 60px;
+}
+header .top_box .top_box_img{
+    width: 70px;
+    height: 80px;
+    margin-right: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+header .top_box .top_box_img img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+header .top_box .top_text_box{
+    display: flex;
+    align-items: flex-end;
+}
+
+header .top_box .top_text_box h1{
+    font-size: 48px;
+    font-weight: bold;
+    color: #464646;
+    line-height: 52px;
+    margin-right: 10px;
+}
+header .top_box .top_text_box p{
+    font-size: 22px;
+    line-height: 22px;
+    letter-spacing: -0.5px;
+    color: #828282;
+}
+
+
+/* SECTION */
+section{
+    width: 100%;
+    height: 1372px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+
+
+/*------------------------scroll custom---------------------------*/
+/* 스크롤바의 width */
+::-webkit-scrollbar { width: 6px; height:6px;}
+/* 스크롤바의 전체 배경색 */
+::-webkit-scrollbar-track { background-color: none; }
+/* 스크롤바 색 */
+::-webkit-scrollbar-thumb { 
+    /* background: linear-gradient(to bottom, #1697bf, #62b7ac);  */
+    border-radius: 10px;
+    background-color: #a6a7a9;
+}
+/* 위아래 버튼 */
+::-webkit-scrollbar-button { display: none; }

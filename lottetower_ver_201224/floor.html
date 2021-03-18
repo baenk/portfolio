@@ -1,0 +1,612 @@
+<!--------------------------------------------- 
+   name :  floor.html
+   auth :  ELTOV
+   date :  2020.11.15
+   desc :  층별안내 HTML
+---------------------------------------------->
+<!DOCTYPE HTML>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="user-scalable=no,initial-scale=1.0,maximum-scale=1.0 minimal-ui" />
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LOTTE TOWER INFORMATION</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico">
+
+    <link rel="stylesheet" href="./include/css/lib/reset.css">
+    <link rel="stylesheet" href="./include/css/lib/font.css">
+    <link rel="stylesheet" href="./include/css/lib/swiper.css">
+    <link rel="stylesheet" href="./include/css/component.css">
+
+    <link rel="stylesheet" href="./include/css/floor.css">
+
+    <script type="text/javascript" src="./include/js/lib/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="./include/js/lib/swiper.js"></script>
+    <script type="text/javascript" src="./include/js/comm.js"></script>
+    <script type="text/javascript" src="./include/js/xml.js"></script>
+
+    <!-- <script type="module" src="https://assets.dabeeomaps.com/upload/JS/jsMapAPI.js"></script> -->
+    <script type="application/javascript" src="https://assets.dabeeomaps.com/upload/JS/dabeeo_jsMapAPI_v03.js"></script>
+    <script type="text/javascript" src="./include/js/floor.js"></script>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+
+    <div class="content_main">
+
+        <!-- <div class="debug_button01" onClick="javascript:onClickDebug01();"></div>
+        <div class="debug_button02" onClick="javascript:onClickDebug02();"></div> -->
+
+        <div class="debug_area" style="width: 400px;">
+            <button class="btn" onClick="javascript:onClickDebugLang('KOR');">KOR</button>
+            <button class="btn" onClick="javascript:onClickDebugLang('ENG');">ENG</button>
+            <button class="btn" onClick="javascript:onClickDebugLang('CHN');">CHN</button>
+            <button class="btn" onClick="javascript:onClickDebugLang('JPN');">JPN</button>
+        </div>
+
+
+        <!-- FLOOR_MAIN START -->
+        <!-- FLOOR_MAIN START -->
+        <div class="floor_main">
+            <header>
+                <div id="id_page_top_title" class="top_box">
+                    <div class="top_text_box">
+                        <h1>1F</h1>
+                        <span class="rectangle_pos top_curr_location">
+                            <p class="lang_code_names" lang_code="FLOOR_LEVEL_CURRENT">현재위치</p>
+                        </span>
+                    </div>
+                    <div class="top_store_box">
+                        <ul>
+                            <p id="id_store_ctg"><span>시그니엘서울(호텔)</span> / <span>에비뉴엘 : </span> 럭셔리 부티크<br><span>쇼핑몰 :
+                                </span> 글로벌패션, 카페 스트리트, CONNECT TO</p>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <section>
+                <div class="floor_map_box">
+                    <div id="id_page_map_main" style=""></div>
+                </div>
+
+                <div class="floor_bottom_area">
+                    <div class="floor_marker">
+                        <ul class="floor_marker_list">
+                            <li class="rectangle_small"><span></span>
+                                <p class="lang_code_names" lang_code="FLOOR_MARKER_FOOD">식당가</p>
+                            </li>
+                            <li class="rectangle_small rectangle_small_pink"><span></span>
+                                <p class="lang_code_names" lang_code="FLOOR_MARKER_SHOP">쇼핑</p>
+                            </li>
+                            <li class="rectangle_small rectangle_small_purple"><span></span>
+                                <p class="lang_code_names" lang_code="FLOOR_MARKER_SERVICE">서비스</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="id_page_facility_btn_list" class="swiper-container facility_box_list">
+                        <div class="swiper-wrapper">
+                            <div class="facility_btn swiper-slide" code="0400">
+                                <div class="facility_btn_icon">
+                                    <img src="./images/map_ic_01.png">
+                                    <img src="./images/map_ic_01_o.png">
+                                </div>
+                                <p class="lang_code_facility" lang_code="FACILTY_P01">안내데스크</p>
+                            </div>
+                            <div class="facility_btn swiper-slide" code="0435">
+                                <div class="facility_btn_icon">
+                                    <img src="./images/map_ic_02.png">
+                                    <img src="./images/map_ic_02_o.png">
+                                </div>
+                                <p class="lang_code_facility" lang_code="FACILTY_P02">컨시어지 데스크</p>
+                            </div>
+                            <div class="facility_btn swiper-slide" code="0425">
+                                <div class="facility_btn_icon">
+                                    <img src="./images/map_ic_03.png">
+                                    <img src="./images/map_ic_03_o.png">
+                                </div>
+                                <p class="lang_code_facility" lang_code="FACILTY_P03">화장실</p>
+                            </div>
+                            <div class="facility_btn swiper-slide" code="0427">
+                                <div class="facility_btn_icon">
+                                    <img src="./images/map_ic_04.png">
+                                    <img src="./images/map_ic_04_o.png">
+                                </div>
+                                <p class="lang_code_facility" lang_code="FACILTY_P04">장애인 화장실</p>
+                            </div>
+                            <div class="facility_btn swiper-slide" code="0426">
+                                <div class="facility_btn_icon">
+                                    <img src="./images/map_ic_05.png">
+                                    <img src="./images/map_ic_05_o.png">
+                                </div>
+                                <p class="lang_code_facility" lang_code="FACILTY_P05">가족화장실</p>
+                            </div>
+                            <div class="facility_btn swiper-slide" code="0413">
+                                <div class="facility_btn_icon">
+                                    <img src="./images/map_ic_06.png">
+                                    <img src="./images/map_ic_06_o.png">
+                                </div>
+                                <p class="lang_code_facility" lang_code="FACILTY_P06">유모차 대여소</p>
+                            </div>
+                            <div class="facility_btn swiper-slide" code="0414">
+                                <div class="facility_btn_icon">
+                                    <img src="./images/map_ic_07.png">
+                                    <img src="./images/map_ic_07_o.png">
+                                </div>
+                                <p class="lang_code_facility" lang_code="FACILTY_P07">유아휴게실</p>
+                            </div>
+                            <div class="facility_btn swiper-slide" code="0423">
+                                <div class="facility_btn_icon">
+                                    <img src="./images/map_ic_08.png">
+                                    <img src="./images/map_ic_08_o.png">
+                                </div>
+                                <p class="lang_code_facility" lang_code="FACILTY_P08">물품 보관소</p>
+                            </div>
+                            <div class="facility_btn swiper-slide" code="0407">
+                                <div class="facility_btn_icon">
+                                    <img src="./images/map_ic_09.png">
+                                    <img src="./images/map_ic_09_o.png">
+                                </div>
+                                <p class="lang_code_facility" lang_code="FACILTY_P09">현금 입출금기</p>
+                            </div>
+                            <div class="facility_btn swiper-slide" code="0401">
+                                <div class="facility_btn_icon">
+                                    <img src="./images/map_ic_10.png">
+                                    <img src="./images/map_ic_10_o.png">
+                                </div>
+                                <p class="lang_code_facility" lang_code="FACILTY_P10">고객상담실</p>
+                            </div>
+                            <div class="facility_btn swiper-slide" code="0442">
+                                <div class="facility_btn_icon">
+                                    <img src="./images/map_ic_11.png">
+                                    <img src="./images/map_ic_11_o.png">
+                                </div>
+                                <p class="lang_code_facility" lang_code="FACILTY_P11">고객라운지</p>
+                            </div>
+                            <div class="facility_btn swiper-slide" code="0417">
+                                <div class="facility_btn_icon">
+                                    <img src="./images/map_ic_12.png">
+                                    <img src="./images/map_ic_12_o.png">
+                                </div>
+                                <p class="lang_code_facility" lang_code="FACILTY_P12">의무실</p>
+                            </div>
+                            <div class="facility_btn swiper-slide" code="0443">
+                                <div class="facility_btn_icon">
+                                    <img src="./images/map_ic_13.png">
+                                    <img src="./images/map_ic_13_o.png">
+                                </div>
+                                <p class="lang_code_facility" lang_code="FACILTY_P13">약국</p>
+                            </div>
+                            <div class="facility_btn swiper-slide" code="0404">
+                                <div class="facility_btn_icon">
+                                    <img src="./images/map_ic_14.png">
+                                    <img src="./images/map_ic_14_o.png">
+                                </div>
+                                <p class="lang_code_facility" lang_code="FACILTY_P14">롯데카드</p>
+                            </div>
+                            <div class="facility_btn swiper-slide" code="0444">
+                                <div class="facility_btn_icon">
+                                    <img src="./images/map_ic_15.png">
+                                    <img src="./images/map_ic_15_o.png">
+                                </div>
+                                <p class="lang_code_facility" lang_code="FACILTY_P15">VIP 카드서비스</p>
+                            </div>
+                            <div class="facility_btn swiper-slide" code="0410">
+                                <div class="facility_btn_icon">
+                                    <img src="./images/map_ic_16.png">
+                                    <img src="./images/map_ic_16_o.png">
+                                </div>
+                                <p class="lang_code_facility" lang_code="FACILTY_P16">행사장</p>
+                            </div>
+                            <div class="facility_btn swiper-slide" code="0445">
+                                <div class="facility_btn_icon">
+                                    <img src="./images/map_ic_17.png">
+                                    <img src="./images/map_ic_17_o.png">
+                                </div>
+                                <p class="lang_code_facility" lang_code="FACILTY_P17">사은품 증정장소</p>
+                            </div>
+                            <div class="facility_btn swiper-slide" code="0408">
+                                <div class="facility_btn_icon">
+                                    <img src="./images/map_ic_18.png">
+                                    <img src="./images/map_ic_18_o.png">
+                                </div>
+                                <p class="lang_code_facility" lang_code="FACILTY_P18">텍스리펀드</p>
+                            </div>
+                            <div class="facility_btn swiper-slide" code="0403">
+                                <div class="facility_btn_icon">
+                                    <img src="./images/map_ic_19.png">
+                                    <img src="./images/map_ic_19_o.png">
+                                </div>
+                                <p class="lang_code_facility" lang_code="FACILTY_P19">상품권 판매소</p>
+                            </div>
+                            <div class="facility_btn swiper-slide" code="0420">
+                                <div class="facility_btn_icon">
+                                    <img src="./images/map_ic_20.png">
+                                    <img src="./images/map_ic_20_o.png">
+                                </div>
+                                <p class="lang_code_facility" lang_code="FACILTY_P20">의류수선실</p>
+                            </div>
+                            <div class="facility_btn swiper-slide" code="0421">
+                                <div class="facility_btn_icon">
+                                    <img src="./images/map_ic_21.png">
+                                    <img src="./images/map_ic_21_o.png">
+                                </div>
+                                <p class="lang_code_facility" lang_code="FACILTY_P21">시계수선실</p>
+                            </div>
+                            <div class="facility_btn swiper-slide" code="0405">
+                                <div class="facility_btn_icon">
+                                    <img src="./images/map_ic_22.png">
+                                    <img src="./images/map_ic_22_o.png">
+                                </div>
+                                <p class="lang_code_facility" lang_code="FACILTY_P22">환전소</p>
+                            </div>
+                            <div class="facility_btn swiper-slide" code="0432">
+                                <div class="facility_btn_icon">
+                                    <img src="./images/map_ic_23.png">
+                                    <img src="./images/map_ic_23_o.png">
+                                </div>
+                                <p class="lang_code_facility" lang_code="FACILTY_P23">매표소</p>
+                            </div>
+                            <div class="facility_btn swiper-slide" code="0411">
+                                <div class="facility_btn_icon">
+                                    <img src="./images/map_ic_24.png">
+                                    <img src="./images/map_ic_24_o.png">
+                                </div>
+                                <p class="lang_code_facility" lang_code="FACILTY_P24">발렛주차장</p>
+                            </div>
+                            <div class="facility_btn swiper-slide" code="0437">
+                                <div class="facility_btn_icon">
+                                    <img src="./images/map_ic_25.png">
+                                    <img src="./images/map_ic_25_o.png">
+                                </div>
+                                <p class="lang_code_facility" lang_code="FACILTY_P25">무슬림 기도실</p>
+                            </div>
+                            <div class="facility_btn swiper-slide" code="0438">
+                                <div class="facility_btn_icon">
+                                    <img src="./images/map_ic_26.png">
+                                    <img src="./images/map_ic_26_o.png">
+                                </div>
+                                <p class="lang_code_facility" lang_code="FACILTY_P26">피난 안전구역</p>
+                            </div>
+                            <div class="facility_btn swiper-slide"></div>
+
+                        </div>
+                    </div>
+
+                    <!-- FLOOR BOX START -->
+                    <div class="floor_box_wrap">
+                        <div id="id_page_floor_btn_list" class="swiper-container floor_box_list">
+                            <div id="id_floor_btn_wrap" class="swiper-wrapper"></div>
+                        </div>
+                        <span id="id_btn_floor_all" class="circle_65_wide" onClick="javascript:onClickInfoFloorAll();">
+                            <img src="./images/floor-bt-all-floor.svg">
+                            <img src="./images/floor-bt-all-floor-o.svg">
+                            <p class="lang_code_names" lang_code="FLOOR_ALL_INFO_ALL" style="line-height:20px;">전층<br>안내
+                            </p>
+                        </span>
+
+                    </div>
+                    <!-- FLOOR BOX START -->
+
+                </div>
+            </section>
+
+        </div>
+        <!-- FLOOR_MAIN END -->
+        <!-- FLOOR_MAIN END -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- FLOOR_ALL START -->
+        <!-- FLOOR_ALL START -->
+        <div id="id_page_floor_all" class="floor_all" style="display:none;">
+
+            <header>
+                <div class="top_box">
+                    <div class="top_box_img">
+                        <img src="./images/floor-ic-tit.png">
+                    </div>
+                    <div class="top_text_box">
+                        <h1 class="lang_code_names" lang_code="FLOOR_ALL_TITLE">전층안내</h1>
+                        <p></p>
+                    </div>
+                </div>
+            </header>
+
+            <section>
+                <!-- <dib class="bottom_box"></dib> -->
+                <div class="floor_map_box">
+
+                    <!-- FLOOR BTN AREA -->
+                    <span id="id_btn_floor_all_prev" class="arrow_btn"
+                        onClick="javascript:onClickFloorAllMove('PREV');"><img
+                            src="./images/floor-ic-all-left.png"></span>
+                    <span id="id_btn_floor_all_next" class="arrow_btn"
+                        onClick="javascript:onClickFloorAllMove('NEXT');"><img
+                            src="./images/floor-ic-all-right.png"></span>
+
+                    <div class="c_scroll">
+                        <div class="c_scroll_thumb"></div>
+                    </div>
+
+                    <!-- FLOOR MAP AREA -->
+                    <div id="id_page_floor_all_map" class="floor_map_img">
+                        <img src="./images/floor/floor-img-all_vertical_kor.png" usemap="#floor_all_map">
+                        <map id="floor_all_map" name="floor_all_map">
+                            <!-- 롯데타워 -->
+                            <area shape="rect" alt="롯데타워 B1F" title="" coords="33,726,303,774"
+                                href="javascript:onClickInfoFloorMove('ALL','TOWER','B1F' );" /> <!-- 타워,에비뉴엘,쇼핑몰 -->
+                            <area shape="rect" alt="롯데타워 1F-5F" title="" coords="33,522,303,722"
+                                href="javascript:onClickInfoFloorMove('ALL', 'TOWER', '1F');" />
+                            <area shape="rect" alt="롯데타워 6F" title="" coords="33,472,303,518"
+                                href="javascript:onClickInfoFloorMove('ALL', 'TOWER', '5F');" />
+                            <area shape="rect" alt="롯데타워 7F" title="" coords="33,421,303,467"
+                                href="javascript:onClickInfoFloorMove('ALL', 'TOWER', '6F');" />
+                            <area shape="rect" alt="롯데타워 8F-9F" title="" coords="33,319,303,417"
+                                href="javascript:onClickInfoFloorMove('ALL', 'TOWER', '8F');" />
+                            <area shape="rect" alt="롯데타워 10F-11F" title="" coords="33,268,303,315"
+                                href="javascript:onClickInfoFloorMove('ALL', 'TOWER', '11F')" />
+                            <area shape="rect" alt="롯데타워 12F" title="" coords="33,216,303,263"
+                                href="javascript:onClickInfoFloorMove('ALL', 'TOWER', '12F');" />
+                            <area shape="rect" alt="롯데타워 31F" title="" coords="33,115,303,162"
+                                href="javascript:onClickInfoFloorMove('ALL', 'TOWER', '31F');" />
+
+                            <!-- B1 브릿지 -->
+                            <area shape="rect" alt="브릿지 미정" title="" coords="307,727,360,773"
+                                href="javascript:onClickInfoFloorMove('ALL', 'TA_BRIDGE', 'B1');" />
+                            <!-- 1F 브릿지 -->
+                            <area shape="rect" alt="브릿지 미정" title="" coords="307,677,360,722"
+                                href="javascript:onClickInfoFloorMove('ALL', 'TA_BRIDGE', '1F');" />
+                            <!-- 6F 브릿지 -->
+                            <area shape="rect" alt="브릿지 미정" title="" coords="307,472,360,517"
+                                href="javascript:onClickInfoFloorMove('ALL', 'TA_BRIDGE', '5F');" />
+                            <!-- 7F 브릿지 -->
+                            <area shape="rect" alt="브릿지 미정" title="" coords="307,423,360,467"
+                                href="javascript:onClickInfoFloorMove('ALL', 'TA_BRIDGE', '6F');" />
+                            <!-- 8F 브릿지 -->
+                            <area shape="rect" alt="브릿지 미정" title="" coords="307,371,360,417"
+                                href="javascript:onClickInfoFloorMove('ALL', 'TA_BRIDGE', '8F');" />
+                            <!-- 9F 브릿지 -->
+                            <area shape="rect" alt="브릿지 미정" title="" coords="307,319,360,366"
+                                href="javascript:onClickInfoFloorMove('ALL', 'TA_BRIDGE', '9F');" />
+
+                            <!-- 에비뉴엘 -->
+                            <area shape="rect" alt="에비뉴엘 B1F" title="" coords="396,727,750,772"
+                                href="javascript:onClickInfoFloorMove('ALL', 'AVENUEL', 'B1F');" />
+                            <area shape="rect" alt="에비뉴엘 1F" title="" coords="396,676,750,724"
+                                href="javascript:onClickInfoFloorMove('ALL', 'AVENUEL', '1F');" />
+                            <area shape="rect" alt="에비뉴엘 2F" title="" coords="396,625,750,671"
+                                href="javascript:onClickInfoFloorMove('ALL', 'AVENUEL', '2F');" />
+                            <area shape="rect" alt="에비뉴엘 3F" title="" coords="396,573,750,620"
+                                href="javascript:onClickInfoFloorMove('ALL', 'AVENUEL', '3F');" />
+                            <area shape="rect" alt="에비뉴엘 4F" title="" coords="396,522,750,568"
+                                href="javascript:onClickInfoFloorMove('ALL', 'AVENUEL', '4F');" />
+                            <area shape="rect" alt="에비뉴엘 5F" title="" coords="396,472,750,519"
+                                href="javascript:onClickInfoFloorMove('ALL', 'AVENUEL', '5F');" />
+                            <area shape="rect" alt="에비뉴엘 6F" title="" coords="396,421,750,467"
+                                href="javascript:onClickInfoFloorMove('ALL', 'AVENUEL', '6F');" />
+                            <!-- 면세점 -->
+                            <area shape="rect" alt="면세점 8F" title="" coords="396,370,750,417"
+                                href="javascript:onClickInfoFloorMove('ALL', 'DUTY', '8F');" />
+                            <area shape="rect" alt="면세점 9F" title="" coords="396,319,750,368"
+                                href="javascript:onClickInfoFloorMove('ALL', 'DUTY', '9F');" />
+
+                            <!-- B1F 브릿지 -->
+                            <area shape="rect" alt="브릿지 미정" title="" coords="755,728,864,773"
+                                href="javascript:onClickInfoFloorMove('ALL', 'AM_BRIDGE', 'B1F');" />
+                            <!-- 1F 브릿지 -->
+                            <area shape="rect" alt="브릿지 미정" title="" coords="755,678,864,725"
+                                href="javascript:onClickInfoFloorMove('ALL', 'AM_BRIDGE', '1F');" />
+                            <!-- 5F 브릿지 -->
+                            <area shape="rect" alt="브릿지 미정" title="" coords="756,474,864,517"
+                                href="javascript:onClickInfoFloorMove('ALL', 'AM_BRIDGE', '5F');" />
+                            <!-- 6F 브릿지 -->
+                            <area shape="rect" alt="브릿지 미정" title="" coords="757,422,864,467"
+                                href="javascript:onClickInfoFloorMove('ALL', 'AM_BRIDGE', '6F');" />
+
+                            <!-- 쇼핑몰 -->
+                            <area shape="rect" alt="쇼핑몰 B3F" title="" coords="1,829,1499,876"
+                                href="javascript:onClickInfoFloorMove('ALL', 'TOWER', 'B3F');" />
+                            <area shape="rect" alt="쇼핑몰 B2F" title="" coords="1,778,1025,825"
+                                href="javascript:onClickInfoFloorMove('ALL', 'TOWER', 'B2F');" />
+                            <area shape="rect" alt="쇼핑몰 아쿠아" title="" coords="1368,728,1500,825"
+                                href="javascript:onClickInfoFloorMove('ALL', 'MALL', 'B1F');" />
+                            <area shape="rect" alt="쇼핑몰 마트" title="" coords="1031,779,1363,826"
+                                href="javascript:onClickInfoFloorMove('ALL', 'MALL', 'B1F');" />
+                            <area shape="rect" alt="쇼핑몰 B1F" title="" coords="903,728,1364,775"
+                                href="javascript:onClickInfoFloorMove('ALL', 'MALL', 'B1F');" />
+                            <area shape="rect" alt="쇼핑몰 1F" title="" coords="903,677,1500,722"
+                                href="javascript:onClickInfoFloorMove('ALL', 'MALL', '1F');" />
+                            <area shape="rect" alt="쇼핑몰 2F" title="" coords="903,625,1500,671"
+                                href="javascript:onClickInfoFloorMove('ALL', 'MALL', '2F');" />
+                            <area shape="rect" alt="쇼핑몰 3F" title="" coords="903,574,1227,622"
+                                href="javascript:onClickInfoFloorMove('ALL', 'MALL', '3F');" />
+                            <area shape="rect" alt="" title="쇼핑몰 하이마트" coords="1234,574,1500,620"
+                                href="javascript:onClickInfoFloorMove('ALL', 'MALL', '3F');" />
+                            <area shape="rect" alt="쇼핑몰 4F" title="" coords="903,523,1500,569"
+                                href="javascript:onClickInfoFloorMove('ALL', 'MALL', '4F');" />
+                            <area shape="rect" alt="쇼핑몰 5F" title="" coords="903,472,1227,518"
+                                href="javascript:onClickInfoFloorMove('ALL', 'MALL', '5F');" />
+                            <area shape="rect" alt="쇼핑몰 6F" title="" coords="903,421,1227,467"
+                                href="javascript:onClickInfoFloorMove('ALL', 'MALL', '6F');" />
+                            <area shape="rect" alt="쇼핑몰 시네마 5F" title="" coords="1311,472,1501,521"
+                                href="javascript:onClickInfoFloorMove('ALL', 'MALL', '5F');" />
+                            <area shape="rect" alt="쇼핑몰 시네마 6F" title="" coords="1311,370,1501,469"
+                                href="javascript:onClickInfoFloorMove('ALL', 'MALL', '6F');" />
+                            <area shape="rect" alt="쇼핑몰 시네마 8F" title="" coords="1312,318,1502,368"
+                                href="javascript:onClickInfoFloorMove('ALL', 'MALL', '8F');" />
+                            <area shape="rect" alt="쇼핑몰 시네마 10F" title="" coords="1313,270,1502,317"
+                                href="javascript:onClickInfoFloorMove('ALL', 'MALL', '10F');" />
+                            <area shape="rect" alt="쇼핑몰 콘서트 8F" title="" coords="1014,371,1208,418"
+                                href="javascript:onClickInfoFloorMove('ALL', 'MALL', '8F');" />
+                            <area shape="rect" alt="쇼핑몰 콘서트 9F" title="" coords="1014,319,1206,370"
+                                href="javascript:onClickInfoFloorMove('ALL', 'MALL', '9F');" />
+                            <area shape="rect" alt="쇼핑몰 콘서트 10F" title="" coords="1015,269,1205,315"
+                                href="javascript:onClickInfoFloorMove('ALL', 'MALL', '10F');" />
+                        </map>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- FLOOR_ALL END -->
+        <!-- FLOOR_ALL END -->
+
+    </div>
+
+
+    <div id="id_popup_bg" class="popup_bg"></div>
+
+    <div id="id_popup_select" class="popup_select" style="display:none;">
+        <div class="popup_top">
+            <div class="pop_name">
+                <p class="lang_code_names" lang_code="FLOOR_POP_TITLE">원하시는 이동수단을 선택해 주세요.</p>
+            </div>
+        </div>
+        <div class="popup_bottom">
+            <hr>
+            <ul class="pop_icon_list">
+                <li class="pop_icon_way" onClick="javascript:onClickPopUpSelect(this, 'elevator');">
+                    <img src="./images/comn-popup-wayfinding-el.svg">
+                    <img src="./images/comn-popup-wayfinding-el-o.svg">
+                    <p class="lang_code_names" lang_code="FLOOR_POP_ELE">엘리베이터</p>
+                </li>
+                <li class="pop_icon_way" onClick="javascript:onClickPopUpSelect(this, 'escalator');">
+                    <img src="./images/comn-popup-wayfinding-es.svg">
+                    <img src="./images/comn-popup-wayfinding-es-o.svg">
+                    <p class="lang_code_names" lang_code="FLOOR_POP_ESC">에스컬레이터</p>
+                </li>
+            </ul>
+        </div>
+        <div class="pop_closebtn" onClick="javascript:onClickPopupClose('SELECT');"><img
+                src="./images/pop_close_btn_black.svg"></div>
+    </div>
+
+
+
+</body>
+
+</html>
+
+<script language="javascript">
+
+    ///////////////////     CUSTOM SCROLL BAR    /////////////////////
+
+    //type: 가로형 or 세로형 스크롤  c_scroll_bar: 커스텀 스크롤바  
+    //c_scroll: 커스텀 스크롤  frame: 이미지 상위 박스
+
+    var PAGEACTIVEYN = false;
+    var gl_reload_yn = "";
+
+    var gl_conf_header = new Object();
+    var gl_jsop_lang_data = new Object();
+
+    var gl_arr_store_list = new Array();
+    var gl_arr_facility_list = new Array();
+
+    var gl_arr_floor_list = new Array(
+        ["B6F", ""], ["B5F", ""], ["B4F", ""], ["B3F", ""], ["B2F", ""], ["B1F", ""],
+        ["1F", ""], ["2F", ""], ["3F", ""], ["4F", ""], ["5F", ""], ["6F", ""], ["7F", ""], ["8F", ""], ["9F", ""],
+        ["10F", ""], ["11F", ""], ["12F", ""], ["31F", ""]
+    );
+
+    function onScrollImg(p_type, frame) {
+        // var c_scroll_bar = frame.siblings(".c_scroll");
+        // var c_scroll = c_scroll_bar.children(".c_scroll_thumb");
+
+        var c_scroll_bar = $(".c_scroll");
+        var c_scroll = $(".c_scroll_thumb");
+
+        //세로 스크롤
+        if (p_type === "height") {
+
+            // 스크롤 움직임 배율
+            //(스크롤바 길이 - 스크롤) / (프레임 길이 (세로->height or 가로->width) - 컨텐츠 길이 (세로->height or 가로->width))
+            var c_ratio = (c_scroll_bar.height() - c_scroll.height()) / (frame.children("img").height() - frame.height());
+
+            //세로 스크롤 이동
+            $(".c_scroll_thumb").css({ "top": (frame.offset().top - frame.children("img").offset().top) * c_ratio });
+        }
+
+        //가로 스크롤
+        else if (p_type === "width") {
+            var c_ratio = (c_scroll_bar.width() - c_scroll.width()) / (frame.children("img").width() - frame.width());
+
+            //가로 스크롤 이동
+            // $(".c_scroll_thumb").css({"left": (img_offsetLeft - frame.children("img").offset().left)*c_ratio});
+
+            $(".c_scroll_thumb").css({ "left": (frame.offset().left - frame.children("img").offset().left) * c_ratio });
+        }
+        else {
+            return;
+        }
+    }
+
+
+    //맵 스크롤 시 버튼 모션
+    function onScrollBtn() {
+
+        if ($("#id_page_floor_all_map").scrollLeft() <= 5) {
+            $("#id_btn_floor_all_prev").hide();
+            $("#id_btn_floor_all_next").show();
+        }
+        else if ($("#id_page_floor_all_map").scrollLeft() > 400) {
+            $("#id_btn_floor_all_prev").show();
+            $("#id_btn_floor_all_next").hide();
+        }
+        else {
+            $("#id_btn_floor_all_prev").show();
+            $("#id_btn_floor_all_next").show();
+        }
+    }
+
+    function setInit() {
+
+        $("#id_page_floor_all_map").scroll(function () {
+            onScrollImg("width", $(this));
+            onScrollBtn();
+        });
+
+
+        var url = document.location.href;
+        var param = getUrlParams(url);
+        gl_reload_yn = param.reload_yn;
+
+        if (gl_reload_yn == "RELOAD") {
+            $(".debug_area").hide();
+            PAGEACTIVEYN = false;
+            setLoadLanguage("./include/kiosk_lang_vertical.json");
+            setLoadContents("./xml/kiosk_contents.xml");
+        } else {
+            if (parent.MAINPARENTCUSTOMCODE) {
+                $(".debug_area").hide();
+                PAGEACTIVEYN = false;
+                setInitSetting();
+            } else {
+                PAGEACTIVEYN = true;
+                setLoadLanguage("./include/kiosk_lang_vertical.json");
+                setLoadContents("./xml/kiosk_contents.xml");
+            }
+        }
+    }
+
+    jQuery(document).ready(function () {
+        setTimeout(setInit, 100);
+    });
+
+</script>

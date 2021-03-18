@@ -1,0 +1,961 @@
+{
+    "index":{
+        "BOTTOM_MNU_FLOOR":
+        {
+            "kor":"층별안내",
+            "eng":"Floor",
+            "chn":"楼层指南",
+            "jpn":"フロアガイド"
+        },
+        "BOTTOM_MNU_STORE":
+        {
+            "kor":"매장검색",
+            "eng":"Store",
+            "chn":"搜索卖场",
+            "jpn":"店舗内"
+        },
+        "BOTTOM_MNU_FOOD":
+        {
+            "kor":"식당가검색",
+            "eng":"Food",
+            "chn":"搜索美食街",
+            "jpn":"レストラン街"
+        },
+        "BOTTOM_MNU_RECOMMAND":
+        {
+            "kor":"추천매장",
+            "eng":"Recommand",
+            "chn":"推荐卖场",
+            "jpn":"おすすめ店"
+        },
+        "BOTTOM_MNU_EVENT":
+        {
+            "kor":"이벤트",
+            "eng":"Event",
+            "chn":"活动",
+            "jpn":"イベント"
+        },
+        "BOTTOM_MNU_PARK":
+        {
+            "kor":"주차안내",
+            "eng":"Parking",
+            "chn":"停车指南",
+            "jpn":"駐車案内"
+        },
+        "BOTTOM_MNU_HELP":
+        {
+            "kor":"이용안내",
+            "eng":"Guide",
+            "chn":"使用指南",
+            "jpn":"ご利用案内"
+        },
+        "BOTTOM_MNU_FACILITY":
+        {
+            "kor":"편의시설",
+            "eng":"Amenities",
+            "chn":"便利设施",
+            "jpn":"便益施設"
+        },
+
+        "POP_INFO" : {
+            "kor" : "시설정보" ,
+            "eng" : "Information",
+            "chn" : "信息",
+            "jpn" : "情報"
+        },
+        "POP_LOC" : {
+            "kor" : "매장위치" ,
+            "eng" : "Place",
+            "chn" : "卖场位置",
+            "jpn" : "店舗"
+        },
+        "POP_TEL" : {
+            "kor" : "전화번호" ,
+            "eng" : "Tel",
+            "chn" : "电话号码",
+            "jpn" : "電話番号"
+        },
+        "POP_TIME" : {
+            "kor" : "영업시간" ,
+            "eng" : "Opening Hours",
+            "chn" : "营业时间",
+            "jpn" : "営業時間"
+        },
+        "POP_MENU" : {
+            "kor" : "주요 메뉴" ,
+            "eng" : "Main Menu",
+            "chn" : "主菜单",
+            "jpn" : "メインメニュー"
+        },
+        "POP_GUIDE" : {
+            "kor" : "위치안내" ,
+            "eng" : "Location",
+            "chn" : "位置引导",
+            "jpn" : "位置案内"
+        },
+        "POP_TERM" : {
+            "kor" : "기간" ,
+            "eng" : "Term",
+            "chn" : "术语",
+            "jpn" : "期間"
+        },
+        "WEATHER_01" : {
+            "kor" : "맑음" ,
+            "eng" : "SUNNY",
+            "chn" : "晴朗",
+            "jpn" : "サニー"
+        },
+        "WEATHER_02" : {
+            "kor" : "흐림" ,
+            "eng" : "CLOUDY",
+            "chn" : "阴天",
+            "jpn" : "曇り"
+        },
+        "WEATHER_03" : {
+            "kor" : "비" ,
+            "eng" : "RAINY",
+            "chn" : "下雨",
+            "jpn" : "雨の"
+        },
+        "WEATHER_04" : {
+            "kor" : "눈" ,
+            "eng" : "SNOWY",
+            "chn" : "下雪",
+            "jpn" : "雪だ"
+        }
+
+    },
+
+    "floor" : {
+        "FLOOR_LEVEL_B6F" : {
+            "kor" : "<span>주차장</span>",
+            "eng" : "<span>PARKING LOT</span>",
+            "chn" : "<span>停车场</span>",
+            "jpn" : "<span>駐車場</span>"
+        },
+        "FLOOR_LEVEL_B5F" : {
+            "kor" : "<span>주차장</span>",
+            "eng" : "<span>PARKING LOT</span>",
+            "chn" : "<span>停车场</span>",
+            "jpn" : "<span>駐車場</span>"
+        },
+        "FLOOR_LEVEL_B4F" : {
+            "kor" : "<span>주차장</span>",
+            "eng" : "<span>PARKING LOT</span>",
+            "chn" : "<span>停车场</span>",
+            "jpn" : "<span>駐車場</span>"
+        },
+        "FLOOR_LEVEL_B3F" : {
+            "kor" : "<span>주차장</span>",
+            "eng" : "<span>PARKING LOT</span>",
+            "chn" : "<span>停车场</span>",
+            "jpn" : "<span>駐車場</span>"
+        },
+        
+        "FLOOR_LEVEL_B2F" : {
+            "kor" : "<span>주차장</span> / <span>마트</span>",
+            "eng" : "<span>PARKING LOT</span> / <span>LOTTE MART(LARGE SUPERMARKET)</span>",
+            "chn" : "<span>乐天玛特</span>",
+            "jpn" : "<span>マート</span>"
+        },
+        "FLOOR_LEVEL_B1F" : {
+            "kor" : "<span>서울스카이(전망대)</span> / <span>에비뉴엘 : </span> 화장품, 구두 / <span>쇼핑몰 :</span> 영패션, 푸드코트, 3355존 / <span>아쿠아리움</span>" ,
+            "eng" : "<span>SEOUL SKY(Observation Deck)</span> / <span>AVENUEL : </span> COSMETICS, SHOES<br><span>SHOPPIING MALL : </span> YOUNG FASHION, FOOD COURT, 3355 ZONE / <span>Aquarium</span>",
+            "chn" : "<span>AVENUEL : </span> 化妆品 皮鞋  <span>购物中心 : </span>青春时尚馆 美食广场  <span>水族馆</span>",
+            "jpn" : "<span>AVENUEL : </span> 化粧品 靴  <span>ショッピングモール Mall : </span> ヤングファッション フードコート  <span>アクアリウム</span>"
+        },
+        "FLOOR_LEVEL_1F" : {
+            "kor" : "<span>시그니엘서울(호텔)</span> / <span>에비뉴엘 : </span> 럭셔리 부티크 <br><span>쇼핑몰 : </span> 글로벌패션, 카페 스트리트, CONNECT TO(렉서스 코리아)" ,
+            "eng" : "<span>SIGNIEL SEOUL(HOTEL)</span> / <span>AVENUEL : </span> LUXURY BOUTIQUE<br><span>SHOPPIING MALL : </span> GLOBAL FASHION, CAFE STREET,  CONNECT TO(LEXUS KOREA)",
+            "chn" : "<span>AVENUEL : </span> 精品屋 <span>购物中心 : </span> 国际时尚 时尚首饰 咖啡街 CONNECT TO(LEXUS KOREA)",
+            "jpn" : "<span>AVENUEL : </span> ブランドブティック  <span>ショッピングモール : </span> グローバルファッション、ファッション雑貨、カフェストリート CONNECT TO(LEXUS KOREA)"
+        },
+        "FLOOR_LEVEL_2F" : {
+            "kor" : "<span>에비뉴엘 : </span> 럭셔리 시계 · 주얼리 / <span>쇼핑몰 : </span> 글로벌패션, 여성패션, 잡화" ,
+            "eng" : "<span>AVENUEL : </span> LUXURY WATCHES & JEWELRY<br><span>SHOPPIING MALL : </span> GLOBAL FASHION, WOMEN'S FASHION, FASHION ACCESSORIES",
+            "chn" : "<span>AVENUEL : </span> 名品名表&珠宝 名品时装   <span>购物中心 : </span> 全球时装 女士时装 时装日杂 ",
+            "jpn" : "<span>AVENUEL : </span> ブランドウォッチ&ジュエリー ブランドファッション  <span>ショッピングモール : </span> グローバルファッション レディースファッション ファッション雑貨"
+        },
+        "FLOOR_LEVEL_3F" : {
+            "kor" : "<span>에비뉴엘 : </span> 명품패션 / <span>쇼핑몰 : </span>스포츠, 남성패션, 홍그라운드 / <span>하이마트</span>" ,
+            "eng" : "<span>AVENUEL : </span> LUXURY FASHION / <span>SHOPPIING MALL : </span> SPORTS, MEN'S FASHION<br>HONG GROUND (RESTAURANT) / <span>LOTTE HIMART(ELECTRONICS)</span>",
+            "chn" : "<span>AVENUEL : </span> 名品时装  <span>购物中心 : </span> 运动&休闲、男装、HONG GROUND(美食庭院)  <span>LOTTE HIMART</span>",
+            "jpn" : "<span>AVENUEL : </span> ブランドファッション  <span>ショッピングモール : </span> スポーツ&レジャー メンズファッション HONG GROUND(飮食街)  <span>LOTTE HIMART</span>"
+        },
+        "FLOOR_LEVEL_4F" : {
+            "kor" : "<span>에비뉴엘 : </span> 남성패션 / <span>쇼핑몰 : </span> 키즈, 생활, 서점, 씨푸드&랍스터 뷔페" ,
+            "eng" : "<span>AVENUEL : </span> MEN'S WEAR<br><span>SHOPPIING MALL : </span> KIDS, LIFE STYLE, BOOK STORE, SEAFOOD & LOBSTER BUFFET",
+            "chn" : "<span>AVENUEL : </span> 男士馆  <span>购物中心 : </span>童装、生活用品 书店 海鲜&龙虾 自助餐厅",
+            "jpn" : "<span>AVENUEL : </span> 化粧品 靴  <span>ショッピングモール : </span> ヤングファッション フードコート  <span>アクアリウム</span>"
+        },
+        "FLOOR_LEVEL_5F" : {
+            "kor" : "<span>타워 : </span> 피트니스 센터 / <span>에비뉴엘 : </span> 여성 컨템포러리<br><span>쇼핑몰 </span> : 테마식당가(서울서울3080, 29스트리트), 패션 / <span>시네마</span>" ,
+            "eng" : "<span>TOWER : </span> FITNESS CENTER / <span>AVENUEL : </span> CONTEMPORARY ACCESSORIES & CLOTHING<br><span>SHOPPIING MALL : </span> THEME RESTAURANTS (SEOUL SEOUL 3080, 29 STREET), FASHION / <span>CINEMA</span>",
+            "chn" : "<span>AVENUEL : </span> 当代杂志&衣物  <span>购物中心 : </span> THEME 美食庭院(首尔首尔3080、29街区) 化妆品&尚装   <span>影院</span>",
+            "jpn" : "<span>AVENUEL : </span> コンテンポラリー雑貨＆衣類   <span>ショッピングモール : </span> テーマ食堂街(ソウル ソウル 3080、29ストリート)、コスメ＆ファッション  <span>シネマ</span>"
+        },
+        "FLOOR_LEVEL_6F" : {
+            "kor" : "<span>뮤지엄</span> / <span>에비뉴엘 : </span> 프리미엄푸드, 아트홀<br><span>쇼핑몰 : </span> 테마식당가(서울서울3080, 29스트리트), 뷰티&에스테틱, 스파 /  <span>시네마</span>" ,
+            "eng" : "<span>MUSEUM</span> / <span>AVENUEL : </span> PREMIUM FOOD, ART HALL<br><span>SHOPPIING MALL : </span> THEME RESTAURANTS (SEOUL SEOUL 3080, 29 STREET), BEAUTY & ESTETIC SPA / <span>CINEMA</span>",
+            "chn" : "<span>AVENUEL : </span> Peck、餐厅、艺术厅 星光大道(STAR AVENUE)  <span>购物中心 : </span> THEME 美食庭院(首尔首尔3080、29街区) 美容 & ESTHETIC SPA  <span>影院</span>",
+            "jpn" : "<span>AVENUEL : </span> 化粧品 靴  <span>ショッピングモール : </span> ヤングファッション フードコート  <span>アクアリウム</span>"
+        },
+        "FLOOR_LEVEL_7F" : {
+            "kor" : "<span>시네마</span>" ,
+            "eng" : "<span>CINEMA</span>",
+            "chn" : "<span>影院</span>",
+            "jpn" : "<span>アクアリウム</span>"
+        },
+        "FLOOR_LEVEL_8F" : {
+            "kor" : "<span>면세점 : </span> 명품부틱, 선글라스, 패션잡화, 전자 / <span>콘서트홀</span> / <span>시네마</span>" ,
+            "eng" : "<span>DUTY FREE : </span> : LUXURY BOUTIQUE, SUNGLASSES, ACCESSORIES, ELECTRONICS<br><span>CONCERT HALL</span> / <span>CINEMA</span>",
+            "chn" : "<span>免税店 : </span> 品牌精品 太阳镜 时尚首饰 电子  <span>音乐厅</span>  <span>影院</span>",
+            "jpn" : "<span>免税店 : </span> ブランドブティック、サングラス、ファッション雑貨 電子  <span>コンサートホール</span> <span>シネマ</span>"
+        },
+        "FLOOR_LEVEL_9F" : {
+            "kor" : "<span>면세점 : </span> 화장품, 명품시계, 주류담배, 토산품 / <span>콘서트홀</span> / <span>시네마</span>" ,
+            "eng" : "<span>DUTY FREE : </span> COSMETICS, LUXURY WATCH, WINE & CIGARETTE, LOCAL PRODUCTS<br><span>CONCERT HALL</span> / <span>CINEMA</span>",
+            "chn" : "<span>免税店 : </span> 化妆品 品牌手表 酒类香烟 土特产  <span>音乐厅</span>  <span>影院</span>",
+            "jpn" : "<span>免税店 : </span> 化粧品、ブランド時計 酒・タバコ 土産品  <span>コンサートホール</span>  <span>シネマ</span>"
+        },
+        "FLOOR_LEVEL_10F" : {
+            "kor" : "<span>콘서트홀</span> / <span>시네마</span>" ,
+            "eng" : "<span>CONCERT HALL</span> / <span>CINEMA</span>",
+            "chn" : "<span>音乐厅</span> 化妆品 皮鞋  <span>影院</span>",
+            "jpn" : "<span>コンサートホール</span> 化粧品 靴  <span>シネマ</span>"
+        },
+        "FLOOR_LEVEL_11F" : {
+            "kor" : "<span>타워 : </span> 메디컬센터 / <span>시네마</span>" ,
+            "eng" : "<span>TOWER : </span> MEDICAL CENTER / <span>CINEMA</span>",
+            "chn" : "<span>影院</span>",
+            "jpn" : "<span>シネマ</span>"
+        },
+
+        "FLOOR_LEVEL_12F" : {
+            "kor" : "<span>타워 : </span> 파이낸스 센터" ,
+            "eng" : "<span>TOWER : </span> FINANCE CENTER",
+            "chn" : "<span></span>",
+            "jpn" : "<span></span>"
+        },
+
+        "FLOOR_LEVEL_31F" : {
+            "kor" : "<span>SKY31 컨벤션 & 푸드에비뉴</span>" ,
+            "eng" : "<span>SKY31 CONVENTION & FOOD AVENUE</span>",
+            "chn" : "<span></span>",
+            "jpn" : "<span></span>"
+        },
+        "FLOOR_LEVEL_CURRENT" : {
+            "kor" : "현재위치" ,
+            "eng" : "Current",
+            "chn" : "当前位置",
+            "jpn" : "現在の位置"
+        },
+
+
+        "FLOOR_MARKER_FOOD" : {
+            "kor" : "식당가" ,
+            "eng" : "Restaurant",
+            "chn" : "餐厅",
+            "jpn" : "レストラン"
+        },
+        "FLOOR_MARKER_SHOP" : {
+            "kor" : "쇼핑" ,
+            "eng" : "Shopping",
+            "chn" : "购物设施",
+            "jpn" : "ショッピング施設"
+        },
+        "FLOOR_MARKER_SERVICE" : {
+            "kor" : "서비스" ,
+            "eng" : "Service",
+            "chn" : "服务",
+            "jpn" : "サービス"
+        },
+
+
+        "FLOOR_ALL_TITLE" : {
+            "kor" : "전층안내" ,
+            "eng" : "Entire Floor Guide",
+            "chn" : "楼层指南",
+            "jpn" : "フロア案内"
+        },
+        "FLOOR_ALL_TITLE_SUB" : {
+            "kor" : "안내를 원하시는 버튼을 선택해 주세요" ,
+            "eng" : "Please Select The Button That You Want",
+            "chn" : "请选择希望引导的按钮",
+            "jpn" : "案内を希望される項目のボタンを選択してください"
+        },
+        "FLOOR_ALL_INFO_ALL" : {
+            "kor" : "전층<br>안내" ,
+            "eng" : "Entire<br>Floor",
+            "chn" : "楼层<br>指南",
+            "jpn" : "フロア<br>案内"
+        },
+
+        
+        "FLOOR_POP_TITLE" : {
+            "kor" : "원하시는 이동수단을 선택해 주세요" ,
+            "eng" : "Please Select The Means of Transportation That You Want",
+            "chn" : "请选择希望的移动方式",
+            "jpn" : "ご希望の移動手段を選択してください"
+        },
+        "FLOOR_POP_ELE" : {
+            "kor" : "엘리베이터" ,
+            "eng" : "Elevator",
+            "chn" : "电梯",
+            "jpn" : "エレベーター"
+        },
+        "FLOOR_POP_ESC" : {
+            "kor" : "에스컬레이터" ,
+            "eng" : "Escalator",
+            "chn" : "扶梯",
+            "jpn" : "エスカレーター"
+        },
+
+        "ERROR_NOTICE" : {
+            "kor" : "알림" ,
+            "eng" : "Notice",
+            "chn" : "Notice",
+            "jpn" : "Notice"
+        },
+        "ERROR_FLOOR" : {
+            "kor" : "층별안내에 오류가 있습니다.<br>잠시후 다시 시도해 주시기 바랍니다." ,
+            "eng" : "There is an error in the floor guide.<br>Please try again later.",
+            "chn" : "There is an error in the floor guide.<br>Please try again later.",
+            "jpn" : "There is an error in the floor guide.<br>Please try again later."
+        },
+        "ERROR_LOCATION" : {
+            "kor" : "위치찾기 정보가 없습니다." ,
+            "eng" : "There is no location information.",
+            "chn" : "There is no location information.",
+            "jpn" : "There is no location information."
+        }
+
+    },
+    "store" : {
+        "STORE_TITLE" : {
+            "kor" : "매장검색" ,
+            "eng" : "Search Store",
+            "chn" : "卖场搜索",
+            "jpn" : "店舗検索"
+        },
+        "STORE_TITLE_SUB" : {
+            "kor" : "안내를 원하시는 버튼을 선택해 주세요" ,
+            "eng" : "Please Select The Button That You Want",
+            "chn" : "请选择希望引导的按钮",
+            "jpn" : "案内を希望される項目のボタンを選択してください"
+        },
+
+        "STORE_CTG_SEARCH" : {
+            "kor" : "카테고리 검색" ,
+            "eng" : "Category",
+            "chn" : "目录搜索",
+            "jpn" : "カテゴリー"
+        },
+        "STORE_CTG_INIT" : {
+            "kor" : "초성/알파벳 검색" ,
+            "eng" : "Initial/Alphabet",
+            "chn" : "拼音首字/字母搜索",
+            "jpn" : "頭文字/アルファベット"
+        },
+        "STORE_CTG_C01" : {
+            "kor" : "해외명품" ,
+            "eng" : "Luxury Fashion",
+            "chn" : "海外名牌",
+            "jpn" : "海外ブランド品"
+        },
+        "STORE_CTG_C02" : {
+            "kor" : "패션의류" ,
+            "eng" : "Fashion Clothing",
+            "chn" : "时装",
+            "jpn" : "ファッション"
+        },
+        "STORE_CTG_C03" : {
+            "kor" : "패션잡화" ,
+            "eng" : "Fashion Accessories",
+            "chn" : "时尚用品",
+            "jpn" : "ファッション雑貨"
+        },
+        "STORE_CTG_C04" : {
+            "kor" : "뷰티" ,
+            "eng" : "Beauty",
+            "chn" : "美妆",
+            "jpn" : "ビューティー"
+        },
+        "STORE_CTG_C05" : {
+            "kor" : "스포츠" ,
+            "eng" : "Sports",
+            "chn" : "运动",
+            "jpn" : "スポーツ"
+        },
+        "STORE_CTG_C06" : {
+            "kor" : "키즈" ,
+            "eng" : "Kids",
+            "chn" : "孩子们",
+            "jpn" : "キッズ"
+        },
+        "STORE_CTG_C07" : {
+            "kor" : "리빙/가전" ,
+            "eng" : "Living/ Electronics",
+            "chn" : "生活/家用电器",
+            "jpn" : "リビング/家電"
+        },
+        "STORE_CTG_C08" : {
+            "kor" : "엔터테인먼트" ,
+            "eng" : "Entertainment",
+            "chn" : "娱乐",
+            "jpn" : "エンターテイメント"
+        },
+        "STORE_CTG_C09" : {
+            "kor" : "호텔" ,
+            "eng" : "Hotel",
+            "chn" : "酒店",
+            "jpn" : "ホテル"
+        },
+        "STORE_CTG_C10" : {
+            "kor" : "서비스" ,
+            "eng" : "Service",
+            "chn" : "服务",
+            "jpn" : "サービス"
+        },
+        "STORE_INIT_TXT" : {
+            "kor" : "초성/알파벳으로 매장을 검색해 보세요" ,
+            "eng" : "Search stores by initial letter or alphabet",
+            "chn" : "按首字母或字母搜索商店",
+            "jpn" : "初声またはアルファベットで店を検索してみてください"
+        },
+        "STORE_NO_RESULT" : {
+            "kor" : "검색결과가 없습니다.<br>다른 검색어를 입력해 주세요." ,
+            "eng" : "No Results Found<br>Please enter another search term",
+            "chn" : "No Results Found<br>Please enter another search term",
+            "jpn" : "No Results Found<br>Please enter another search term"
+        },
+        "STORE_BTN_MALL" : {
+            "kor" : "쇼핑몰" ,
+            "eng" : "MALL",
+            "chn" : "购物中心",
+            "jpn" : "モール"
+        },
+        "STORE_BTN_TOWER" : {
+            "kor" : "타워" ,
+            "eng" : "TOWER",
+            "chn" : "大厦",
+            "jpn" : "タワー"
+        },
+        "STORE_BTN_AVENUEL" : {
+            "kor" : "에비뉴엘" ,
+            "eng" : "AVENUEL",
+            "chn" : "名品馆",
+            "jpn" : "名品館"
+        }
+
+    },
+
+    "food" : {
+        "FOOD_TITLE" : {
+            "kor" : "식당가 검색" ,
+            "eng" : "Search Restaurant",
+            "chn" : "搜索美食区",
+            "jpn" : "レストラン検索"
+        },
+        "FOOD_TITLE_SUB" : {
+            "kor" : "안내를 원하시는 버튼을 선택해 주세요" ,
+            "eng" : "Please Select The Button That You Want",
+            "chn" : "请选择希望引导的按钮",
+            "jpn" : "案内を希望される項目のボタンを選択してください"
+        },
+
+
+        "FOOD_CTG_SEARCH" : {
+            "kor" : "카테고리 검색" ,
+            "eng" : "Category",
+            "chn" : "目录搜索",
+            "jpn" : "カテゴリー"
+        },
+        "FOOD_CTG_INIT" : {
+            "kor" : "초성/알파벳 검색" ,
+            "eng" : "Initial/Alphabet",
+            "chn" : "拼音首字/字母搜索",
+            "jpn" : "頭文字/アルファベット"
+        },
+        "FOOD_CTG_C01" : {
+            "kor" : "한식" ,
+            "eng" : "Korean Food",
+            "chn" : "韩餐",
+            "jpn" : "韓国料理"
+        },
+        "FOOD_CTG_C02" : {
+            "kor" : "일식" ,
+            "eng" : "Japanese Food",
+            "chn" : "日料",
+            "jpn" : "日本料理"
+        },
+        "FOOD_CTG_C03" : {
+            "kor" : "중식" ,
+            "eng" : "Chinese Food",
+            "chn" : "中餐",
+            "jpn" : "中華料理"
+        },
+        "FOOD_CTG_C04" : {
+            "kor" : "양식" ,
+            "eng" : "Western Food",
+            "chn" : "西餐",
+            "jpn" : "洋食"
+        },
+        "FOOD_CTG_C05" : {
+            "kor" : "세계음식" ,
+            "eng" : "World Food",
+            "chn" : "世界美食",
+            "jpn" : "世界のグルメ"
+        },
+        "FOOD_CTG_C06" : {
+            "kor" : "테마레스토랑" ,
+            "eng" : "Theme Restaurant",
+            "chn" : "主题餐厅",
+            "jpn" : "テーマレストラン"
+        },
+        "FOOD_CTG_C07" : {
+            "kor" : "카페" ,
+            "eng" : "Cafe",
+            "chn" : "咖啡厅",
+            "jpn" : "カフェ"
+        },
+        "FOOD_CTG_C08" : {
+            "kor" : "델리/패스트푸드" ,
+            "eng" : "Delhi/Fast Food",
+            "chn" : "家常菜/快餐",
+            "jpn" : "デリ/ファーストフード"
+        },
+        "FOOD_INIT_TXT" : {
+            "kor" : "초성/알파벳으로 매장을 검색해 보세요" ,
+            "eng" : "Search stores by initial letter or alphabet",
+            "chn" : "按首字母或字母搜索商店",
+            "jpn" : "初声またはアルファベットで店を検索してみてください"
+        },
+        "FOOD_NO_RESULT" : {
+            "kor" : "검색결과가 없습니다.<br>다른 검색어를 입력해 주세요." ,
+            "eng" : "No results were found for your search.<br>Please enter another search term",
+            "chn" : "no result chn",
+            "jpn" : "no result jpn"
+        }
+    },
+
+    "recommand" : {
+        "RECOMMAND_TITLE" : {
+            "kor" : "추천매장" ,
+            "eng" : "Recommended Store",
+            "chn" : "推荐卖场",
+            "jpn" : "おすすめ店"
+        },
+        "RECOMMAND_TITLE_SUB" : {
+            "kor" : "안내를 원하시는 버튼을 선택해 주세요" ,
+            "eng" : "Please Select The Button That You Want",
+            "chn" : "请选择希望引导的按钮",
+            "jpn" : "案内を希望される項目のボタンを選択してください"
+        },
+
+
+        "RECOMMAND_CTG_POPULAR" : {
+            "kor" : "인기매장" ,
+            "eng" : "POPULAR STORE",
+            "chn" : "人气卖场",
+            "jpn" : "人気ショップ"
+        },
+        "RECOMMAND_CTG_PHOTO" : {
+            "kor" : "포토스팟" ,
+            "eng" : "PHOTO SPOT",
+            "chn" : "热门拍照场所",
+            "jpn" : "フォトスポット"
+        },
+        "RECOMMAND_CTG_NEW" : {
+            "kor" : "신규매장" ,
+            "eng" : "NEW STORE",
+            "chn" : "新卖场",
+            "jpn" : "新規テナント"
+        },
+        "RECOMMAND_SPOT_01" : {
+            "kor" : "여왕의 계단" ,
+            "eng" : "The Queen's Staircase",
+            "chn" : "The Queen's Staircase",
+            "jpn" : "The Queen's Staircase"
+        },
+        "RECOMMAND_SPOT_02" : {
+            "kor" : "POSSIBILITIES" ,
+            "eng" : "POSSIBILITIES",
+            "chn" : "POSSIBILITIES",
+            "jpn" : "POSSIBILITIES"
+        },
+        "RECOMMAND_SPOT_03" : {
+            "kor" : "시그니엘서울 계단" ,
+            "eng" : "Signiel Seoul Stairs",
+            "chn" : "Signiel Seoul Stairs",
+            "jpn" : "Signiel Seoul Stairs"
+        },
+        "RECOMMAND_SPOT_04" : {
+            "kor" : "서울스카이전망대" ,
+            "eng" : "Seoul Sky Observatory",
+            "chn" : "Seoul Sky Observatory",
+            "jpn" : "Seoul Sky Observatory"
+        },
+        "RECOMMAND_SPOT_05" : {
+            "kor" : "쇼핑몰 5F 꽃길" ,
+            "eng" : "Shopping Mall 5F Flower Road",
+            "chn" : "Shopping Mall 5F Flower Road",
+            "jpn" : "Shopping Mall 5F Flower Road"
+        },
+        "RECOMMAND_SPOT_06" : {
+            "kor" : "서울서울 3080" ,
+            "eng" : "Seoul Seoul 3080",
+            "chn" : "Seoul Seoul 3080",
+            "jpn" : "Seoul Seoul 3080"
+        }
+    },
+    "event" : {
+        "EVENT_TITLE" : {
+            "kor" : "이벤트" ,
+            "eng" : "Event",
+            "chn" : "活动",
+            "jpn" : "イベント"
+        },
+        "EVENT_TITLE_SUB" : {
+            "kor" : "안내를 원하시는 버튼을 선택해 주세요" ,
+            "eng" : "Please Select The Button That You Want",
+            "chn" : "请选择希望引导的按钮",
+            "jpn" : "案内を希望される項目のボタンを選択してください"
+        },
+        "EVENT_BTN_ALL" : {
+            "kor" : "전체" ,
+            "eng" : "All",
+            "chn" : "所有",
+            "jpn" : "全体"
+        },
+        "EVENT_BTN_SHOP" : {
+            "kor" : "쇼핑" ,
+            "eng" : "Shopping",
+            "chn" : "购物",
+            "jpn" : "ショッピング"
+        },
+        "EVENT_BTN_ENT" : {
+            "kor" : "엔터테인먼트" ,
+            "eng" : "entertainment",
+            "chn" : "娱乐",
+            "jpn" : "エンターテイメント"
+        },
+        "EVENT_NO_DATA" : {
+            "kor" : "진행중인 이벤트가 없습니다" ,
+            "eng" : "No Event",
+            "chn" : "No Event",
+            "jpn" : "No Event"
+        }
+
+    },
+    "park" : {
+        "PARK_TITLE" : {
+            "kor" : "주차안내" ,
+            "eng" : "Parking Info",
+            "chn" : "停车指南",
+            "jpn" : "駐車案内"
+        },
+        "PARK_TITLE_SUB" : {
+            "kor" : "안내를 원하시는 버튼을 선택해 주세요" ,
+            "eng" : "Please Select The Button That You Want",
+            "chn" : "请选择希望引导的按钮",
+            "jpn" : "案内を希望される項目のボタンを選択してください"
+        },
+        "PARK_QR_TEXT" : {
+            "kor" : "주차비 결제 페이지로 이동합니다" ,
+            "eng" : "Please Move to The Parking Fee Payment Page",
+            "chn" : "移动至停车费支付页面",
+            "jpn" : "駐車料金の支払いページに移動します"
+        },
+        "PARK_CAR_NUMBER" : {
+            "kor" : "주차안내" ,
+            "eng" : "Parking Info",
+            "chn" : "停车指南",
+            "jpn" : "駐車案内"
+        },
+        "PARK_CAR_TIME" : {
+            "kor" : "입차시간" ,
+            "eng" : "Entrance Time",
+            "chn" : "驶入时间",
+            "jpn" : "入庫時間"
+        },
+        "PARK_CAR_ZONE" : {
+            "kor" : "주차구역" ,
+            "eng" : "Parking Zone",
+            "chn" : "停车位置",
+            "jpn" : "駐車区域"
+        },
+        "PARK_CAR_GUIDE" : {
+            "kor" : "위치안내" ,
+            "eng" : "Location",
+            "chn" : "位置引导",
+            "jpn" : "位置案内"
+        },
+
+        "PARK_ENTER_NUM" : {
+            "kor" : "차량번호를 입력해 주세요" ,
+            "eng" : "Please Enter Your Licesne Plate Number",
+            "chn" : "请输入车牌号",
+            "jpn" : "車両番号を入力してください"
+        },
+        "PARK_NO_RESULT" : {
+            "kor" : "검색결과가 없습니다.<br>차량번호를 다시 확인하여 주세요." ,
+            "eng" : "No results were found for your search.<br>Please check the vehicle number again",
+            "chn" : "No result",
+            "jpn" : "No result"
+        }
+    },
+
+    "help" : {
+        "HELP_TITLE" : {
+            "kor" : "이용안내" ,
+            "eng" : "User Guide",
+            "chn" : "使用指南",
+            "jpn" : "ご利用案内"
+        },
+        "HELP_TITLE_SUB" : {
+            "kor" : "안내를 원하시는 버튼을 선택해 주세요" ,
+            "eng" : "Please Select The Button That You Want",
+            "chn" : "请选择希望引导的按钮",
+            "jpn" : "案内を希望される項目のボタンを選択してください"
+        },
+        "HELP_BTN_TRAFFIC" : {
+            "kor" : "교통안내" ,
+            "eng" : "Traffic Guide",
+            "chn" : "交通指南",
+            "jpn" : "交通案内"
+        },
+        "HELP_BTN_TIME" : {
+            "kor" : "영업시간안내" ,
+            "eng" : "Opening hours",
+            "chn" : "营业时间指南",
+            "jpn" : "営業時間のご案内"
+        },
+        "HELP_TAP_BUS" : {
+            "kor" : "버스노선" ,
+            "eng" : "Bus Route",
+            "chn" : "公交路线",
+            "jpn" : "バス路線"
+        },
+        "HELP_TAP_TRANSFER" : {
+            "kor" : "환승센터" ,
+            "eng" : "Transfer Center",
+            "chn" : "换乘中心",
+            "jpn" : "乗り換えセンター"
+        },
+        "HELP_INFO_TOWER" : {
+            "kor" : "롯데월드타워" ,
+            "eng" : "LOTTE WORLD TOWER",
+            "chn" : "LOTTE WORLD TOWER",
+            "jpn" : "LOTTE WORLD TOWER"
+        },
+        "HELP_INFO_MALL" : {
+            "kor" : "롯데월드몰" ,
+            "eng" : "LOTTE WORLD MALL",
+            "chn" : "LOTTE WORLD MALL",
+            "jpn" : "LOTTE WORLD MALL"
+        },
+        "HELP_INFO_SIGNIEL" : {
+            "kor" : "시그니엘 서울" ,
+            "eng" : "SIGNIEL SEOUL",
+            "chn" : "SIGNIEL SEOUL",
+            "jpn" : "SIGNIEL SEOUL"
+        },
+        "HELP_INFO_PODIUM" : {
+            "kor" : "포디엄" ,
+            "eng" : "PODIUM",
+            "chn" : "PODIUM",
+            "jpn" : "PODIUM"
+        },
+        "HELP_INFO_DETAIL" : {
+            "kor" : "상세보기" ,
+            "eng" : "detail",
+            "chn" : "查看详情",
+            "jpn" : "詳細を見る"
+        },
+        "HELP_POP_PODIUM" : {
+            "kor" : "롯데월드타워 - 포디엄" ,
+            "eng" : "LOTTE WORLD TOWER - PODIUM",
+            "chn" : "LOTTE WORLD TOWER - PODIUM",
+            "jpn" : "LOTTE WORLD TOWER - PODIUM"
+        },
+        "HELP_POP_SIGNIEL" : {
+            "kor" : "롯데월드타워 - 시그니엘 서울" ,
+            "eng" : "LOTTE WORLD TOWER - SIGNIEL SEOUL",
+            "chn" : "LOTTE WORLD TOWER - SIGNIEL SEOUL",
+            "jpn" : "LOTTE WORLD TOWER - SIGNIEL SEOUL"
+        }
+    },
+
+    "facility" : {
+        "FACILITY_TITLE" : {
+            "kor" : "편의시설" ,
+            "eng" : "Amenities",
+            "chn" : "便利设施",
+            "jpn" : "便益施設"
+        },
+        "FACILITY_TITLE_SUB" : {
+            "kor" : "안내를 원하시는 버튼을 선택해 주세요" ,
+            "eng" : "Please Select The Button That You Want",
+            "chn" : "请选择希望引导的按钮",
+            "jpn" : "案内を希望される項目のボタンを選択してください"
+        },
+        "FACILTY_P01" : {
+            "kor" : "안내데스크" ,
+            "eng" : "Information Desk",
+            "chn" : "服务台",
+            "jpn" : "案内デスク"
+        },
+        "FACILTY_P02" : {
+            "kor" : "컨시어지 데스크" ,
+            "eng" : "Concierge Desk",
+            "chn" : "礼宾服务",
+            "jpn" : "コンシェルジュデスク"
+        },
+        "FACILTY_P03" : {
+            "kor" : "화장실" ,
+            "eng" : "Restroom",
+            "chn" : "卫生间",
+            "jpn" : "トイレ"
+        },
+        "FACILTY_P04" : {
+            "kor" : "장애인 화장실" ,
+            "eng" : "Disabled Restroom",
+            "chn" : "残疾人卫生间",
+            "jpn" : "障害者対応トイレ"
+        },
+        "FACILTY_P05" : {
+            "kor" : "가족화장실" ,
+            "eng" : "Family Restroom",
+            "chn" : "家人卫生间",
+            "jpn" : "ファミリートイレ"
+        },
+        "FACILTY_P06" : {
+            "kor" : "유모차 대여소" ,
+            "eng" : "Stroller Rental Desk",
+            "chn" : "婴儿车租赁所",
+            "jpn" : " ベビーカー貸出所"
+        },
+        "FACILTY_P07" : {
+            "kor" : "유아휴게실" ,
+            "eng" : "Kid's Lounge",
+            "chn" : "嬰兒车服务",
+            "jpn" : "ベビーカーのお貸し出し"
+        },
+        "FACILTY_P08" : {
+            "kor" : "물품보관소" ,
+            "eng" : "ILockers",
+            "chn" : "物品保管所",
+            "jpn" : "手荷物預かり所"
+        },
+        "FACILTY_P09" : {
+            "kor" : "현금 입출금기" ,
+            "eng" : "ATM",
+            "chn" : "取款机",
+            "jpn" : "ATM"
+        },
+        "FACILTY_P10" : {
+            "kor" : "고객상담실" ,
+            "eng" : "Customer Service Center",
+            "chn" : "客服中心",
+            "jpn" : "客様相談室"
+        },
+        "FACILTY_P11" : {
+            "kor" : "고객라운지" ,
+            "eng" : "Customer Lounge",
+            "chn" : "客户等候厅",
+            "jpn" : "カスタマーサロン"
+        },
+        "FACILTY_P12" : {
+            "kor" : "의무실" ,
+            "eng" : "Dispensary",
+            "chn" : "医务室",
+            "jpn" : "医務室"
+        },
+        "FACILTY_P13" : {
+            "kor" : "약국" ,
+            "eng" : "Pharmacy",
+            "chn" : "外国",
+            "jpn" : "薬局"
+        },
+        "FACILTY_P14" : {
+            "kor" : "롯데카드" ,
+            "eng" : "Lotte Card",
+            "chn" : "乐天卡",
+            "jpn" : "ロッテカード"
+        },
+        "FACILTY_P15" : {
+            "kor" : "VIP 카드서비스" ,
+            "eng" : "Vip Card Service",
+            "chn" : "Vip卡服务",
+            "jpn" : "Vipカードサービス"
+        },
+        "FACILTY_P16" : {
+            "kor" : "행사장" ,
+            "eng" : "Venue",
+            "chn" : "活动区",
+            "jpn" : "イベント会場"
+        },
+        "FACILTY_P17" : {
+            "kor" : "사은품 증정장소" ,
+            "eng" : "Gift Desk",
+            "chn" : "赠品服务场所",
+            "jpn" : "謝恩品贈呈場所"
+        },
+        "FACILTY_P18" : {
+            "kor" : "텍스리펀드" ,
+            "eng" : "Tax Refund",
+            "chn" : "退税",
+            "jpn" : "タックスリファンド"
+        },
+        "FACILTY_P19" : {
+            "kor" : "상품권 판매소" ,
+            "eng" : "Gift Certificate Desk",
+            "chn" : "商品券销售处",
+            "jpn" : "商品券販売所"
+        },
+        "FACILTY_P20" : {
+            "kor" : "의류수선실" ,
+            "eng" : "Clothing Repair Shop",
+            "chn" : "修衣室",
+            "jpn" : "洋服のお直し・リフォーム"
+        },
+        "FACILTY_P21" : {
+            "kor" : "시계수선실" ,
+            "eng" : "Watch Repair Shop",
+            "chn" : "修表室",
+            "jpn" : "時計修理"
+        },
+        "FACILTY_P22" : {
+            "kor" : "환전소" ,
+            "eng" : "Currency Exchange",
+            "chn" : "换钱所",
+            "jpn" : "外貨両替所"
+        },
+        "FACILTY_P23" : {
+            "kor" : "매표소" ,
+            "eng" : "Ticket Booth",
+            "chn" : "售票处",
+            "jpn" : "チケット売り場"
+        },
+        "FACILTY_P24" : {
+            "kor" : "발렛주차장" ,
+            "eng" : "Vallet Parking Lot",
+            "chn" : "代停停车场",
+            "jpn" : "バレットパーキング"
+        },
+        "FACILTY_P25" : {
+            "kor" : "무슬림 기도실" ,
+            "eng" : "Muslim Oratory",
+            "chn" : "穆斯林祈祷室",
+            "jpn" : "イスラム教徒向け祈祷室"
+        },
+        "FACILTY_P26" : {
+            "kor" : "피난 안전구역" ,
+            "eng" : "Evacuation Safety Zone",
+            "chn" : "避难安全区域",
+            "jpn" : "非難安全区域"
+        }
+    }
+
+}

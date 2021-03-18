@@ -1,0 +1,377 @@
+<!--------------------------------------------- 
+   name :  facility.html
+   auth :  ELTOV
+   date :  2020.11.15
+   desc :  공용시설처리
+---------------------------------------------->
+
+<!DOCTYPE HTML>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="user-scalable=no,initial-scale=1.0,maximum-scale=1.0 minimal-ui" />
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LOTTE TOWER INFORMATION</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico">
+
+    <link rel="stylesheet" href="./include/css/lib/reset.css">
+    <link rel="stylesheet" href="./include/css/lib/font.css">
+    <link rel="stylesheet" href="./include/css/lib/swiper.css">
+    <link rel="stylesheet" href="./include/css/lib/common.css">
+    <link rel="stylesheet" href="./include/css/component.css">
+
+    <link rel="stylesheet" href="./include/css/facility.css">
+
+    <script type="text/javascript" src="include/js/lib/jquery-3.2.1.js"></script>
+
+    <script type="text/javascript" src="include/js/comm.js"></script>
+    <script type="text/javascript" src="include/js/xml.js"></script>
+    <script type="text/javascript" src="include/js/facility.js"></script>
+
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+
+    <div class="debug_area" style="width: 400px;">
+        <button class="btn" onClick="javascript:onClickDebugLang('KOR');">KOR</button>
+        <button class="btn" onClick="javascript:onClickDebugLang('ENG');">ENG</button>
+        <button class="btn" onClick="javascript:onClickDebugLang('CHN');">CHN</button>
+        <button class="btn" onClick="javascript:onClickDebugLang('JPN');">JPN</button>
+    </div>
+
+
+    <!-- KIOSK AREA START-->
+    <div id="facility" class="contents_area">
+
+        <!-- HEADER START-->
+        <header>
+            <div class="top_box">
+                <div class="top_box_img">
+                    <img src="./images/facility-ic-tit.svg">
+                </div>
+                <div class="top_text_box">
+                    <h1 class="lang_code_names" lang_code="FACILITY_TITLE"> 편의시설 </h1>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+        </header>
+        <!-- HEADER END-->
+
+
+
+        <!-- SECTION AREA START-->
+        <section>
+            <!-- FACILITY START-->
+            <div id="facility_wrap">
+
+                <!-- FACILITY LIST START-->
+                <ul class="facility_list">
+                    <!-- FACILITY LIST LINE-->
+                    <li>
+                        <!-- FACILITY 01-->
+                        <div class="facility_box facility_active" code="0400" icon_code="01">
+                            <!-- FACILITY IMAGE-->
+                            <div class="facility_img_box">
+                                <img src="./images/facility_ic_01.png">
+                                <img src="./images/facility_ic_01_o.png">
+                            </div>
+                            <!-- FACILITY NAME-->
+                            <div class="facility_text_box">
+                                <h3 class="lang_code_names" lang_code="FACILTY_P01">안내데스크</h3>
+                            </div>
+                        </div>
+
+                        <!-- FACILITY 02-->
+                        <div class="facility_box" code="0435" icon_code="02">
+                            <div class="facility_img_box">
+                                <img src="./images/facility_ic_02.png">
+                                <img src="./images/facility_ic_02_o.png">
+                            </div>
+                            <div class="facility_text_box">
+                                <h3 class="lang_code_names" lang_code="FACILTY_P02">컨시어지 데스크</h3>
+                            </div>
+                        </div>
+
+                        <!-- FACILITY 03-->
+                        <div class="facility_box" code="0425" icon_code="03">
+                            <div class="facility_img_box">
+                                <img src="./images/facility_ic_03.png">
+                                <img src="./images/facility_ic_03_o.png">
+                            </div>
+                            <div class="facility_text_box">
+                                <h3 class="lang_code_names" lang_code="FACILTY_P03">화장실</h3>
+                            </div>
+                        </div>
+
+                        <!-- FACILITY 04-->
+                        <div class="facility_box" code="0427" icon_code="04">
+                            <div class="facility_img_box">
+                                <img src="./images/facility_ic_04.png">
+                                <img src="./images/facility_ic_04_o.png">
+                            </div>
+                            <div class="facility_text_box">
+                                <h3 class="lang_code_names" lang_code="FACILTY_P04">장애인 화장실</h3>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="facility_box" code="0426" icon_code="05">
+                            <div class="facility_img_box">
+                                <img src="./images/facility_ic_05.png">
+                                <img src="./images/facility_ic_05_o.png">
+                            </div>
+                            <div class="facility_text_box">
+                                <h3 class="lang_code_names" lang_code="FACILTY_P05">가족화장실</h3>
+                            </div>
+                        </div>
+                        <div class="facility_box" code="0413" icon_code="06">
+                            <div class="facility_img_box">
+                                <img src="./images/facility_ic_06.png">
+                                <img src="./images/facility_ic_06_o.png">
+                            </div>
+                            <div class="facility_text_box">
+                                <h3 class="lang_code_names" lang_code="FACILTY_P06">유모차 대여소</h3>
+                            </div>
+                        </div>
+                        <div class="facility_box" code="0414" icon_code="07">
+                            <div class="facility_img_box">
+                                <img src="./images/facility_ic_07.png">
+                                <img src="./images/facility_ic_07_o.png">
+                            </div>
+                            <div class="facility_text_box">
+                                <h3 class="lang_code_names" lang_code="FACILTY_P07">유아휴게실</h3>
+                            </div>
+                        </div>
+                        <div class="facility_box" code="0423" icon_code="08">
+                            <div class="facility_img_box">
+                                <img src="./images/facility_ic_08.png">
+                                <img src="./images/facility_ic_08_o.png">
+                            </div>
+                            <div class="facility_text_box">
+                                <h3 class="lang_code_names" lang_code="FACILTY_P08">물품보관소</h3>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="facility_box" code="0407" icon_code="09">
+                            <div class="facility_img_box">
+                                <img src="./images/facility_ic_09.png">
+                                <img src="./images/facility_ic_09_o.png">
+                            </div>
+                            <div class="facility_text_box">
+                                <h3 class="lang_code_names" lang_code="FACILTY_P09">현금 입출금기</h3>
+                            </div>
+                        </div>
+                        <div class="facility_box" code="0401" icon_code="10">
+                            <div class="facility_img_box">
+                                <img src="./images/facility_ic_10.png">
+                                <img src="./images/facility_ic_10_o.png">
+                            </div>
+                            <div class="facility_text_box">
+                                <h3 class="lang_code_names" lang_code="FACILTY_P10">고객상담실</h3>
+                            </div>
+                        </div>
+                        <div class="facility_box" code="0442" icon_code="11">
+                            <div class="facility_img_box">
+                                <img src="./images/facility_ic_11.png">
+                                <img src="./images/facility_ic_11_o.png">
+                            </div>
+                            <div class="facility_text_box">
+                                <h3 class="lang_code_names" lang_code="FACILTY_P11">고객라운지</h3>
+                            </div>
+                        </div>
+                        <div class="facility_box" code="0417" icon_code="12">
+                            <div class="facility_img_box">
+                                <img src="./images/facility_ic_12.png">
+                                <img src="./images/facility_ic_12_o.png">
+                            </div>
+                            <div class="facility_text_box">
+                                <h3 class="lang_code_names" lang_code="FACILTY_P12">의무실</h3>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="facility_box" code="0443" icon_code="13">
+                            <div class="facility_img_box">
+                                <img src="./images/facility_ic_13.png">
+                                <img src="./images/facility_ic_13_o.png">
+                            </div>
+                            <div class="facility_text_box">
+                                <h3 class="lang_code_names" lang_code="FACILTY_P13">약국</h3>
+                            </div>
+                        </div>
+                        <div class="facility_box" code="0404" icon_code="14">
+                            <div class="facility_img_box">
+                                <img src="./images/facility_ic_14.png">
+                                <img src="./images/facility_ic_14_o.png">
+                            </div>
+                            <div class="facility_text_box">
+                                <h3 class="lang_code_names" lang_code="FACILTY_P14">롯데카드</h3>
+                            </div>
+                        </div>
+                        <div class="facility_box" code="0444" icon_code="15">
+                            <div class="facility_img_box">
+                                <img src="./images/facility_ic_15.png">
+                                <img src="./images/facility_ic_15_o.png">
+                            </div>
+                            <div class="facility_text_box">
+                                <h3 class="lang_code_names" lang_code="FACILTY_P15">VIP 카드서비스</h3>
+                            </div>
+                        </div>
+                        <div class="facility_box" code="0410" icon_code="16">
+                            <div class="facility_img_box">
+                                <img src="./images/facility_ic_16.png">
+                                <img src="./images/facility_ic_16_o.png">
+                            </div>
+                            <div class="facility_text_box">
+                                <h3 class="lang_code_names" lang_code="FACILTY_P16">행사장</h3>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="facility_box" code="0445" icon_code="17">
+                            <div class="facility_img_box">
+                                <img src="./images/facility_ic_17.png">
+                                <img src="./images/facility_ic_17_o.png">
+                            </div>
+                            <div class="facility_text_box">
+                                <h3 class="lang_code_names" lang_code="FACILTY_P17">사은품 증정장소</h3>
+                            </div>
+                        </div>
+                        <div class="facility_box" code="0408" icon_code="18">
+                            <div class="facility_img_box">
+                                <img src="./images/facility_ic_18.png">
+                                <img src="./images/facility_ic_18_o.png">
+                            </div>
+                            <div class="facility_text_box">
+                                <h3 class="lang_code_names" lang_code="FACILTY_P18">텍스리펀드</h3>
+                            </div>
+                        </div>
+                        <div class="facility_box" code="0403" icon_code="19">
+                            <div class="facility_img_box">
+                                <img src="./images/facility_ic_19.png">
+                                <img src="./images/facility_ic_19_o.png">
+                            </div>
+                            <div class="facility_text_box">
+                                <h3 class="lang_code_names" lang_code="FACILTY_P19">상품권 판매소</h3>
+                            </div>
+                        </div>
+                        <div class="facility_box" code="0420" icon_code="20">
+                            <div class="facility_img_box">
+                                <img src="./images/facility_ic_20.png">
+                                <img src="./images/facility_ic_20_o.png">
+                            </div>
+                            <div class="facility_text_box">
+                                <h3 class="lang_code_names" lang_code="FACILTY_P20">의류수선실</h3>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="facility_box" code="0421" icon_code="21">
+                            <div class="facility_img_box">
+                                <img src="./images/facility_ic_21.png">
+                                <img src="./images/facility_ic_21_o.png">
+                            </div>
+                            <div class="facility_text_box">
+                                <h3 class="lang_code_names" lang_code="FACILTY_P21">시계수선실</h3>
+                            </div>
+                        </div>
+                        <div class="facility_box" code="0405" icon_code="22">
+                            <div class="facility_img_box">
+                                <img src="./images/facility_ic_22.png">
+                                <img src="./images/facility_ic_22_o.png">
+                            </div>
+                            <div class="facility_text_box">
+                                <h3 class="lang_code_names" lang_code="FACILTY_P22">환전소</h3>
+                            </div>
+                        </div>
+                        <div class="facility_box" code="0432" icon_code="23">
+                            <div class="facility_img_box">
+                                <img src="./images/facility_ic_23.png">
+                                <img src="./images/facility_ic_23_o.png">
+                            </div>
+                            <div class="facility_text_box">
+                                <h3 class="lang_code_names" lang_code="FACILTY_P23">매표소</h3>
+                            </div>
+                        </div>
+                        <div class="facility_box" code="0411" icon_code="24">
+                            <div class="facility_img_box">
+                                <img src="./images/facility_ic_24.png">
+                                <img src="./images/facility_ic_24_o.png">
+                            </div>
+                            <div class="facility_text_box">
+                                <h3 class="lang_code_names" lang_code="FACILTY_P24">발렛주차장</h3>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="facility_box" code="0437" icon_code="25">
+                            <div class="facility_img_box">
+                                <img src="./images/facility_ic_25.png">
+                                <img src="./images/facility_ic_25_o.png">
+                            </div>
+                            <div class="facility_text_box">
+                                <h3 class="lang_code_names" lang_code="FACILTY_P25">무슬림 기도실</h3>
+                            </div>
+                        </div>
+                        <div class="facility_box" code="0438" icon_code="26">
+                            <div class="facility_img_box">
+                                <img src="./images/facility_ic_26.png">
+                                <img src="./images/facility_ic_26_o.png">
+                            </div>
+                            <div class="facility_text_box">
+                                <h3 class="lang_code_names" lang_code="FACILTY_P26">피난 안전구역</h3>
+                            </div>
+                        </div>
+                        <div class="fake_block"></div>
+                    </li>
+                </ul>
+                <!-- FACILITY LIST END-->
+
+            </div>
+            <!-- FACILITY END-->
+        </section>
+        <!-- SECTION AREA END-->
+
+
+    </div>
+
+</body>
+
+</html>
+
+<script language="javascript">
+
+    var PAGEACTIVEYN = false;
+
+    var gl_conf_header = new Object();
+    var gl_jsop_lang_data = new Object();
+
+    var gl_arr_facility_list = new Array();
+
+    function setInit() {
+
+        // 이벤트 리스너 처리
+        $(".facility_box").click(function () {
+            onClickFacilityInfo(this);
+        });
+
+        if (parent.MAINPARENTCUSTOMCODE) {
+            $(".debug_area").hide();
+            PAGEACTIVEYN = false;
+            setInitSetting();
+        } else {
+            PAGEACTIVEYN = true;
+            setLoadLanguage("./include/kiosk_lang_horizon.json");
+            setLoadContents("./xml/kiosk_contents.xml");
+        }
+    }
+    jQuery(document).ready(function () {
+        setTimeout(setInit, 45);
+    });
+</script>

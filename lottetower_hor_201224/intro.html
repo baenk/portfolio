@@ -1,0 +1,263 @@
+<!--------------------------------------------- 
+   name :  intro.html
+   auth :  ELTOV
+   date :  2020.11.08
+   desc :  인트로 HTML
+---------------------------------------------->
+
+
+<!DOCTYPE HTML>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="user-scalable=no,initial-scale=1.0,maximum-scale=1.0 minimal-ui" />
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LOTTE TOWER INFORMATION</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico">
+
+    <link rel="stylesheet" href="./include/css/lib/reset.css">
+    <link rel="stylesheet" href="./include/css/lib/font.css">
+    <link rel="stylesheet" href="./include/css/lib/swiper.css">
+    <link rel="stylesheet" href="./include/css/component.css">
+
+    <link rel="stylesheet" href="./include/css/intro.css">
+
+    <script type="text/javascript" src="include/js/lib/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="include/js/lib/swiper.js"></script>
+    <script type="text/javascript" src="include/js/comm.js"></script>
+    <script type="text/javascript" src="include/js/xml.js"></script>
+
+    <script type="text/javascript" src="./include/js/intro.js"></script>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+
+    <style>
+        /*---------------------swiper-----------------*/
+        .swiper-container {
+            width: 96%;
+            margin-right: 40px;
+            height: 1170px;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            width: auto;
+            height: 1132px;
+            border-radius: 30px;
+            box-shadow: -15px 20px 10px rgba(12, 9, 9, 0.4);
+
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-slide .event_img {
+            border-radius: 30px;
+            max-width: 900px;
+        }
+    </style>
+
+    </head>
+
+    <body>
+        <!--    main start  -->
+        <!--    main start  -->
+        <div class="bg_video">
+            <video muted autoplay loop>
+                <source src="./images/intro_background.mp4">
+            </video>
+        </div>
+
+        <div id="main">
+            <!--    section start  -->
+            <!--    section start  -->
+            <section>
+                <!-- VIDEO SECTION AREA -->
+                <div id="id_page_intro_list" class="video_section" style="display:none;">
+                    <div id="id_notice_contents_00" class="video_section_wrap">
+                        <video muted>
+                            <source src="">
+                        </video>
+                        <img src="">
+                    </div>
+                    <div id="id_notice_contents_01" class="video_section_wrap">
+                        <video muted>
+                            <source src="">
+                        </video>
+                        <img src="">
+                    </div>
+                </div>
+                <!-- VIDEO SECTION AREA -->
+
+                <!-- SWIPER SECTION AREA -->
+                <div id="id_page_event_list" class="swiper_section swiper-container" dir="rtl" style="display:none1;">
+                    <div class="swiper-wrapper"></div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+                <!-- SWIPER SECTION AREA -->
+
+                <div class="intro_section">
+                    <div class="weather_wrap">
+                        <div class="w_icon_part">
+                            <img id="id_weather_icon" src="" style="width:85px">
+                        </div>
+                        <div class="w_text_part">
+                            <div class="w_tpr_box">
+                                <p id="id_weather_temp">&nbsp;</p>
+                                <p id="id_weather_name">맑음</p>
+                            </div>
+                            <div class="w_time_box">
+                                <p id="id_time_box_hour">00:00</p>
+                                <p id="id_time_box_day">00.00.00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bottom_gnb">
+                        <div class="bottom_gnb_box">
+                            <ul class="bottom_gnb_list">
+                                <li id="id_btn_botom_mnu_floor" onClick="javascript:onClickBottomMnu('FLOOR');">
+                                    <div class="gnb_icon_box">
+                                        <img src="./images/intro_GNB-01.svg" alt="gnb_icon_01">
+                                    </div>
+                                    <p id="id_mnu_icon_floor" class="gnb_lang_01" lang_code="BOTTOM_MNU_FLOOR"><img
+                                            src="./images/index_mnu_floor_txt_kor.svg" style="width:90%;"></p>
+                                </li>
+                                <li id="id_btn_botom_mnu_store" onClick="javascript:onClickBottomMnu('STORE');">
+                                    <div class="gnb_icon_box">
+                                        <img src="./images/intro_GNB-02.svg" alt="gnb_icon_02">
+                                    </div>
+                                    <p id="id_mnu_icon_store" class="gnb_lang_01" lang_code="BOTTOM_MNU_STORE"><img
+                                            src="./images/index_mnu_store_txt_kor.svg" style="width:90%;"></p>
+                                </li>
+                                <li id="id_btn_botom_mnu_food" onClick="javascript:onClickBottomMnu('FOOD');">
+                                    <div class="gnb_icon_box">
+                                        <img src="./images/intro_GNB-03.svg" alt="gnb_icon_03">
+                                    </div>
+                                    <p id="id_mnu_icon_food" class="gnb_lang_01" lang_code="BOTTOM_MNU_FOOD"><img
+                                            src="./images/index_mnu_food_txt_kor.svg" style="width:90%;"></p>
+                                </li>
+                                <li id="id_btn_botom_mnu_recommand" onClick="javascript:onClickBottomMnu('RECOMMAND');">
+                                    <div class="gnb_icon_box">
+                                        <img src="./images/intro_GNB-04.svg" alt="gnb_icon_04">
+                                    </div>
+                                    <p id="id_mnu_icon_recommand" class="gnb_lang_01" lang_code="BOTTOM_MNU_RECOMMAND">
+                                        <img src="./images/index_mnu_recommand_txt_kor.svg" style="width:90%;">
+                                    </p>
+                                </li>
+                                <li id="id_btn_botom_mnu_event" onClick="javascript:onClickBottomMnu('EVENT');">
+                                    <div class="gnb_icon_box">
+                                        <img src="./images/intro_GNB-05.svg" alt="gnb_icon_05">
+                                    </div>
+                                    <p id="id_mnu_icon_event" class="gnb_lang_01" lang_code="BOTTOM_MNU_EVENT"><img
+                                            src="./images/index_mnu_event_txt_kor.svg" style="width:90%;"></p>
+                                </li>
+                                <li id="id_btn_botom_mnu_park" onClick="javascript:onClickBottomMnu('PARK');">
+                                    <div class="gnb_icon_box">
+                                        <img src="./images/intro_GNB-06.svg" alt="gnb_icon_06">
+                                    </div>
+                                    <p id="id_mnu_icon_park" class="gnb_lang_01" lang_code="BOTTOM_MNU_PARK"><img
+                                            src="./images/index_mnu_park_txt_kor.svg" style="width:90%;"></p>
+                                </li>
+                                <li id="id_btn_botom_mnu_help" onClick="javascript:onClickBottomMnu('HELP');">
+                                    <div class="gnb_icon_box">
+                                        <img src="./images/intro_GNB-07.svg" alt="gnb_icon_07">
+                                    </div>
+                                    <p id="id_mnu_icon_help" class="gnb_lang_01" lang_code="BOTTOM_MNU_HELP"><img
+                                            src="./images/index_mnu_help_txt_kor.svg" style="width:90%;"></p>
+                                </li>
+                                <li id="id_btn_botom_mnu_facility" onClick="javascript:onClickBottomMnu('FACILITY');">
+                                    <div class="gnb_icon_box">
+                                        <img src="./images/intro_GNB-08.svg" alt="gnb_icon_08">
+                                    </div>
+                                    <p id="id_mnu_icon_facility" class="gnb_lang_01" lang_code="BOTTOM_MNU_FACILITY">
+                                        <img src="./images/index_mnu_facility_txt_kor.svg" style="width:90%;">
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--    section end  -->
+            <!--    section end  -->
+
+
+
+            <!--    footer start  -->
+            <!--    footer start  -->
+            <footer>
+                <div class="bottom_end">
+                    <div class="bottom_logo_box">
+                        <img src="./images/bottom_log.png">
+                    </div>
+                    <div class="bottom_lang_box">
+                        <ul class="bottom_lang_list">
+                            <li id="id_btn_lang_kor" class="bottom_lang_01 lang_active"
+                                onClick="javascript:onClickBottomLang('KOR');">한국어</li>
+                            <li id="id_btn_lang_eng" class="bottom_lang_02"
+                                onClick="javascript:onClickBottomLang('ENG');">ENG</li>
+                            <li id="id_btn_lang_chn" class="bottom_lang_03"
+                                onClick="javascript:onClickBottomLang('CHN');">中文</li>
+                            <li id="id_btn_lang_jpn" class="bottom_lang_04"
+                                onClick="javascript:onClickBottomLang('JPN');">日本語</li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+            <!--    footer end  -->
+            <!--    footer end  -->
+
+
+
+        </div>
+
+        <!--    main end  -->
+        <!--    main end  -->
+
+    </body>
+
+    </html>
+
+    <script language="javascript">
+
+        var PAGEACTIVEYN = false;
+
+        var gl_conf_header = new Object();
+        var gl_jsop_lang_data = new Object();
+
+        var gl_arr_notice_list = new Array();
+        var gl_arr_notice_img_list = new Array();
+        var gl_arr_notice_mov_list = new Array();
+
+        function setInit() {
+
+            if (parent.MAINPARENTCUSTOMCODE) {
+                $(".debug_area").hide();
+                PAGEACTIVEYN = false;
+                setInitSetting();
+            } else {
+                PAGEACTIVEYN = true;
+                setLoadLanguage("./include/kiosk_lang_horizon.json");
+                setLoadContents("./xml/kiosk_contents.xml");
+            }
+        }
+
+        jQuery(document).ready(function () {
+            setTimeout(setInit, 50);
+        });
+    </script>

@@ -1,0 +1,84 @@
+/******************************************
+   name :  facility.css
+   auth :  ELTOV
+   date :  2020.11.08
+   desc :  ����ü� ó��
+*******************************************/
+
+
+
+
+
+/* SECTION AREA */
+#facility_wrap{
+    width: 1620px;
+    height: 100%;
+    margin: 0 40px;
+    padding: 63px 0px 0 130px;
+    box-sizing: border-box;
+}
+
+
+/******************* FACILITY LIST *****************/
+
+/* FACILITY LINE */
+.facility_list li{
+    width: 1440px;
+    height: 80px;
+    display: flex;
+    /* border: 1px solid blue; */
+    margin-bottom: 37px;
+}
+.facility_list li .facility_box{
+    width: 25%;
+    display: table-cell;
+    box-sizing: border-box;
+    text-align: left;
+    vertical-align: middle;
+}
+
+
+/* FACILITY */
+.facility_list li .facility_box>div{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* FACILITY ICON IMAGE */
+.facility_list li .facility_box .facility_img_box{
+    margin-right: 20px;
+}
+
+.facility_list li .facility_box .facility_img_box img{
+    width: 80px;
+}
+
+.facility_list li .facility_box .facility_img_box img:nth-child(2){
+    display: none;
+}
+
+/* FACILITY ICON IMAGE ACTIVE */
+.facility_list li .facility_box.facility_active .facility_img_box img:first-child{
+    display: none;
+}
+.facility_list li .facility_box.facility_active .facility_img_box img:nth-child(2){
+    display: block;
+}
+
+/* FACILITY NAME */
+.facility_list li .facility_box .facility_text_box h3{
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 21px;
+    color: #7d7f80;
+}
+.facility_list li .facility_box .facility_text_box p{
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 5px;
+    color: #949494;
+}
+
+
+/******************* FACILITY LIST *****************/
+

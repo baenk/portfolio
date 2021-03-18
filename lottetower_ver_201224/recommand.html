@@ -1,0 +1,159 @@
+<!--------------------------------------------- 
+   name :  recommand.html
+   auth :  ELTOV
+   date :  2020.11.15
+   desc :  추천매장 정보처리
+---------------------------------------------->
+
+<!DOCTYPE HTML>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="user-scalable=no,initial-scale=1.0,maximum-scale=1.0 minimal-ui" />
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LOTTE TOWER INFORMATION</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico">
+
+    <link rel="stylesheet" href="./include/css/lib/reset.css">
+    <link rel="stylesheet" href="./include/css/lib/font.css">
+    <link rel="stylesheet" href="./include/css/lib/swiper.css">
+    <link rel="stylesheet" href="./include/css/lib/common.css">
+    <link rel="stylesheet" href="./include/css/component.css">
+
+    <link rel="stylesheet" href="./include/css/recommand.css">
+
+    <script type="text/javascript" src="./include/js/lib/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="./include/js/lib/swiper.js"></script>
+    <script type="text/javascript" src="./include/js/comm.js"></script>
+    <script type="text/javascript" src="./include/js/xml.js"></script>
+
+    <script type="text/javascript" src="./include/js/recommand.js"></script>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+
+    <div class="debug_area" style="width: 400px;">
+        <button class="btn" onClick="javascript:onClickDebugLang('KOR');">KOR</button>
+        <button class="btn" onClick="javascript:onClickDebugLang('ENG');">ENG</button>
+        <button class="btn" onClick="javascript:onClickDebugLang('CHN');">CHN</button>
+        <button class="btn" onClick="javascript:onClickDebugLang('JPN');">JPN</button>
+    </div>
+
+
+    <div class="contents_area">
+        <div class="debug_button01" onClick="javascript:onClickDebug01();"></div>
+        <header>
+            <div class="top_box">
+                <div class="top_box_img">
+                    <img src="./images/recommended-ic-tit.svg">
+                </div>
+                <div class="top_text_box">
+                    <h1 class="lang_code_names" lang_code="RECOMMAND_TITLE">추천매장</h1>
+                    <p></p>
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="recommand_wrap">
+                <div class="popular_section">
+                    <div class="swiper_text_box">
+                        <h3 class="lang_code_names" lang_code="RECOMMAND_CTG_POPULAR">인기매장</h3>
+                        <p>&nbsp;</p>
+                    </div>
+                    <div id="id_page_popular_list" class="swiper-container" dir="rtl">
+                        <div class="swiper-wrapper"></div>
+                    </div>
+                </div>
+                <div class="photo_section">
+                    <div class="swiper_text_box" style="padding-right:60px;">
+                        <h3 class="lang_code_names" lang_code="RECOMMAND_CTG_PHOTO">포토스팟</h3>
+                        <p>&nbsp;</p>
+                    </div>
+                    <!-- 반대로 회전 dir="rtl" -->
+                    <div id="id_page_photo_list" class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide photo" onClick="javascript:onClickInfoView('PHOTOSPOT','01');">
+                                <img src="./images/img_recommended_spot01.png">
+                                <div class="photo_txt">
+                                    <p class="lang_code_names" lang_code="RECOMMAND_SPOT_01">여왕의 계단</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide photo" onClick="javascript:onClickInfoView('PHOTOSPOT','02');">
+                                <img src="./images/img_recommended_spot02.png">
+                                <div class="photo_txt">
+                                    <p class="lang_code_names" lang_code="RECOMMAND_SPOT_02">POSSIBILITIES</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide photo" onClick="javascript:onClickInfoView('PHOTOSPOT','03');">
+                                <img src="./images/img_recommended_spot03.png">
+                                <div class="photo_txt">
+                                    <p class="lang_code_names" lang_code="RECOMMAND_SPOT_03">시그니엘서울 계단</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide photo" onClick="javascript:onClickInfoView('PHOTOSPOT','04');">
+                                <img src="./images/img_recommended_spot04.png">
+                                <div class="photo_txt">
+                                    <p class="lang_code_names" lang_code="RECOMMAND_SPOT_04">서울스카이전망대</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide photo" onClick="javascript:onClickInfoView('PHOTOSPOT','05');">
+                                <img src="./images/img_recommended_spot05.png">
+                                <div class="photo_txt">
+                                    <p class="lang_code_names" lang_code="RECOMMAND_SPOT_05">쇼핑몰 5F 꽃길</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide photo" onClick="javascript:onClickInfoView('PHOTOSPOT','06');">
+                                <img src="./images/img_recommended_spot06.png">
+                                <div class="photo_txt">
+                                    <p class="lang_code_names" lang_code="RECOMMAND_SPOT_06">서울서울 3080</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="new_store_section">
+                    <div class="swiper_text_box">
+                        <h3 class="lang_code_names" lang_code="RECOMMAND_CTG_NEW">신규매장</h3>
+                        <p>&nbsp;</p>
+                    </div>
+                    <div id="id_page_new_list" class="swiper-container" dir="rtl">
+                        <div class="swiper-wrapper"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
+
+<script language="javascript">
+
+    var PAGEACTIVEYN = false;
+
+    var gl_conf_header = new Object();
+    var gl_jsop_lang_data = new Object();
+
+    var gl_arr_store_list = new Array();
+    var gl_arr_recommand_list = new Array();
+
+    function setInit() {
+
+        if (parent.MAINPARENTCUSTOMCODE) {
+            $(".debug_area").hide();
+            PAGEACTIVEYN = false;
+            setInitSetting();
+        } else {
+            PAGEACTIVEYN = true;
+            setLoadLanguage("./include/kiosk_lang_vertical.json");
+            setLoadContents("./xml/kiosk_contents.xml");
+        }
+    }
+
+    jQuery(document).ready(function () {
+        setTimeout(setInit, 250);
+    });
+</script>
