@@ -289,22 +289,22 @@ function setMakeWeather(p_data){
             if(str_name == "맑음"){
                 gl_main_conf.weather_code = "WEATHER_01";
                 str_weather_name = gl_jsop_lang_data[gl_main_conf.name]["WEATHER_01"][str_lang];
-                $("#id_weather_icon").attr("src","images/ico_weather01.png");
+                $("#id_weather_icon").attr("src","./images/ico_weather01.png");
                 $("#id_weather_icon").show();
             }else if(str_name == "구름 많음" || str_name == "흐림"){
                 gl_main_conf.weather_code = "WEATHER_02";
                 str_weather_name = gl_jsop_lang_data[gl_main_conf.name]["WEATHER_02"][str_lang];
-                $("#id_weather_icon").attr("src","images/ico_weather03.png");
+                $("#id_weather_icon").attr("src","./images/ico_weather03.png");
                 $("#id_weather_icon").show();
             }else if(str_name == "비" || str_name == "비/눈" || str_name == "소나기" || str_name == "빗방울" ){
                 gl_main_conf.weather_code = "WEATHER_03";
                 str_weather_name = gl_jsop_lang_data[gl_main_conf.name]["WEATHER_03"][str_lang];
-                $("#id_weather_icon").attr("src","images/ico_weather04.png");
+                $("#id_weather_icon").attr("src","./images/ico_weather04.png");
                 $("#id_weather_icon").show();
             }else if(str_name == "눈" || str_name == "진눈개비" || str_name == "눈날림"){
                 gl_main_conf.weather_code = "WEATHER_04";
                 str_weather_name = gl_jsop_lang_data[gl_main_conf.name]["WEATHER_04"][str_lang];
-                $("#id_weather_icon").attr("src","images/ico_weather05.png");
+                $("#id_weather_icon").attr("src","./images/ico_weather05.png");
                 $("#id_weather_icon").show();
             }else{
                 str_weather_name = "";
