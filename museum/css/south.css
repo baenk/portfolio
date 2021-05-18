@@ -1,0 +1,437 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+html,body{
+    width: 100%;
+}
+
+header{
+    width: 100%;
+    height: 130px;
+/*    border: 1px solid red;*/
+    border-bottom: 2px solid #66cd7e;
+    background: white;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+header #menubar{
+    width: 100%;
+    height: 125px;
+    position: relative;
+    z-index: 4;
+    background: white;
+}
+header .nav1{
+    width: 1200px;
+    height: 20px;
+    margin: 0 auto;
+/*    border: 1px solid red;*/
+}
+header .nav1 li{
+    width: 100px;
+    line-height: 20px;
+    float: right;
+/*    border: 1px solid red;*/
+    text-align: center;
+}
+header .nav1 li a{
+    text-align: center;
+    display: block;
+    font-size: 12px;
+    color: #333;
+}
+header h1{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+header h1 a{
+    margin: auto;
+}
+header .menu{
+    width: 100%;
+    height: 30px;
+    margin: 0 auto;
+/*    border: 1px solid red;*/
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    border-bottom: #999;
+}
+header .menu ul{
+    width: 60%;
+    min-width: 900px;
+    height: 30px;
+/*    border: 1px solid red;*/
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+header .menu ul li{
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    margin: 0 auto;
+    float: left;
+/*    border: 1px solid red;*/
+}
+header .menu ul li a{
+    width: 100%;
+    height: 30px;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+/*    border: 1px solid red;*/
+    border-bottom: 0;
+    transition: all 0.5s ease;
+}
+header .menu ul li .bar{
+    width: 0;
+    height: 3px;
+    border-bottom: 3px solid #66cd7e;
+}
+header .menu ul li .bar.active{
+    width: 100%;
+}
+
+.submenu{
+    width: 60%;
+    height: 240px;
+    min-width: 900px;
+    margin: 0 auto;
+/*    border: 1px solid red;*/
+    position: relative;
+    top: -280px;
+/*    display: none;*/
+    z-index: 3;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    
+}
+.submenu ol{
+    width: 150px;
+    height: 100%;
+    line-height: 30px;
+    display: block;
+    margin: 0 auto;
+    float: left;
+}
+.submenu ol li{
+    width: 100%;
+    height: 30px;
+}
+.submenu ol li:first-child{
+    margin-top: 15px;
+}
+.submenu ol li a{
+        width: 100%;
+    height: 30px;
+    display: block;
+    font-size: 12px;
+    color: #333;
+/*    border: 1px solid red;*/
+}
+
+
+        .container{
+            text-align: center;
+        }
+        .row{
+            margin: 0 auto;
+            margin-bottom: 10px;
+            text-align: center;
+/*            width: 70%;*/
+        }
+        [class|="col"]{
+/*            border: 3px solid #eaeaed;*/
+/*            height: 200px;*/
+            font-size: .8em;
+            line-height: 50px;
+            text-align: center;
+/*            color: white;*/
+            font-weight: 700;
+            box-sizing: border-box;
+            padding: 2% 2%;
+        }
+        .inner{
+            width: 100%;
+            height: 100%;
+            background: #cccf;
+        }
+
+
+/*----------------------------------section-----------------------------------------------*/
+
+
+
+/*-------------section1-------------*/
+#section1{
+    width: 100%;
+    height: auto;
+    margin-top: 130px;
+    background: url(../images/banner_bg01.png);
+/*    border: 1px solid red;*/
+}
+.item img{
+    width: 100%;
+    height: 100%;
+}
+#timeBar{
+    width: 100%;
+    height: 80px;
+    background: #66cd7e;
+    text-align: center;
+}
+#timeBar p{
+    line-height: 80px;
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color:  #264f42;
+    display: inline-block;
+}
+/*-------------section2-------------*/
+#section2{
+    width: 100%;
+    height: auto;
+/*    border: 1px solid red;*/
+    background: #fff8f5;
+}
+#section2 h3{
+    margin: 50px auto;
+}
+#section2 .jumbotron{
+    background: none;
+/*    border: 1px solid red;*/
+}
+#section2 .secTxt{
+    text-align: left;
+}
+#section2 .secTxt h1{
+    font-size: 30px;
+    color: #666;
+}
+#section2 .secTxt p{
+    font-size: 12px;
+    color: #666;
+    line-height: 40px;
+}
+#section2 .secTxt .btn{
+    background:  #66cd7e;
+    border: 0;
+}
+#section2 .jumboBan{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding-top: 15px;
+/*    border: 1px solid red;*/
+    position: relative;
+}
+#section2 .jumboBan ul{
+/*    border: 1px solid blue;*/
+}
+#section2 .jumboBan ul li{
+    position: absolute;
+    text-align: center;
+}
+#section2 .jumboBan ul li img{
+    width: 100%;
+}
+
+/*------------------section3------------------*/
+#section3{
+/*    height: 670px;*/
+    background: url(../images/ex_bg.png) center center no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    padding: 100px;
+}
+#section3 h2{
+    color: white;
+}
+#section3 .col-md-4 img{
+    width: 170px;
+    height: 170px;
+    border: 3px solid white;
+}
+#section3 .col-md-4 a{
+    text-align: center;
+    background:  #66cd7e;
+    color: white;
+    border: 0;
+}
+
+
+
+
+
+
+
+
+/*---------------------section4-----------------------*/
+#section4{
+    background: #f9ede7;
+}
+#section4 h3{
+    margin: 100px auto 50px;
+}
+#section4 .container{
+    padding-bottom: 50px;
+}
+#section4 .inner{
+    position: relative;
+}
+#section4 .inner.active:before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    z-index: 10;
+}
+#section4 .inner .detail{
+    display: none;
+}
+#section4 .inner.active .detail{
+    display: block;
+    position: absolute;
+    top: 45%;
+/*    bottom: 50%;*/
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: white;
+    font-size: 18px;
+    z-index: 12;
+}
+#section4 .inner a img{
+    width: 100%;
+}
+/*---------------------section5-----------------------*/
+
+#section5{
+    color: black;
+}
+#section5 h3{
+    margin: 100px auto 50px;
+}
+#section5 .row{
+    margin: 50px 0;
+}
+#section5 .notice .tab{
+/*    border: 1px solid black;*/
+    border-bottom: 0;
+    text-align: left;
+    overflow: hidden;
+}
+#section5 .notice .tab input{
+    display: none;
+}
+#section5 .notice .tab label{
+    width: 100px;
+    height: 100%;
+    margin: 0;
+    text-align: center;
+}
+#section5 .notice .tab input:checked+label{
+    background:  #66cd7e;
+    color: white;
+}
+#section5 .notice table{
+    width: 100%;
+/*    text-align: center;*/
+    table-layout: fixed;
+    box-sizing: border-box;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-collapse: collapse;
+}
+#section5 .notice table th,
+#section5 .notice table td{
+    text-align: center;
+    border: 1px solid #cccccc;
+}
+#section5 .notice table th:first-child{
+    width: 10%;
+}
+#section5 .notice table td:nth-child(2){
+    width: 60%;
+    text-align: left;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow: hidden;
+    padding: 0 20px;
+}
+#section5 .notice table td a{
+    color: black;
+}
+#section5 .notice table th:nth-child(3){
+    width: 10%;
+}
+#section5 .notice table th:nth-child(4){
+    width: 20%;
+}
+#section5 .notice ul{
+    display: none;
+}
+#section5 .map{
+    margin-top: 50px;
+}
+
+
+/*--------------------footer--------------------------*/
+footer{
+    height: auto;
+    background: #264f42;
+    box-sizing: border-box;
+    padding-top: 30px;
+}
+.ft_info{
+/*    text-align: center;*/
+}
+.ft_info>p{
+/*    text-align: left;*/
+    font-size: 1.2rem;
+    line-height: 20px;
+    color: white;
+}
+.ft_info_btn{
+    width: 300px;
+    height: 40px;
+    text-align: center;
+    margin: auto;
+}
+.ft_info_btn>a{
+    display: block;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    font-size: 1.2rem;
+    background: #666;
+    border-radius: 15px;
+    margin: auto;
+    float: left;
+}
+.ft_family img{
+    width: 120px;
+}
+.dropup{
+    top: -5px;
+    float: left;
+    margin-left: 30px;
+}
+.dropdown-menu{
+    top: 90%;
+    right: 0;
+    margin: auto;
+}

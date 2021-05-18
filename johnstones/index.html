@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>green</title>
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1.0, minimun-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/pc_green.css">
+    <link rel="stylesheet" href="css/green.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap" rel="stylesheet">
+    <script src="lib/jquery-1.11.1.min.js"></script>
+    <script src="lib/jquery.easing.1.3.js"></script>
+    <script src="lib/jquery.bxslider.min.js"></script>
+    <script>
+        $(function () {
+            //            $(window).resize(function(){
+            //              location.reload();  
+            //            });
+            //            function main_vid(){
+            //                
+            //             $("#main video").delay(2000).get(0).play();   
+            //            }
+            //            var video_1= setInterval( main_vid, 2000);
+            //            $("#main video").attr("autoplay");
+            //            function main_txt(){
+            //                $("#main").css({"background": "url(images/main2.gif) center center"});
+            //                    $("#main").css({"background-size": "cover"});
+            //            }
+            //            var main_autoTxt= setInterval(main_txt, 100);
+
+
+
+            //창 가로 사이즈에 따른 배경 변화
+            //            function resize1(){
+            //                $(window).resize(function(){
+            //                     var windowWidth= $(window).width();
+            //                    console.log(windowWidth);
+            //                               if(windowWidth<=1200){
+            //                $("#main").css({"background":"url(../images/banner02.png)"});
+            //            }  else{
+            //                $("#main").css({"background":"url(../images/main2.gif)"});
+            //            }
+            //                });   
+            //            }
+            //            
+            //            resize1();
+
+
+            /*--------------------------메뉴 창---------------------------------*/
+            var on_off = false;
+            var sub_width = $("#sub_menu").width();
+            $("#sub_menu").css({ "right": -sub_width });
+            $(".btn").click(function () {
+                $(".on").removeClass("on");
+                if ($("#sub_menu").is(":animated")) { return; }
+                if ($("#sub_menu").position().right == 0) { return; }
+
+                on_off = !on_off;
+                if (on_off) {
+                    $("#sub_menu").stop().animate({ right: 0 }, 1000, "easeOutExpo");
+
+                }
+                else {
+                    //                    if($(window).width()>769){
+                    $("#sub_menu").stop().animate({ right: -sub_width }, 1000, "easeOutExpo");
+                    //                    }
+                    //                    else{
+                    //                        $("#sub_menu").stop().animate({right: "-100%"}, 1000, "easeOutExpo");
+                    //                    }
+                }
+
+            });
+
+            /*----------------------서브메뉴-----------------------------*/
+
+            $(".s_btn").click(function () {
+                if ($(".list").is(":animated")) { return; }
+                $(this).next().slideToggle(600);
+                //클릭하지 않은 것 slideUp
+                $(".list").not($(this).next()).slideUp(600);
+
+
+            });
+
+            /*banner1*/
+
+            var bnn1 = new Array();
+            var b_width = $(".banner1 li").width();
+            for (var i = 0; i < 3; i++) {
+                bnn1.push($(".banner1 li").eq(i));
+                bnn1[i].css({ "left": b_width * i });
+            }
+
+            function banner1() {
+                $(".banner1 li").each(function (i) {
+                    b_width = $(".banner1 li").width();
+                    $(this).animate({ left: "-=" + b_width + "px" }, 1000, function () {
+                        for (i = 0; i < 3; i++) {
+                            bnn1[i].css({ "left": b_width * i });
+                        }
+                    });
+                });
+                var first_list = bnn1.shift();
+                bnn1.push(first_list);
+
+            }
+            var timer1 = setInterval(banner1, 2000);
+
+
+            //            /*------------banner1 left---------------------------*/
+            //            
+            //            $(".b1_left").click(function(){
+            //                if($(".banner1 li").is(":animated")){return;}
+            //                clearInterval(timer1);
+            //                var last_list=bnn1.pop();
+            //                bnn1.unshift(last_list);
+            //                bnn1[0].css({"left": -b_width});
+            //                $(".banner1 li").stop().animate({left:"+="+b_width+"px"}, 1000, function(){
+            //                    for(i=0; i<3; i++){
+            //                        bnn1[i].css({"left": b_width*i});
+            //                    }
+            //                    });
+            //                timer1= setInterval( banner1, 2000);   
+            //            });
+            //            
+            //            
+            //             /*------------banner1 right---------------------------*/
+            //            $(".b1_right").click(function(){
+            //                if($(".banner1 li").is(":animated")){return;}
+            //                clearInterval(timer1);
+            //                bnn1[2].css({"left": b_width*2});
+            //                var first_list=bnn1.shift();
+            //                bnn1.push(first_list);
+            //                $(".banner1 li").stop().animate({left:"-="+b_width+"px"}, 1000, function(){
+            //                    for(i=0; i<3; i++){
+            //                        bnn1[i].css({"left": b_width*i});
+            //                    }
+            //                });
+            //                timer1= setInterval( banner1, 2000);   
+            //            });
+
+
+
+
+            /*banner2*/
+            $(window).resize(function () {
+                sub_width = $("#sub_menu").width();
+                $("#sub_menu").css({ "right": -sub_width });
+                //                bx_banner();
+            });
+
+            //            var bx_banner= function(){
+            //                
+            //                if($(window).width()<769){
+            //                    $(".banner2").off();
+            //                }
+            //                else{
+            //                    var slider2= $(".banner2").bxSlider({
+            //                    slideWidth:250,
+            //                    maxSlides: 4,
+            //                    minSlides: 1,
+            //                    moveSlides: 1,
+            //                    auto: true,
+            //                    controls: true,
+            //                    prevSelector: ".left",
+            //                    prevText: "<",
+            //                    nextSelector: ".right",
+            //                    nextText: ">",
+            //                    pager:false,
+            //                    autoHover: true
+            //                });
+            //                }
+            //            }
+            $(".banner2 li").mouseover(function () {
+                $(this).children("div").addClass("on");
+                $(this).children(".on").css({ "height": $(this).height() });
+                //                $(this).children("img").animate({transform: "scale(1.1)"}, 1000, "easeOutExpo");
+                $(".banner2 div").not($(this).children("div")).removeClass("on");
+                //                $(".arrow").css({"opacity":"1"});
+            });
+            $(".banner2 li").mouseleave(function () {
+                $(".banner2 div").removeClass("on");
+            });
+            //            $(".banner2").mouseleave(function(){
+            //                $(".arrow").css({"opacity":"0"});
+            //            });
+
+            /*-------------------section2-------------------*/
+            $("#section2 .img_box li").mouseover(function () {
+                $(this).addClass("active");
+                $("#section2 .img_box li").not($(this)).removeClass("active");
+                $(this).children("a").text("인스타그램 보러가기");
+            });
+
+
+            /*-------------------section4-------------------*/
+            //            $(".img_box li").mouseover(function(){
+            //                var divHeight=$(".img_box li img").height();
+            //                $(".img_box div").addClass("active");
+            //                $(".active").css("height",divHeight);
+            //                $(".active p").text("Lorem ipsum dolor sit amet, consectetur adipisicing elit. In nihil voluptas delectus, quisquam reiciendis, fugiat perferendis dolorem. Dolorem vitae, qui iusto non illum suscipit, nesciunt earum, omnis facere neque amet.")
+            //            });
+            //            $(".img_box li").mouseleave(function(){
+            //                $(".img_box div").removeClass("active");
+            //                $(".active p").text("");
+            //            });
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <h2><img src="images/logo_f.png"></h2>
+        <nav>
+            <ul>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">My page</a></li>
+                <li><a href="#">Order</a></li>
+                <li><a href="#">Wish List</a></li>
+            </ul>
+            <li class="user"><a href="#"><img src="images/user.png"></a></li>
+            <li class="btn"><a href="#"><img src="images/toggle.png"></a></li>
+        </nav>
+    </header>
+    <div id="main">
+        <!--
+            <video id="myVideo" loop muted>
+                <source src="images/aaaa.mp4">
+            </video>
+-->
+        <div class="txt">
+            <h1>Design your home</h1>
+            <p>with <span>JOHNSTONE'S</span></p>
+            <div class="box1"></div>
+        </div>
+        <div id="sub_menu">
+            <ul>
+                <li class="s_btn"><a href="#">menu1</a></li>
+                <ol class="list">
+                    <li><a href="#">sub_menu1</a></li>
+                    <li><a href="#">sub_menu2</a></li>
+                    <li><a href="#">sub_menu3</a></li>
+                    <li><a href="#">sub_menu4</a></li>
+                </ol>
+                <li class="s_btn"><a href="#">menu2</a></li>
+                <ol class="list">
+                    <li><a href="#">sub_menu1</a></li>
+                    <li><a href="#">sub_menu2</a></li>
+                    <li><a href="#">sub_menu3</a></li>
+                    <li><a href="#">sub_menu4</a></li>
+                </ol>
+                <li class="s_btn"><a href="#">menu3</a></li>
+                <ol class="list">
+                    <li><a href="#">sub_menu1</a></li>
+                    <li><a href="#">sub_menu2</a></li>
+                    <li><a href="#">sub_menu3</a></li>
+                    <li><a href="#">sub_menu4</a></li>
+                </ol>
+                <li class="s_btn"><a href="#">menu4</a></li>
+                <ol class="list">
+                    <li><a href="#">sub_menu1</a></li>
+                    <li><a href="#">sub_menu2</a></li>
+                    <li><a href="#">sub_menu3</a></li>
+                    <li><a href="#">sub_menu4</a></li>
+                </ol>
+                <li class="s_btn"><a href="#">menu5</a></li>
+                <ol class="list">
+                    <li><a href="#">sub_menu1</a></li>
+                    <li><a href="#">sub_menu2</a></li>
+                    <li><a href="#">sub_menu3</a></li>
+                    <li><a href="#">sub_menu4</a></li>
+                </ol>
+            </ul>
+        </div>
+    </div>
+    <div id="wrap1">
+        <section id="section1">
+            <div class="contents">
+                <div class="notice">
+                    <h2>News & Notice</h2>
+                    <span><a href="#">more+</a></span>
+                    <hr>
+                    <table>
+                        <tr>
+                            <td>1</td>
+                            <td><a href="#">2020 트렌드 컬러 ‘클래식 블루’ 홈인테리어 제안</a></td>
+                            <td>20.03.20</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><a href="#">특별한 전시 ‘노벨상 특별전’ 전시관 컬러 콜라보 진행</a> </td>
+                            <td>20.03.10</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><a href="#">기능성 페인트 신제품 출시로 상반기 시장 공략</a></td>
+                            <td>20.03.05</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><a href="#">존스톤스 NCTS 2020 (존스톤스 인터내셔널 컬러 트렌드쇼)</a></td>
+                            <td>19.12.11</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="banner1">
+                    <ul>
+                        <li><a href="#"><img src="images/banner01.png" alt="배너이미지1"></a></li>
+                        <li><a href="#"><img src="images/banner02.png" alt="배너이미지2"></a></li>
+                        <li><a href="#"><img src="images/banner03.png" alt="배너이미지3"></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="contents2">
+                <h2>Best Product</h2>
+                <div class="arrow">
+                    <div class="left"></div>
+                    <div class="right"></div>
+                </div>
+                <div class="banner2">
+                    <li>
+                        <img src="images/paint01.png" alt="페인트1">
+                        <a href="#">천정/벽면용</a>
+                        <div></div>
+                    </li>
+                    <li>
+                        <img src="images/paint02.png" alt="페인트2">
+                        <a href="#">문/몰딩/가구용</a>
+                        <div></div>
+                    </li>
+                    <li>
+                        <img src="images/paint03.png" alt="페인트3">
+                        <a href="#">프라이머/잿소</a>
+                        <div></div>
+                    </li>
+                    <li>
+                        <img src="images/paint04.png" alt="페인트4">
+                        <a href="#">외부벽면/철재</a>
+                        <div></div>
+                    </li>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="wrap2">
+        <section id="section2">
+            <div class="s_txt2">
+                <h2>Instargram</h2>
+                <p>제품을 사용하는 생생한 모습을 보여주세요</p>
+            </div>
+            <div class="img_box">
+                <li>
+                    <img src="images/instar01.png" alt="인스타1">
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <img src="images/instar02.png" alt="인스타2">
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <img src="images/instar03.png" alt="인스타3">
+                    <a href="#"></a>
+                </li>
+            </div>
+        </section>
+    </div>
+
+    <div id="wrap3">
+        <section id="section3">
+            <div class="s_txt3">
+                <h2>ABSOLU System</h2>
+                <p>PPG의 조색 시스템인 ABSOLU System의 특징은 Zero VOC로서 냄새가 없고
+                    인체와 환경에 무해한 무독성 착색제를 사용하여 100% 합성 안료를 사용하여
+                    뛰어난 색상 구현력, 색상 유지력 그리고 은폐력을 보증합니다</p>
+            </div>
+            <div class="img_box">
+                <div>
+                    <p></p>
+                </div>
+                <li><a href="#"><img src="images/color01.png" alt="샘플1"></a></li>
+                <li><a href="#"><img src="images/color02.png" alt="샘플2"></a></li>
+            </div>
+        </section>
+    </div>
+    <div id="wrap4">
+        <section id="section4">
+            <div class="s_txt4">
+                <h2><img src="images/sect3_logo.png"></h2>
+            </div>
+            <div class="img_box">
+                <!--                    <div><p></p></div>-->
+                <li><a href="#"><img src="images/color03.png" alt="샘플3"></a></li>
+                <li><a href="#"><img src="images/color04.png" alt="샘플4"></a></li>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="f_wrap">
+            <div class="f_logo"><img src="images/logo_f.png"></div>
+            <div class="f_txt">
+                <a href="#">서비스이용약관</a>
+                <a href="#">개인정보보호정책</a>
+                <a href="#">회사소개</a>
+                <a href="#">고객문의</a>
+                <a href="#">시공상담</a>
+                <a href="#">컬러칩요청</a>
+                <a href="#">페인트계산기</a>
+                <p>인천광역시 강화군 불은면 강화동로 554, 1동 (전면)| 대표자 : 오필성 | 사업자번호 : 162-87-01569 | 개인정보책임자 : 오필성<br>통신판매신고번호 :
+                    제2019-인천강화-0183호 | T: 032-937-3308 | F: 032-937-3318 | E: jspaintkorea@naver.com<br>주식회사 존스톤스 코리아 |
+                    COPYRIGHT ⓒ 2018 -JS PAINT- ALL RIGHT RESERVED. WEBDESIGNED BY INTERCOMMUZ</p>
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+</html>

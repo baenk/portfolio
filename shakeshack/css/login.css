@@ -1,0 +1,172 @@
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        body{
+            background: url(../images/l_bg.png) center center no-repeat;
+            background-size: cover;
+        }
+        
+        /*---------------------------header-----------------------------------*/
+    header{
+        width: 100%;
+        height: 60px;
+        position: fixed;
+        top: 10px;
+        box-sizing: border-box;
+        /*            border: 1px solid red;*/
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        z-index: 10;
+    }
+    header h1{
+        float: left;
+        /*            border: 1px solid red;*/
+        }
+        header h1 img{
+        width: 200px;
+        height: auto;
+        vertical-align: middle;
+    }
+    header nav{
+        float: right;
+        width: 70%;
+        height: 60px;
+    /*                border: 1px solid red;*/
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+
+    }
+    header nav .toggle{
+        line-height: 82px;
+        display: none;
+    }
+    header nav ul{
+        width: 600px;
+    /*    width: 50%;*/
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-content: space-between;
+        align-items: center;
+    /*    border: 1px solid white;*/
+    }
+    header nav ul li{
+        width: 110px;
+    /*                border: 1px solid white;*/
+        text-align: center;
+    }
+    header nav ul li:last-child{
+        width: 50px;
+    }
+    header nav ul li a{
+        color: white;
+        font-size: 0.938rem;
+    }
+        
+        
+        
+        /*---------------------------------login----------------------------------------*/
+        #log_wrap{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 470px;
+            height: 670px;
+            background: #191919;
+            border-radius: 10px;
+        }
+        #log_form{
+            width: 370px;
+            height: 570px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+/*            border: 1px solid white;*/
+        }
+        #log_form h1{
+            text-align: center;
+            padding: 50px 0 30px;
+        }
+        #log_form p,a{
+            color: white;
+            font-size: 15px;
+        }
+        #log_form a{
+            display: block;
+            text-align: center;
+        }
+        #log_form fieldset{
+            border: none;
+        }
+        /*---------------------------id, pw------------------------*/
+        #log_form input{
+            width: 100%;
+            height: 40px;
+            margin: 15px auto;
+            background: #333;
+            color: white;
+            border: none;
+            text-indent: 10px;
+        }
+        #log_form .logError{
+            height: 15px;
+            margin: 10px auto 20px;
+/*            border: 1px solid red;*/
+        }
+        #log_form .logError p{
+            color: #e33434;
+            font-size: 12px;
+            text-align: center;
+/*            display: none;*/
+        }
+        
+        
+        /*---------------------button---------------------*/
+        
+        #log_form .login{
+            height: 50px;
+            margin: 0 auto 30px;
+            background: #62ae39;
+/*            border: 1px solid red;*/
+            border-radius: 7px;
+            text-align: center;
+        }
+        #log_form .login a{
+            line-height: 50px;
+        }
+        
+        /*-------------------creat account----------------------*/
+        #log_form .join p{
+            display: block;
+            float: left;
+            text-align: center;
+            margin-right: 20px;
+            
+        }
+        #log_form .join{
+            width: 90%;
+            margin: 0 auto 10px;
+/*            padding: 10px 0;*/
+/*            border: 1px solid white;*/
+        }
+
+        #log_form .new{
+            clear: both;
+            margin: 10px auto;
+        }
+        

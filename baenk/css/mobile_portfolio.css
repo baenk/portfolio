@@ -1,0 +1,702 @@
+
+/*--------------------------------------1024px-----------------------------------------------*/
+@media all and (max-width:1024px) {
+    .txt{
+        height: 150px;
+    }
+    
+    
+    #section1 p{
+        line-height: 120px;
+        font-size: 80px;
+        font-weight: 700;
+        display: block;
+        margin: 0 auto;
+        padding-top: 50px;
+    /*            opacity: 0;*/
+        color: white;
+    /*    border: 1px solid black;*/
+    }
+    #section1 span{
+    line-height: 80px;
+    width: 500px;
+    font-size: 14px;
+    height: 50px;
+    margin: 0;
+    color: white;
+/*    border: 1px solid;*/
+}
+    
+    
+    
+    
+    /*-----------------------------section2-------------------------*/
+
+    #section2 #container2{
+        top: 100px;
+        width: 80%;
+        height: 60%;
+        margin: auto;
+        flex-flow: column nowrap;
+        flex-direction: column-reverse;
+/*        border: 1px solid white*/
+    }
+    #section2 .hourBox{
+        top: 50px;
+        bottom: 0;
+        width: 100%;
+        height: 400px;
+        margin-left: 0px;
+        margin: auto;
+/*        border: 1px solid white;*/
+        text-align: center;
+    }
+    #section2 #canvas1{
+        width: 350px;
+        height: 160px;
+/*        border: 1px solid white;*/
+    }
+    #section2 .hourBox h1{
+        top: 0;
+        right: 0;
+        margin: auto;
+        font-size: 120px;
+/*        border: 1px solid white;*/
+    }
+    #section2 .hourBox h1 span{
+        font-size: 40px;
+    }
+    #section2 .hourBox p{
+        width: 75%;
+        margin: 10px auto;
+/*        margin-top: 20px;*/
+        text-align: center;
+        font-size: 14px;
+    }
+    #section2 .hourBox a{
+        margin: 0 auto;
+        margin-top: 20px;
+        font-size: 14px;
+    }
+    /*pill design*/
+    #section2 .pillBox{
+        width: 80%;
+        padding: 0 100px;
+    /*    border: 1px solid white;*/
+    }
+    #section2 .pillEach{
+        width: 100px;
+        height: 240px;
+        margin: 0 10px;
+    }
+
+    #section2 .pillMax{
+        width: 60px;
+        height: 200px;
+    /*    opacity: 0.8;*/
+    }
+
+    #section2 p{
+        position: relative;
+    /*            z-index: 1;*/
+        width: 60px;
+        height: 20px;
+        text-align: center;
+/*        color: white;*/
+        font-size: 16px;
+    /*    font-weight: bold;*/
+/*                border: 1px solid red;*/
+    }
+
+    
+    /*-------------------------section3--------------------*/
+    #section3 .workTxt li h2{
+        font-size: 34px;
+    }
+    #section3 .workTxt li p{
+        font-size: 14px;
+    }
+    #section3 .workTxt li a{
+        font-size: 14px;
+    }
+    #section3 .part2 li a{
+        font-size: 34px;
+    }
+    
+    #section3 .popup_info_txt h1{
+    font-size: 35px;
+    font-weight: bold;
+}
+    #section3 .popup_info_txt p{
+        margin-top: 15px;
+        font-size: 15px;
+    }
+    #section3 #popup_bg #popup ul{
+        width: 100%;
+    /*    border: 1px solid black;*/
+    }
+    #section3 #popup_bg #popup ul li{
+        margin: 15px 5px 0;
+        float: left;
+    }
+    #section3 #popup_bg #popup ul li:nth-child(3){
+        margin-left: 0;
+        margin-bottom: 15px;
+    }
+    
+    /*-------------------------section4--------------------*/
+    #section4{
+    }
+    #section4 .contactWrap{
+        width: 43%;
+    }
+    
+    
+    
+    
+}
+
+/*--------------------------------------768px-----------------------------------------------*/
+@media all and (max-width:768px) {
+    /*-------------------------section1--------------------*/
+    .txt{
+        height: 100px;
+    }
+    /*portfolio text*/
+    #section1 p{
+        line-height: 120px;
+        font-size: 60px;
+        font-weight: 700;
+        display: block;
+        margin: 0 auto;
+        padding-top: 50px;
+    /*            opacity: 0;*/
+        color: white;
+    /*    border: 1px solid black;*/
+    }
+    #section1 span{
+    line-height: 80px;
+    width: 500px;
+    font-size: 13px;
+    height: 50px;
+    margin: 0;
+    color: white;
+/*    border: 1px solid;*/
+}
+    
+    
+    
+    /*-------------------------section2--------------------*/
+    #section2 .hourBox p{
+        width: 100%;
+    }
+    /*-------------------------section3--------------------*/
+    #section3{
+        display: flex;
+        flex-flow: column;
+        flex-direction: column-reverse;
+/*        justify-content: space-around;*/
+/*        align-items: center;*/
+        position: relative;
+    }
+    #section3 .part1{
+        position: absolute;
+        left: 0;
+        margin: 0 auto;
+        width: 0%;
+        height: 30%;
+/*        border: 1px solid black;*/
+    }
+    #section3 .workTxt{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        margin: auto;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+    }
+    #section3 .workTxt li h2{
+        font-size: 30px;
+    }
+    #section3 .workTxt li p{
+    }
+    #section3 .workTxt li a{
+        margin-top: 14px;
+    }
+
+    #section3 .part2{
+        position: absolute;
+        bottom: 37%;
+        width: 0;
+        height: 0;
+        margin-right: 4%;
+    }
+    #section3 .part2 li a{
+        font-size: 30px;
+    }
+
+    /*-------------------------------popup-----------------------------------*/
+    #section3 #popup_bg{
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+    /*    filter: blur(3px);*/
+        position: fixed;
+        top: 0;
+        opacity: 0;
+        display: none;
+        z-index: 10;
+    }
+
+    #section3 #popup_bg #popup{
+        width: 95%;
+        max-width: 1200px;
+        height: 700px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        background:white;
+        overflow: auto;
+    }
+    #section3 #popup_bg #popup #popup_info{
+        width: 100%;
+        height: 700px;
+        box-sizing: border-box;
+        padding: 30px 60px;
+        overflow: hidden;
+        background: #62ae39;
+    }
+    #section3 #popup_bg #popup #popup_info .popup_info_txt{
+        width: 100%;
+    /*    height: 700px;*/
+        margin-top: 100px;
+    /*    border: 1px solid black;*/
+        float: left;
+        color: white;
+    }
+    #section3 .popup_info_txt h1{
+        font-size: 30px;
+        font-weight: bold;
+    }
+    #section3 .popup_info_txt p{
+        font-size: 14px;
+        margin-top: 15px;
+    }
+    #section3 #popup_bg #popup #popup_info>span{
+        width: 22px;
+        height: 23px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        opacity: 0.4;
+    }
+    #section3 #popup_bg #popup #popup_info>span img{
+        width: 100%;
+    }
+    #section3 #popup_bg #popup ul{
+        width: 100%;
+    /*    border: 1px solid black;*/
+    }
+    #section3 #popup_bg #popup ul li{
+        font-size: 14px;
+        margin: 10px;
+        margin-bottom: 15px;
+        float: left;
+    }
+    #section3 #popup_bg #popup ul li:first-child{
+        margin-left: 0;
+    }
+    #section3 #popup_bg #popup ul a{
+        clear: both;
+        width: 120px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        display: block;
+        margin-top: 20px;
+        color: white;
+        font-size: 14px;
+        font-weight: 600;
+        border: 2px solid white;
+        border-radius: 13px;
+
+    }
+    #section3 #popup_bg #popup #work_img{
+        width: 100%;
+        height: auto;
+        float: right;
+    } 
+    #section3 #popup_bg #popup #work_img img{
+        width: 100%;
+        margin-top: 50px;
+        box-shadow: 0px 0px 30px rgba(0,0,0,0.7);
+    }
+
+
+    #section3 #popup_bg .detail_image{
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 100px;
+    }
+    #section3 #popup_bg .detail_image img{
+        width: 100%;
+        }
+    
+    
+    /*-------------------------section4--------------------*/
+    #section4{
+    }
+
+    #section4 .contactWrap{
+        width: 80%;
+        height: 100%;
+    /*    height: auto;*/
+        display: flex;
+        flex-flow: column nowrap;
+    /*    align-items: center;*/
+    /*    align-content: center;*/
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    /*    border: 1px solid black;*/
+    }
+    #section4 .part{
+        width: 100%;
+        position: relative;
+    }
+    #section4 .part1{
+        position: relative;
+        width: 100%;
+    /*    height: 300px;*/
+        height: 0;
+    /*
+        top: 0;
+        bottom: 0;
+        left: 10%;
+    */
+    /*    margin: auto;*/
+    /*            border: 1px solid black;*/
+    }
+    #section4 .part2{
+        position: relative;
+        margin-top: 20px;
+    /*    height: 80px;*/
+        height: 0;
+    /*    display: none;*/
+    /*    border: 1px solid white;*/
+    }
+    #section4 .part3{
+        position: relative;
+        margin-top: 20px;
+        height: 0;
+    /*    height: 80px;*/
+    /*    display: none;*/
+    }
+    #section4 .bgBox{
+        width: 100%;
+        height: 100%;
+        background: #999;
+        opacity: 0.4;
+        border-radius: 20px;
+    }
+    #section4 .workTxt{
+        width: 100%;
+        height: 80%;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        margin: auto;
+        display: flex;
+        flex-flow: column;
+    /*    justify-content: center;*/
+        box-sizing: border-box;
+    /*    padding: 50px;*/
+        color: rgba(0,0,0,0.6);
+    /*            left: -700px;*/
+    /*    border: 1px solid black;*/
+        overflow: hidden;
+    }
+
+    #section4 .workTxt li h2{
+        margin-left: 20px;
+        margin-bottom: 10px;
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    #section4 .workTxt li h2 span{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    #section4 .workTxt li p{
+        margin-left: 20px;
+        width: 80%;
+        color: rgba(0,0,0,0.6);
+    /*    font-weight: bold;*/
+    }
+    #section4 .part2 p,
+    #section4 .part3 p{
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+/*
+    #section4 .workTxt li p:nth-child(1){
+        color: black;
+        }
+*/
+    #section4 .workTxt li p:nth-child(2){
+        margin-top: 5px;
+        }
+    #section4 .workTxt li p span{
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+    #section4 .workTxt li p span img{
+        width: 20px;
+    }
+    #section4 .footer{
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+    }
+
+    
+    
+}
+/*--------------------------------------460px-----------------------------------------------*/
+@media all and (max-width:460px) {
+    .title{
+        top: 100px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        font-size: 30px;
+        text-align: center;
+        height: 40px;
+    
+    }
+    
+/*-------------------------section1--------------------*/    
+    .txt{
+    width: 10px;
+    height: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    margin: 0 auto;
+
+}
+    
+/*-------------------------section2--------------------*/
+    #section2{
+    }
+    #section2 .hourBox h1 span{
+        font-size: 34px;
+    }
+    
+     /*pill design*/
+    #section2 .pillBox{
+        width: 100%;
+        height: 300px;
+    }
+    #section2 .pillEach{
+        width: 45%;
+        min-width: 45px;
+        height: 180px;
+        margin: 0 5px;
+/*        border: 1px solid red;*/
+    }
+
+    #section2 .pillMax{
+        margin: auto;
+        width: 100%;
+        height: 200px;
+    }
+    #section2 .pill{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 0;
+    /*    background: white;*/
+        background: #fc894b;
+        background: -moz-linear-gradient(top,  #fc894b 0%, #f2d010 100%);
+        background: -webkit-linear-gradient(top,  #fc894b 0%,#f2d010 100%);
+        background: linear-gradient(to bottom,  #fc894b 0%,#f2d010 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc894b', endColorstr='#f2d010',GradientType=0 );
+
+    }
+    #section2 p{
+        position: relative;
+    /*            z-index: 1;*/
+        width: 60px;
+        height: 20px;
+        text-align: center;
+        color: white;
+        font-size: 14px;
+    /*    font-weight: bold;*/
+    /*            border: 1px solid red;*/
+    }
+
+    #section2>img{
+        width: 40%;
+        height: auto;
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    /*    border: 1px solid white;*/
+        opacity: 1;
+
+    }
+
+    #section2 .hourBox p{
+        width: 100%;
+    }
+     /*-------------------------section3--------------------*/
+    
+    #section3{
+    }
+    #section3 .part1{
+        position: absolute;
+        left: 0;
+        margin: 0 auto;
+        width: 0%;
+        height: 35%;
+/*        border: 1px solid black;*/
+    }
+    #section3 .workTxt{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        margin: auto;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        text-align: center;
+    }
+    #section3 .workTxt li h2{
+        font-size: 30px;
+    }
+    #section3 .workTxt li p{
+    }
+    #section3 .workTxt li a{
+        margin: 0 auto;
+        margin-top: 14px;
+    }
+
+    #section3 .part2{
+        position: absolute;
+        bottom: 40%;
+        width: 0;
+        height: 0;
+        margin-right: 4%;
+    }
+    #section3 .part2 li a{
+        font-size: 30px;
+    }
+    
+    
+    #section3 #popup_bg #popup #popup_info{
+        padding: 30px 30px;
+    }
+    #section3 #popup_bg #popup #popup_info .popup_info_txt{
+        margin-top: 80px;
+        text-align: center;
+    }
+    #section3 .popup_info_txt h1{
+        font-size: 30px;
+        font-weight: bold;
+    }
+    #section3 .popup_info_txt p{
+        font-size: 14px;
+        margin-top: 15px;
+    }
+    #section3 #popup_bg #popup #popup_info>span{
+        width: 22px;
+        height: 23px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        opacity: 0.4;
+    }
+    #section3 #popup_bg #popup #popup_info>span img{
+        width: 100%;
+    }
+    #section3 #popup_bg #popup ul{
+        width: 100%;
+    /*    border: 1px solid black;*/
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+    }
+    #section3 #popup_bg #popup ul li{
+        font-size: 12px;
+        margin-bottom: 0;
+/*        margin-bottom: 15px;*/
+        float: left;
+/*        border: 1px solid black;*/
+    }
+}
+
+/*--------------background---------------------*/
+
+
+/*------------------상단 타이틀-----------------------*/
+
+
+
+/*-----------section1-----------------*/
+
+/*background animation*/
+
+.txt .txt2{
+    position: fixed;
+    width: 100%;
+    height: 200px;
+    right: 0;
+    top: 0px;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+/*    border: 1px solid white;*/
+    z-index: 3;
+}
+
+#section1>img{
+    width: 60%;
+    height: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+/*    border: 1px solid white;*/
+    opacity: 0;
+    
+}
+
+/*--------------------------section4-----------------------------*/
+
